@@ -1,0 +1,21 @@
+/* Events.css */
+.stacked-slide {
+    position: relative;
+    transform: scale(0.85);
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+
+.slick-center .stacked-slide {
+    transform: scale(1);
+    z-index: 2;
+}
+
+.slick-slide {
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+
+.slick-center {
+    opacity: 1;
+}

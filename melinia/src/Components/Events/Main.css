@@ -1,0 +1,89 @@
+.element-2 {
+    display: flex;
+    
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.element-3 {
+    text-align: justify;
+    font-size: large;
+}
+
+.element-1 {
+    text-align: justify;
+    font-size: large;
+}
+
+.round-rules {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+
+
+
+
+.venue, .time, .teamsize {
+    width: 250px !important;
+    
+    background-color: rgba(64, 25, 80, 0.7);
+    border-radius: 20px;
+    color: white;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    p{
+        margin-bottom: 0 !important;
+    }
+
+.element-4 {
+    display: flex;
+    align-items: center;
+}
+
+.divider {
+    width: 100%;
+    margin: 30px 0; /* Adjust margin as needed */
+    border: 1px solid #000; /* You can customize the border color */
+  }
+
+.coord {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 50%; */
+}
+
+.element-5 {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+}
+.title{
+    margin-bottom: 0 !important;
+}
+.sep {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: 40px;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #cc93a3;
+    border: none;
+    position: relative;
+    padding: 0.5rem;
+    justify-self: center;
+}

@@ -1,0 +1,34 @@
+.circle-image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.icons a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    /* You can customize the color as needed */
+}
+
+.icons a:hover {
+    color: #007bff;
+    /* Change color on hover, customize as needed */
+}

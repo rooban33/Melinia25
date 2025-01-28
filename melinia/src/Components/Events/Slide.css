@@ -1,0 +1,166 @@
+/* Button styles for carousel navigation */
+.card .card-button {
+    position: absolute;
+    top: 43%;
+    box-shadow: none;
+    border-radius: 5px;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+}
+
+.card .card-button.right {
+    right: 0%;
+}
+
+.react-stacked-center-carousel {
+    padding: 10px 0;
+    background-color: #0c0915 !important;
+}
+
+/* Main card styles for each carousel slide */
+.card-card {
+    transition: all 300ms ease;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 15px;
+    height: 280px;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-card:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
+
+/* Disable hover effect for the center slide */
+.react-stacked-center-carousel-slide-0 .card-card {
+    cursor: default;
+}
+
+.react-stacked-center-carousel-slide-0 .card-card:hover {
+    transform: none;
+}
+
+/* Utility classes for sizing */
+.fill {
+    width: 100%;
+    height: 100%;
+}
+
+/* Overlay for hover effect */
+.card-card .card-overlay {
+    user-select: none;
+    position: absolute;
+    background-color: #00000099;
+    /* Semi-transparent black */
+    transition: all 300ms ease;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.card-card:hover .card-overlay {
+    background-color: #0000002d;
+    /* Lighter overlay on hover */
+}
+
+/* Image styling */
+.card-card .cover-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    /* Image behind text */
+    transition: filter 300ms ease, transform 300ms ease;
+    /* Smooth blur transition */
+}
+
+.card-card:hover .cover-image {
+    filter: blur(3px);
+    /* Blur effect on hover */
+    transform: scale(1.03);
+    /* Slight zoom to enhance effect */
+}
+
+/* Styles for the text on the card */
+.card-card .discription {
+    position: absolute;
+    bottom: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, 50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    /* Hidden by default */
+    z-index: 2;
+    /* Text appears above everything else */
+    transition: opacity 300ms ease, transform 300ms ease;
+    /* Smooth fade-in and movement */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    /* Shadow for readability */
+}
+
+.card-card:hover .discription {
+    opacity: 1;
+    /* Show the text on hover */
+    transform: translate(-50%, -50%);
+    /* Center text fully */
+}
+
+/* Center slide-specific styles */
+.react-stacked-center-carousel-slide-0 .card-card .cover {
+    transition: opacity 300ms ease, z-index 0ms 300ms;
+}
+
+/* Cover (acts as a clickable area for non-center slides) */
+.card-card .cover {
+    position: absolute;
+    transition: opacity 300ms ease;
+}
+
+.card-card .cover.on {
+    opacity: 1;
+    z-index: 1;
+}
+
+.card-card .cover.off {
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Hover effect for text description */
+.card-card .discription:hover {
+    color: #ffcc00;
+    /* Highlight text color on hover */
+}
+
+/* Indicator styles */
+.indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    gap: 8px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #c4c4c4;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #3f51b5;
+}

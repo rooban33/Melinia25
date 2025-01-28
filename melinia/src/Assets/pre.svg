@@ -1,0 +1,29 @@
+<!-- By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL -->
+<!-- Todo: add easing -->
+<svg width="80" height="80" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" stroke="#d38bfc">
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(1 1)" stroke-width="2">
+            <polygon points="5 50 10 40 0 40">
+                <animate attributeName="points"
+                     begin="0s" dur="2.2s"
+                     values="5 50 10 40 0 40;27 5 32 15 22 15;49 50 54 40 44 40;5 50 10 40 0 40"
+                     calcMode="linear"
+                     repeatCount="indefinite" />
+            </polygon>
+            <polygon points="27 5 32 15 22 15">
+                <animate attributeName="points"
+                     begin="0s" dur="2.2s"
+                     values="27 5 32 15 22 15;49 50 54 40 44 40;5 50 10 40 0 40;27 5 32 15 22 15"
+                     calcMode="linear"
+                     repeatCount="indefinite" />
+            </polygon>
+            <polygon points="49 50 54 40 44 40">
+                <animate attributeName="points"
+                     begin="0s" dur="2.2s"
+                     values="49 50 54 40 44 40;5 50 10 40 0 40;27 5 32 15 22 15;49 50 54 40 44 40"
+                     calcMode="linear"
+                     repeatCount="indefinite" />
+            </polygon>
+        </g>
+    </g>
+</svg>

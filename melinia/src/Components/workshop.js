@@ -7,6 +7,7 @@ import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";
 import { FaArrowRight } from "react-icons/fa";
 import mixpanel from "mixpanel-browser";
+import SpotlightCard from "./SpotlightCard/SpotlightCard";
 function Workshop() {
   const [isEventCompleted, setCondition] = useState(false);
 
@@ -26,99 +27,172 @@ function Workshop() {
   };
   return (
     <div className="workshopMainBox">
-      <div className="aboutBox" style={{marginBottom:"30px"}}>
-        <div>
-          <img className="workshopImage" src={hackathon} alt="Event" />
-        </div>
-        <div className="verticalDivider" style={{ height: '300px', width: '10px', backgroundColor: '#676368', marginLeft: '20px', marginRight: '15px' }}></div>
-        <div style={{ paddingLeft: '30px', paddingRight: '20px', marginTop: '20px' }}>
-          <div className="d-flex justify-content-between flex-column flex-xl-column">
-            <div style={{marginBottom:'10px'}}>
-              <span className="workshopFont font-weight-bold">HACKATHON</span>
-            </div>
-            <br></br>
-            <div>
-              <span className="workshopSubFont font-weight-bold" style={{ color: 'white', fontSize: '0.9em' }}>Round 1 : Feb 1-10 2024 <br></br> Round 2 : Feb 12-14 2024</span>
-            </div>
-            {/* <br/>
-            <div>
-              <span className="workshopSubFont font-weight-bold" style={{ color: 'white', fontSize: '0.9em' }}>Round 2: Feb 12-14 2024</span>
-            </div> */}
-          </div>
-          {/* <div style={{ marginTop: '5px' }}>
-            <span className="workshopFont">ABOUT THE MELINIA HACKATHON</span>
-          </div> */}
-          <Divider className="horizontalDivider" style={{ padding: '0', margin: '0', marginTop: '10px', borderColor: 'black' }} />
-          <p className="rajdhaniFont" style={{ textAlign: 'initial', marginTop: '20px' }}>Embark on a transformative journey at the forefront of innovation with Melinia's Flagship Hackathon! This dynamic event is your gateway to shaping a brighter future through four compelling themes:
-<br></br>
-<br></br>
-1) Sustainable tech<br></br>
-	2) Mental health tech<br></br> 
-	3) Civic Engagement<br></br>
-	4) Financial literacy<br></br>
-  <br></br>
+      <div className="aboutBox" style={{ marginBottom: "30px", textAlign: "center", display: "grid", justifyContent: "center" }}>
+  
+  {/* Centered Title */}
+  <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", marginBottom: "20px" }}>
+
+  <span className="workshopFont font-weight-bold" style={{ fontSize: "24px" }}>
+    FLAGSHIP EVENTS
+  </span>
+</div>
+
+
+  <div style={{ gridRow: "2", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginTop: "20px" }}>
+    
+
+  <SpotlightCard 
+  className="custom-spotlight-card" 
+  spotlightColor="rgba(0, 229, 255, 0.2)" 
+  style={{ 
+    width: "350px", 
+    height: "280px", 
+    background: "linear-gradient(135deg, #001f3f, #005f73)", 
+    color: "white", 
+    padding: "20px", 
+    borderRadius: "10px", 
+    display: "flex", 
+    flexDirection: "column", 
+    justifyContent: "space-between", 
+    alignItems: "center", 
+    textAlign: "center", 
+    transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0px 6px 15px rgba(0, 0, 0, 0.3)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.2)";
+  }}
+>
+  {/* Hackathon Image */}
+  <img 
+    src="https://cdn-icons-png.flaticon.com/512/7326/7326897.png" 
+    alt="Hackathon Logo" 
+    style={{ width: "60px", height: "60px", marginBottom: "10px" }}
+  />
+
+  {/* Event Title */}
+  <h3 style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>
+    Ideaathon 2025
+  </h3>
+
+  {/* Short Description */}
+  <p style={{ fontSize: "14px", opacity: "0.9", marginBottom: "15px" }}>
+    Join the most exciting AI Hackathon of the year! Collaborate, innovate, and
+    create groundbreaking AI solutions.
+  </p>
+
+  {/* Event Date & Location */}
+  <p style={{ fontSize: "12px", fontWeight: "500", opacity: "0.8", marginBottom: "10px", paddingBottom:"8px" }}>
+    📍 CIT, India | 🗓️ March 15-17, 2025
+  </p>
+
+  {/* View More Button */}
+  <button 
+    style={{
+      background: "#00a6fb",
+      color: "white",
+      padding: "8px 15px",
+      border: "none",
+      borderRadius: "5px",
+      fontSize: "14px",
+      fontWeight: "bold",
+      cursor: "pointer",
+      transition: "background 0.3s ease-in-out"
+    }}
+    onMouseEnter={(e) => e.currentTarget.style.background = "#007bb5"}
+    onMouseLeave={(e) => e.currentTarget.style.background = "#00a6fb"}
+  >
+    View More Info
+  </button>
+
+</SpotlightCard>
+
+<SpotlightCard 
+  className="custom-spotlight-card" 
+  spotlightColor="rgba(0, 229, 255, 0.2)" 
+  style={{ 
+    width: "350px", 
+    height: "280px", 
+    background: "linear-gradient(135deg, #001f3f, #005f73)", 
+    color: "white", 
+    padding: "20px", 
+    borderRadius: "10px", 
+    display: "flex", 
+    flexDirection: "column", 
+    justifyContent: "space-between", 
+    alignItems: "center", 
+    textAlign: "center", 
+    transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0px 6px 15px rgba(0, 0, 0, 0.3)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.2)";
+  }}
+>
+  {/* Hackathon Image */}
+  <img 
+    src="https://cdn-icons-png.flaticon.com/512/7326/7326897.png" 
+    alt="Hackathon Logo" 
+    style={{ width: "60px", height: "60px", marginBottom: "10px" }}
+  />
+
+  {/* Event Title */}
+  <h3 style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>
+    AI Hackathon 2025
+  </h3>
+
+  {/* Short Description */}
+  <p style={{ fontSize: "14px", opacity: "0.9", marginBottom: "15px" }}>
+    Join the most exciting AI Hackathon of the year! Collaborate, innovate, and
+    create groundbreaking AI solutions.
+  </p>
+
+  {/* Event Date & Location */}
+  <p style={{ fontSize: "12px", fontWeight: "500", opacity: "0.8", marginBottom: "10px", paddingBottom:"8px" }}>
+    📍 Bengaluru, India | 🗓️ March 15-17, 2025
+  </p>
+
+  {/* View More Button */}
+  <button 
+    style={{
+      background: "#00a6fb",
+      color: "white",
+      padding: "8px 15px",
+      border: "none",
+      borderRadius: "5px",
+      fontSize: "14px",
+      fontWeight: "bold",
+      cursor: "pointer",
+      transition: "background 0.3s ease-in-out"
+    }}
+    onMouseEnter={(e) => e.currentTarget.style.background = "#007bb5"}
+    onMouseLeave={(e) => e.currentTarget.style.background = "#00a6fb"}
+  >
+    View More Info
+  </button>
+
+</SpotlightCard>
 
 
 
-Join us in crafting viable and feasible product prototypes that not only enhance the lifestyles of students and professors but also elevate the working standards of institutions at large. Let your creativity thrive and leave a lasting mark on the world! 💡</p>
-          <div style={{ display: 'flex', justifyContent: 'end' }}>
-            {!isEventCompleted ? (
-              <Button className="buttonFont" style={{ backgroundColor: '#61016e' }} variant="contained" onClick={handleRegisterClick}>Register <FaArrowRight style={{ marginLeft: '3px' }} /></Button>
+  </div>
 
-            ) : (<Button className="buttonFont" style={{ color: '#61016e', borderColor: '#61016e' }} variant="outlined">Event Completed <FaArrowRight style={{ marginLeft: '3px' }} /></Button>)}
+</div>
 
-
-          </div>
-        </div>
-
-
-      </div>
       {/* <Divider style={{ padding: '0', margin: '0', borderColor: 'black' }} /> */}
 
 
     
-       <div className="aboutBox2">
-        <div className="reverseFlex">
-          <div>
-            <img className="workshopImage" src={paperPresentation} alt="Event" />
-          </div>
-          <div className="verticalDivider" style={{ height: '300px', width: '10px', backgroundColor: '#676368', marginLeft: '20px', marginRight: '25px' }}></div>
-          <div style={{ paddingLeft: '30px', paddingRight: '20px', marginTop: '20px' }}>
-            <div className="d-flex justify-content-between flex-column flex-md-row" >
-              <div>
-                <span className="workshopFont font-weight-bold">PAPER PRESENTATION</span>
-              </div>
-              <div>
-                <span className="workshopSubFont font-weight-bold" style={{ color: 'white', fontSize: '0.9em' }}>Feb 16 2024</span>
-              </div>
-            </div>
-            {/* <div style={{ marginTop: '5px', display:'flex', justifyContent:'start' }}>
-              <span className="workshopFont" style={{textAlign:'center'}}>THE ENTREPRENEURIAL MINDSET</span>
-            </div> */}
-            <Divider className="horizontalDivider" style={{ padding: '0', margin: '0', marginTop: '10px', borderColor: 'black' }} />
-            <p className="rajdhaniFont" style={{ textAlign: 'initial', marginTop: '20px' }}>Embark on a journey of intellectual exploration at Melinia's Paper Presentation Event! Select from five captivating themes:
-
-            <br></br>
-<br></br>
-1) JavaScript Frameworks: A Journey from Past to Present and Future Innovations<br></br>
-	2) Preparing for Uncertainty: Decision Making in a Dynamic Business Environment<br></br> 
-	3) From Code to Canvas: Generative AI's Artistic Endeavors<br></br>
-	4) Anticipating the Future: Unraveling Predictive Modeling Across Various Industries<br></br>
-  5) Tech Evolution in Communication: Tracing the Impact on Past, Present, and Future<br></br>
-  <br></br>
-
-Seize this opportunity to present insightful perspectives and contribute to the rich tapestry of intellectual innovation. Unfold your ideas on the stage of knowledge! 📚 </p>
-            <div style={{ display: 'flex', justifyContent: 'end' }}>
-              {!isEventCompleted ? (
-                <Button className="buttonFont" style={{ backgroundColor: '#61016e' }} variant="contained" onClick={handleRegisterClick1}>Register <FaArrowRight style={{ marginLeft: '3px' }} /></Button>
-
-              ) : (<Button className="buttonFont" style={{ color: '#61016e', borderColor: '#61016e' }} variant="outlined">Event Completed <FaArrowRight style={{ marginLeft: '3px' }} /></Button>)}
-            </div>
-          </div>
-        </div>
-
-
-      </div>
 {/* 
       <Divider style={{ padding: '0', margin: '0', borderColor: 'black' }} />
 

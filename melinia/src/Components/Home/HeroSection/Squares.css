@@ -1,0 +1,6 @@
+.squares-canvas {
+    width: 100vw;  /* Takes the full viewport width */
+    height: 100vh; /* Takes only the screen height, not the whole website */
+    border: none;
+    display: block;
+}

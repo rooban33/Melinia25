@@ -1,8 +1,9 @@
 import React from 'react';
-import SplashCursor from '../SplashCursor';
+import Squares from './Squares';
 
 const HeroSection = ({ yearsImage, isEventCompleted }) => {
   return (
+
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' , width:"100%" }}>
       <h1 
         style={{ paddingBottom: 15, textAlign: 'center', fontFamily: "Audiowide", fontSize: "1.5em" }} 
@@ -38,6 +39,8 @@ const HeroSection = ({ yearsImage, isEventCompleted }) => {
         {/* Additional content or components can go here */}
       </div>
     </div>
+
+    
   );
 };
 

@@ -686,6 +686,15 @@ button:focus {
   }
 }
 
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
 .myAvtar {
   justify-content: center !important;
   padding-top: 9em !important;
@@ -695,6 +704,10 @@ button:focus {
   .myAvtar {
     padding-top: 2em !important;
     padding-bottom: 2em !important;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr; /* Stacks cards on smaller screens */
   }
 }
 

@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
+import "./learnmorebutton.css";
 const springValues = {
     damping: 30,
     stiffness: 100,
@@ -125,12 +125,13 @@ export default function TiltedCard({
                     }}
                 >
                     <p className="text-lg text-gray-800 font-medium">{overlayContent}</p>
-                    <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600"
-                        onClick={handleEventClick}
-                    >
-
-                        {buttonText}
+                    <button className="learn-more" onClick={handleEventClick}>
+                        <span className="circle" aria-hidden="true">
+                            <span className="icon arrow"></span>
+                        </span>
+                        <span className="button-text">{buttonText}</span>
                     </button>
+
                 </motion.div>
             )}
 
@@ -147,6 +148,15 @@ export default function TiltedCard({
             >
                 {buttonText}
             </button> */}
+
+            {/* <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600"
+                        onClick={handleEventClick}
+                    >
+
+                        {buttonText}
+                    </button> */}
+
+
         </figure>
     );
 }

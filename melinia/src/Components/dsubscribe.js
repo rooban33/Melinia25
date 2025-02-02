@@ -1,15 +1,18 @@
 import React from 'react';
 
-const HoverButton = () => {
-    return (
-        <button className="hover-btn">
-            Hover me
-            <style jsx>{`
+const HoverButton = ({ text, onClick, isActive }) => {
+  return (
+    <button
+      className={`hover-btn ${isActive ? 'active' : ''}`} // Add 'active' class if the button is active
+      onClick={onClick}
+    >
+      {text}
+      <style jsx>{`
         .hover-btn {
           width: 10em;
           position: relative;
           height: 3.5em;
-          border: 3px ridge #149cea;
+          border: 3px ridge #F33A6A; // Border color - Squid Game pink
           outline: none;
           background-color: transparent;
           color: white;
@@ -27,7 +30,7 @@ const HoverButton = () => {
           left: 3%;
           width: 95%;
           height: 40%;
-          background-color: #212121;
+          background-color: black; // Top glow - Black
           transition: 0.5s;
           transform-origin: center;
         }
@@ -40,21 +43,31 @@ const HoverButton = () => {
           left: 3%;
           width: 95%;
           height: 40%;
-          background-color: #212121;
+          background-color: black; // Bottom glow - Black
           transition: 0.5s;
         }
 
         .hover-btn:hover::before,
         .hover-btn:hover::after {
-          transform: scale(0);
+          transform: scale(0); // Remove the glow effect when hovered
         }
 
         .hover-btn:hover {
-          box-shadow: inset 0px 0px 25px #1479ea;
+          box-shadow: inset 0px 0px 25px #F76B8A; // Hover effect - Lighter pink
+        }
+
+        // Remove hover effect for active state
+        .hover-btn.active {
+          box-shadow: none; // Remove box-shadow when button is active
+        }
+
+        .hover-btn.active::before,
+        .hover-btn.active::after {
+          transform: scale(0); // Remove top and bottom glow when button is active
         }
       `}</style>
-        </button>
-    );
+    </button>
+  );
 };
 
 export default HoverButton;

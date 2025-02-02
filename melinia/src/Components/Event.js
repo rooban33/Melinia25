@@ -24,12 +24,12 @@ const EventDetails = () => {
             <Button
                 onClick={() => navigate(-1)}
                 variant="text"
-                className="text-black font-bold self-start"
+                className="!text-[#F33A6A] font-bold self-start"
             >
                 ← Back
             </Button>
             {/* <div className="flex flex-col md:flex-row p-6 min-h-[calc(100vh-HeaderHeight-FooterHeight)] overflow-hidden"> */}
-            <div className="flex flex-col md:flex-row p-6 min-h-screen overflow-hidden">
+            <div className="flex flex-col md:flex-row  min-h-screen overflow-hidden">
 
                 {/* <div className="flex flex-col md:flex-row p-6 h-screen overflow-y-auto"> */}
                 {/* Left Column - 40% Width, Normal Scrolling */}
@@ -38,7 +38,7 @@ const EventDetails = () => {
                 </div>
 
                 {/* Right Column - 60% Width, Scrollable Event Details */}
-                <div className="w-full md:w-3/5 p-6 bg-transparent text-left">
+                <div className="w-full md:w-3/5 p-2  bg-transparent text-left">
                     {/* Title */}
                     <DecryptedText
                         text={event.title}
@@ -49,22 +49,24 @@ const EventDetails = () => {
                             fontFamily: "Arial",
                             fontSize: "2rem",
                             fontWeight: "bold",
-                            color: "#ff3860",
-                            textShadow: "0 0 5px #ff3860, 0 0 10px #ff3860",
+                            color: "#F33A6A",
+                            // textShadow: "0 0 5px #ff3860, 0 0 10px #ff3860",
                             display: "flex",
                             justifyContent: "center"
                         }}
                     />
 
                     {/* Description */}
-                    <DetailCard venue={event.venue} date="March 07, 2025" time={event.time} />
-                    <h3 className="mt-6 text-lg font-semibold text-gray-900 ">Description:</h3>
+                    <div className="mt-16 flex justify-center">
+                        <DetailCard venue={event.venue} date="March 07, 2025" time={event.time} />
+                    </div>
+                    <h3 className="mt-12 text-lg font-semibold !text-white ">Description:</h3>
                     <p className=" text-gray-700 ml-8">
                         {event.description}
                     </p>
 
                     {/* Rules */}
-                    <h3 className="mt-6 text-lg font-semibold text-gray-900">Rules:</h3>
+                    <h3 className="mt-6 text-lg font-semibold !text-white">Rules:</h3>
                     <ul className="list-none space-y-2 text-gray-700">
                         {event.rules.map((rule, index) => (
                             <li key={index} className="flex items-center">
@@ -76,7 +78,7 @@ const EventDetails = () => {
 
 
                     {/* Prize Section */}
-                    <h3 className="mt-6 text-lg font-semibold text-gray-900">Prize:</h3>
+                    <h3 className="mt-6 text-lg font-semibold !text-white">Prize:</h3>
                     <div className="flex items-center space-x-6 text-gray-700 ml-4 ">
                         <div className="flex items-center">
                             <img src={goldTrophy} alt="Gold Trophy" className="w-8 h-8 mr-2" />
@@ -89,7 +91,7 @@ const EventDetails = () => {
                     </div>
 
                     {/* Contact Info */}
-                    <h3 className="mt-6 text-lg font-semibold text-gray-900">Contact Info:</h3>
+                    <h3 className="mt-6 text-lg font-semibold !text-white">Contact Info:</h3>
                     <div className="text-gray-700 ml-4">
                         {event.contact.map((person, index) => (
                             <div key={index} className="flex items-center mt-2">
@@ -106,7 +108,7 @@ const EventDetails = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

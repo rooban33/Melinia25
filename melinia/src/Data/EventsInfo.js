@@ -17,8 +17,8 @@ const events = [
             first: "₹50,000",
             second: "₹25,000"
         },
-        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"]
-
+        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"],
+        is_flagship: true
     },
     {
         id: 2,
@@ -38,7 +38,8 @@ const events = [
             first: "₹20,000",
             second: "₹10,000"
         },
-        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"]
+        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"],
+        is_flagship: true
     },
     {
         id: 3,
@@ -58,7 +59,8 @@ const events = [
             first: "₹15,000",
             second: "₹7,500"
         },
-        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"]
+        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"],
+        is_flagship: false
     },
     {
         id: 4,
@@ -78,7 +80,8 @@ const events = [
             first: "₹12,000",
             second: "₹6,000"
         },
-        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"]
+        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"],
+        is_flagship: false
     },
     {
         id: 5,
@@ -98,7 +101,8 @@ const events = [
             first: "₹10,000",
             second: "₹5,000"
         },
-        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"]
+        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"],
+        is_flagship: false
     },
     {
         id: 6,
@@ -118,7 +122,8 @@ const events = [
             first: "₹8,000",
             second: "₹4,000"
         },
-        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"]
+        contact: ["Lokhesh - 9876543210", "Rajesh - 9123456789"],
+        is_flagship: false
     }
 ];
 

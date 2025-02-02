@@ -136,17 +136,20 @@ const VARIANTS = {
     }
 };
 
-export default function PixelCard({
-    eventTitle,
-    eventImage,
-    variant = "default",
-    gap,
-    speed,
-    colors,
-    noFocus,
-    className = "",
-    children
-}) {
+export default function
+
+
+    PixelCard({
+        eventTitle,
+        eventImage,
+        variant = "default",
+        gap,
+        speed,
+        colors,
+        noFocus,
+        className = "",
+        children
+    }) {
 
     const containerRef = useRef(null);
     const canvasRef = useRef(null);

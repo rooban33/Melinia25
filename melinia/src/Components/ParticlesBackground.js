@@ -16,7 +16,7 @@ export const Particle = () => {
     const particlesConfig = {
         background: {
             color: {
-                value: "transparent", // Ensure background is not affected
+                value: "transparent",
             },
         },
         fpsLimit: 60,
@@ -24,7 +24,7 @@ export const Particle = () => {
             events: {
                 onHover: {
                     enable: true,
-                    mode: "repulse", // Interactive effect on hover
+                    mode: "repulse",
                 },
                 resize: true,
             },
@@ -37,53 +37,54 @@ export const Particle = () => {
         },
         particles: {
             number: {
-                value: 30, // Number of shapes
+                value: 30,
                 density: {
                     enable: true,
                     area: 800,
                 },
             },
             color: {
-                value: "#ffffff", // Border color (white)
+                value: ["#FF1199", "#11FFEE"], // Alternating colors
             },
             shape: {
-                type: ["circle", "square", "triangle"], // Shapes to render
+                type: ["circle", "square", "triangle"],
             },
             opacity: {
-                value: 0, // Fully transparent fill
+                value: 0,
             },
             size: {
-                value: 30, // Shape size
+                value: 30,
                 random: true,
             },
             stroke: {
-                width: 6, // Border thickness
-                color: "#ffffff", // White border color
+                width: 6,
+                color: ["#FF1199", "#11FFEE"], // Alternating border colors
             },
             rotate: {
                 value: {
                     min: 0,
-                    max: 360, // Allow random rotation angles
+                    max: 360,
                 },
                 animation: {
-                    enable: true, // Enable rotation animation
-                    speed: 10, // Speed of rotation
-                    sync: false, // Each shape rotates independently
+                    enable: true,
+                    speed: 10,
+                    sync: false,
                 },
             },
             move: {
                 enable: true,
-                speed: 1, // Movement speed
+                speed: 1,
                 direction: "none",
                 random: false,
                 straight: false,
                 outModes: {
-                    default: "bounce", // Shapes bounce off edges
+                    default: "bounce",
                 },
             },
         },
         detectRetina: true,
     };
+    
 
     const particlesLoaded = useCallback(async (container) => {
         //console.log(container);
@@ -124,4 +125,3 @@ export const Particle = () => {
 />
     );
 };
-

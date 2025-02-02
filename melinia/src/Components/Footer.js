@@ -1,11 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillMail,
-  AiFillInstagram,
-  AiFillYoutube,
-} from "react-icons/ai";
+import { AiFillMail, AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import Ballpit from './BallPit';
 
 import './Footer.css';
 
@@ -15,10 +12,37 @@ function Footer() {
   };
 
   return (
-    <Container fluid className="footer" style={{ zIndex: '10', position: 'relative', minHeight: "150px", display: "flex", flexDirection: "column", justifyContent: "space-around"}}>
-      <Row className="justify-content-around">
+    <Container fluid className="footer" style={{
+      zIndex: '10',
+      position: 'relative',
+      minHeight: "150px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-around",
+      overflow: "hidden",
+    }}>
+      {/* Ballpit Canvas Background */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 0, // Puts Ballpit behind other elements
+        pointerEvents: 'none', // Ensures it doesn’t block clicks
+      }}>
+        <Ballpit
+          count={40}
+          gravity={0.1}
+          friction={1}
+          wallBounce={0.7}
+          followCursor={false}
+        />
+      </div>
+
+      <Row className="justify-content-around" style={{ position: "relative", zIndex: 2 }}>
         <Col xs={12} md={6} lg={4} className="contactus">
-        <h3 className="d-none d-md-block" style={{ fontSize: "15px", color: "white" }}>For Updates..</h3>
+          <h3 className="d-none d-md-block" style={{ fontSize: "15px", color: "white" }}>For Updates..</h3>
           <a href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u" style={{ textDecoration: "none", color: "white", fontSize: "20px" }}>
             Follow Our <FaWhatsapp /> channel
           </a>
@@ -46,7 +70,7 @@ function Footer() {
         </Col>
       </Row>
 
-      <Row className="justify-content-center">
+      <Row className="justify-content-center" style={{ position: "relative", zIndex: 2 }}>
         <Col xs={12} className="developed-with-love" style={{ fontSize: "15px", color: "white", textDecoration: "underline" }} onClick={handleClick}>
           Dev Team
         </Col>

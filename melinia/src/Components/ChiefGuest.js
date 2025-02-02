@@ -1,33 +1,83 @@
-import { Avatar, span } from "@mui/material";
-import { Box, Container } from "@mui/system";
 import React from "react";
-import chief from "../Assets/crew/chief.jpg"
+import { Avatar } from "@mui/material";
+import { Box, Container } from "@mui/system";
+import chief from "../Assets/crew/chief.jpg";
 
 function ChiefGuest() {
   return (
-    <Box sx={{ marginTop: "60px",height:"100%",width:"100%",padding:"20px"  }}>
+    <Box
+      sx={{
+        marginTop: "60px",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "20px",
+      }}
+    >
       <Container
         sx={{
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          alignItems: "center",
+          background: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(10px)",
+          borderRadius: "20px",
+          padding: "40px",
+          boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+          textAlign: "center",
+          maxWidth: "600px",
         }}
       >
-        <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-          <span className="font1" fontWeight="700" style={{color:'white', fontSize:'1.6rem'}} mb={1} textAlign="center">
-            MEET OUR CHIEF GUEST
-          </span>
-        
+        <h2
+          style={{
+            color: "white",
+            fontSize: "2rem",
+            fontWeight: "bold",
+            textTransform: "uppercase",
+            letterSpacing: "1.5px",
+            marginBottom: "15px",
+          }}
+        >
+          Meet Our Chief Guest
+        </h2>
 
-          <Avatar src={chief} sx={{marginTop:'10px', marginBottom:'10px',width:230,objectFit:"contain",height:230,borderRadius:"100%",}} />
+        <Avatar
+          src={chief}
+          sx={{
+            width: 200,
+            height: 200,
+            border: "4px solid white",
+            boxShadow: "0px 5px 15px rgba(255, 255, 255, 0.2)",
+            transition: "transform 0.3s ease-in-out",
+            '&:hover': {
+              transform: "scale(1.1)",
+            },
+          }}
+        />
 
-          <span className="font2" color="white"  variant="h6" style={{marginTop:8, color:'#d3d3d3', fontWeight:'bolder', fontSize:'1.5em', marginBottom:4}}>Mr. Sathish Nandagopal</span>
-          <span className="font3" variant="subtitle2" style={{color:'#d3d3d3', fontWeight:'bolder', marginBottom:4}}>Location Head HR</span>
-          <span className="font3" variant="subtitle2" style={{color:'#d3d3d3', fontWeight:'bolder', marginBottom:4}}>FSC - CIS Coimbatore</span>
-          <span className="font3" variant="subtitle2" style={{color:'#d3d3d3', fontWeight:'bolder', marginBottom:4}}>Wipro Technologies</span>
-          <span className="font3" color="#d3d3d3" textAlign="center" style={{color:'#d3d3d3', fontWeight:'bolder', fontSize:'1.3rem', marginBottom:4}}>Excitement fills the air as we announce Sathish Nandagopal, Location HR at Wipro, as the Chief Guest for our techfest. With a passion for leading global people agendas, Sathish oversees the human capital needs of 3200+ employees in the location, ensuring the right talent for impactful business outcomes. Committed to fostering inclusivity, he envisions a workplace where everyone can contribute and succeed equally. Join us for an insightful session with Sathish Nandagopal, a leader dedicated to excellence and positive change</span>
-        </Box>
+        <h3 style={{ color: "#f1f1f1", marginTop: "15px", fontSize: "1.6rem", fontWeight: "bold" }}>
+          Mr. Sathish Nandagopal
+        </h3>
+        <p style={{ color: "#d3d3d3", fontSize: "1rem", fontWeight: "500", margin: "4px 0" }}>
+          Location Head HR, Wipro Technologies
+        </p>
+        <p style={{ color: "#d3d3d3", fontSize: "1rem", fontWeight: "500", margin: "4px 0" }}>
+          FSC - CIS Coimbatore
+        </p>
+
+        <p
+          style={{
+            color: "#d3d3d3",
+            fontSize: "1.2rem",
+            fontWeight: "500",
+            marginTop: "15px",
+            lineHeight: "1.6",
+          }}
+        >
+          Excitement fills the air as we announce Sathish Nandagopal as the Chief Guest for our techfest. As a leader overseeing 3200+ employees, he is committed to fostering inclusivity and excellence in the workplace. Join us for an insightful session with a visionary leader!
+        </p>
       </Container>
     </Box>
   );

@@ -4,6 +4,8 @@ import TiltedCard from "./NewCard"; // Import your new card component
 import "../style.css";
 import events from "../Data/EventsInfo";
 import FilterButton from "./Check";
+
+import HoverButton from "./dsubscribe";
 // Main Events Page Component
 const EventsPage = () => {
     const [activeCategory, setActiveCategory] = useState("Technical");
@@ -19,11 +21,11 @@ const EventsPage = () => {
                 <nav className="flex justify-center gap-4 mt-8">
 
                     {["Technical", "Non-Technical", "Flagship"].map((category) => (
-                        <FilterButton
+                        <HoverButton
                             key={category}
                             text={category}  // Pass category as text
                             onClick={() => setActiveCategory(category)} // Handle click event
-                            isActive={activeCategory === category}  // Check if active category
+                            isActive={activeCategory === category} // Indicate if the button is active
                         />
                     ))}
                 </nav>
@@ -38,7 +40,10 @@ const EventsPage = () => {
                             className="flex justify-center relative group"
                         >
                             {/* Glow effect */}
-                            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#FF1199] to-[#11FFEE] custom-glow"></div>
+                            <div className="absolute inset-0 rounded-lg bg-gradient-to-r  custom-glow"
+                                style={{
+                                    backgroundColor: event.is_flagship === true ? "#FFD700" : "#F33A6A",
+                                }}></div>
                             {/* Card */}
                             <div className="relative">
                                 <TiltedCard

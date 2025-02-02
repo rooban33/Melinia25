@@ -38,7 +38,7 @@ function Workshop() {
 </div>
 
 
-  <div style={{ gridRow: "2", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginTop: "20px" }}>
+  <div className="events-grid">
     
 
   <SpotlightCard 

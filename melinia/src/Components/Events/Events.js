@@ -10,7 +10,7 @@ import hackathon from '../../Assets/events/hackATHON.png';
 import Paperpresentation from '../../Assets/events/Paper presentation.png';
 import sequelverse from '../../Assets/events/SEQUELVERSE.png';
 import somethingfishy from '../../Assets/events/something fishy.png';
-
+import { useNavigate } from "react-router-dom";
 const data = [
   { image: Keycharades, text: "Keycharades" },
   { image: bidbattle, text: "Bid Battle" },
@@ -25,7 +25,7 @@ const data = [
 const CardExample = () => {
   const ref = React.useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const navigate = useNavigate();
   // Automatically move to the next slide every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,7 +63,7 @@ const CardExample = () => {
         {/* Left Arrow Button */}
         <div
           className="card-button left"
-          onClick={() => ref.current?.goBack()}
+          onClick={() => navigate("/events")}
           style={{
             position: "absolute",
             top: "40%",

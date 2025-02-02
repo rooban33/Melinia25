@@ -30,7 +30,7 @@ const CardExample = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       ref.current?.goNext();
-    }, 3000);
+    }, 30000);
     return () => clearInterval(interval);
   }, []);
 
@@ -64,34 +64,14 @@ const CardExample = () => {
         <div
           className="card-button left"
           onClick={() => ref.current?.goBack()}
-          style={{
-            position: "absolute",
-            top: "40%",
-            left: "10px",
-            zIndex: 10,
-            cursor: "pointer",
-            fontSize: "30px",
-            color: "#3f51b5",
-          }}
         >
-          &#8592;
         </div>
 
         {/* Right Arrow Button */}
         <div
           className="card-button right"
           onClick={() => ref.current?.goNext()}
-          style={{
-            position: "absolute",
-            top: "40%",
-            right: "10px",
-            zIndex: 10,
-            cursor: "pointer",
-            fontSize: "30px",
-            color: "#3f51b5",
-          }}
         >
-          &#8594;
         </div>
 
         {/* Indicators */}

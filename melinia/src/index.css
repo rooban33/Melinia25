@@ -20,6 +20,6 @@ body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: radial-gradient(circle,  rgb(197 56 88),rgb(197 56 88)); 
+  background-image: radial-gradient(circle,  black,black); 
 }
         

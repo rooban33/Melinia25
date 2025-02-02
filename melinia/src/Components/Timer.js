@@ -1,39 +1,72 @@
-import React, { useState } from "react";
-import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
-import "@leenguyen/react-flip-clock-countdown/dist/index.css";
+import React, { useState, useEffect } from "react";
+import TiltedCard from "./PrizePool";
+import "./Timer.css";
+import TimerImage from "../Assets/images/squid-game-piggy-bank-05-Photoroom.png";
+
+const COUNTDOWN_TARGET = new Date("2025-03-07T09:00:00");
+
+const getTimeLeft = () => {
+	const totalTimeLeft = COUNTDOWN_TARGET - new Date();
+	const days = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
+	const hours = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
+	const minutes = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
+	const seconds = Math.floor((totalTimeLeft / 1000) % 60);
+	return { days, hours, minutes, seconds };
+};
 
 const CountdownTimer = () => {
-  const [targetDate] = useState(new Date("2025-03-07T09:00:00"));
-  const now = new Date();
+	const [timeLeft, setTimeLeft] = useState(() => getTimeLeft());
 
-  const differenceInMilliseconds = Math.max(targetDate.getTime() - now.getTime(), 0);
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setTimeLeft(getTimeLeft());
+		}, 1000);
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        padding: "0 10%",
-        height: "30vh",
-      }}
-    >
-      <FlipClockCountdown
-        to={now.getTime() + differenceInMilliseconds}
-        labels={["Days", "Hours", "Minutes", "Seconds"]}
-        className="flip-clock"
-        duration={0.5}
-        hideOnComplete={false}
-        labelStyle={{
-          fontSize: "1.5rem",
-          color: "white",
-          fontWeight: "bold",
-          textAlign: "center",
-        }}
+		return () => {
+			clearInterval(timer);
+		};
+	}, []);
+
+	return (
+    
+		<div className='countdown'>
+      <TiltedCard
+        imageSrc={TimerImage} // Set TimerImage here
+        altText="Timer Image"
+        captionText=" "
+        containerHeight="300px"
+        containerWidth="300px"
+        imageHeight="300px"
+        imageWidth="300px"
+        rotateAmplitude={12}
+        scaleOnHover={1.2}
+        showMobileWarning={false}
+        showTooltip={false}
+        displayOverlayContent={true}
+        overlayContent={
+          <div></div>
+        }
       />
-    </div>
-  );
+
+      <h4 className="aboutFont" >
+        PRIZE POOL : 50,000 RS
+      </h4>
+			<div className='content'>
+				{Object.entries(timeLeft).map((el) => {
+					const label = el[0];
+					const value = el[1];
+					return (
+						<div className='box' key={label}>
+							<div className='value'>
+								<span>{value}</span>
+							</div>
+							<span className='label'> {label} </span>
+						</div>
+					);
+				})}
+			</div>
+		</div>
+	);
 };
 
 export default CountdownTimer;

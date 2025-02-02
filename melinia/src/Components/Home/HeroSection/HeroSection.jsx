@@ -1,46 +1,71 @@
-import React from 'react';
-import Squares from './Squares';
+import React from "react";
+import { motion } from "framer-motion";
+import "./HeroSection.css";
 
-const HeroSection = ({ yearsImage, isEventCompleted }) => {
+const HeroSection = () => {
   return (
+    <div className="hero-container">
+      {/* Background Animation */}
+      <div className="squid-bg"></div>
 
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' , width:"100%" }}>
-      <h1 
-        style={{ paddingBottom: 15, textAlign: 'center', fontFamily: "Audiowide", fontSize: "1.5em" }} 
-        className="q"
-      >
-        Coimbatore Institute of Technology
-      </h1>
-      <h1 
-        style={{ paddingBottom: 15, textAlign: 'center', fontFamily: "Audiowide", fontSize: "1.3em" }} 
-        className="q"
-      >
-        Department of Computing <br /> MSc SS | DS | DCS | AIML
-      </h1>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <div className="rajdhaniFont">
-          <span>Proudly Presents</span>
-          <br />
+      {/* Hero Card */}
+      <div className="hero-card">
+        {/* Squid Game-Inspired Title */}
+        <motion.h1 
+          initial={{ opacity: 0, y: -50 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8, ease: "easeOut" }} 
+          className="hero-heading"
+        >
+          Coimbatore Institute of Technology
+        </motion.h1>
+
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+          className="hero-subheading"
+        >
+          Department of Computing <br /> MSc SS | DS | DCS | AIML
+        </motion.h2>
+
+        {/* MELINIA 2K25 Squid Game Style */}
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+          className="hero-title"
+        >
+          mElinia <span className="squid-highlight">2K25</span>
+        </motion.h1>
+        {/* Shapes (Circle, Triangle, Square) */}
+        <div className="squid-shapes">
+          <span className="circle">○</span>
+          <span className="triangle">△</span>
+          <span className="square">□</span>
         </div>
-        <br />
-        <br />
-      </div>
-      <h1 className="heading-name meliniaFont">
-        MELINIA
-        <strong className="main-name"> 2K24 </strong>
-      </h1>
-      <h1 
-        style={{ paddingBottom: 15, textAlign: 'center' }} 
-        className="heading"
-      >
-        National Level Technical Symposium <br /> <br />
-      </h1>
-      <div style={{ padding: 50, textAlign: "left" }}>
-        {/* Additional content or components can go here */}
+
+        {/* Tagline */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
+          className="hero-tagline"
+        >
+          National Level Technical Symposium
+        </motion.p>
+
+        {/* Call-to-Action Button with Mask Hover */}
+        <motion.button 
+          initial={{ opacity: 0, scale: 0.9 }} 
+          animate={{ opacity: 1, scale: 1 }} 
+          transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+          className="squid-button"
+        >
+           Register Now
+        </motion.button>
       </div>
     </div>
-
-    
   );
 };
 

@@ -48,8 +48,8 @@ class Developers extends React.Component {
   cardDataUs = [
     {
       name: "Shajithrooban G G",
-      role: "Web Develeoper",
-      department: "Department of Computing",
+      role: "Web Developer",
+      department: "M.Sc. Software Systems (4th Year)",
       phone: "+917845738898",
       email: "71762131045@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/shajith-rooban-b26453221/", 
@@ -58,8 +58,8 @@ class Developers extends React.Component {
     },
     {
       name: "Pranavarul K",
-      role: "Web Develeoper",
-      department: "Department of Computing",
+      role: "Web Developer",
+      department: "M.Sc. Software Systems (4th Year)",
       phone: "+919486624020",
       email: "71762131034@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/pranavarul-karthikeyan-89945a223/",
@@ -68,8 +68,8 @@ class Developers extends React.Component {
     },
     {
       name: "Lokhesh R J",
-      role: "Web Develeoper",
-      department: "Department of Computing",
+      role: "Web Developer",
+      department: "M.Sc. Software Systems (4th Year)",
       phone: "+919865229679",
       email: "71762131026@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/lokheshrj/",
@@ -78,8 +78,8 @@ class Developers extends React.Component {
     },
     {
       name: "Rajarajan A P",
-      role: "Web Develeoper",
-      department: "Department of Computing",
+      role: "Web Developer",
+      department: "M.Sc. Software Systems (4th Year)",
       phone: "+918248164968",
       email: "71762131038@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/rajarajan-a-p/",
@@ -88,8 +88,8 @@ class Developers extends React.Component {
     },
     {
       name: "Karthick Roshan",
-      role: "Web Develeoper",
-      department: "Department of Computing",
+      role: "Web Developer",
+      department: "M.Sc. Software Systems (4th Year)",
       phone: "+918248164968",
       email: "71762131024@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/karthick-roshan/",
@@ -101,7 +101,7 @@ class Developers extends React.Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: "#1a1a2e", padding: "100px 0" }}>
+      <div style={{ backgroundColor: "transparent", padding: "100px 0" }}>
         <Particle />
         <StyledTypography variant="h4">Development Team</StyledTypography>
         <div className="board-container">

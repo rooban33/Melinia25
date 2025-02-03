@@ -122,7 +122,7 @@ cardDataStudent = [
 
   render() {
     return (
-      <div style={{ backgroundColor: "#1a1a2e", padding: "100px 0" }}>
+      <div style={{ backgroundColor: "transparent", padding: "100px 0" }}>
         <Particle />
         <StyledTypography variant="h4">Meet the Team</StyledTypography>
         <div className="board-container">

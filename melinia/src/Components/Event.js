@@ -10,6 +10,7 @@ import events from "../Data/EventsInfo";
 import { Button } from "@mui/material";
 import CallIcon from "@mui/icons-material/Call";
 import ContinueApplicationButton from "./Continueapplication";
+import CustomButton from "./backbutton";
 import "./Event.css";
 const EventDetails = () => {
     const { id } = useParams();
@@ -23,14 +24,10 @@ const EventDetails = () => {
     return (
         <div className="flex flex-col p-6 min-h-screen overflow-hidden mt-12">
             {/* Back button placed above the grid, left-aligned */}
-            <Button
-                onClick={() => navigate(-1)}
-                variant="text"
-                className="!text-[#F33A6A] font-bold self-start"
-            >
-                ← Back
-            </Button>
             {/* <div className="flex flex-col md:flex-row p-6 min-h-[calc(100vh-HeaderHeight-FooterHeight)] overflow-hidden"> */}
+            <div className="fixed top-3 left-4 z-[1100]">
+                <CustomButton />
+            </div>
             <div className="flex flex-col md:flex-row  min-h-screen overflow-hidden">
 
                 {/* <div className="flex flex-col md:flex-row p-6 h-screen overflow-y-auto"> */}
@@ -110,6 +107,7 @@ const EventDetails = () => {
                 <ContinueApplicationButton />
             </div>
         </div >
+
     );
 };
 

@@ -1,69 +1,82 @@
-import React from 'react';
+import React from "react";
 
 const HoverButton = ({ text, onClick, isActive }) => {
   return (
     <button
-      className={`hover-btn ${isActive ? 'active' : ''}`} // Add 'active' class if the button is active
+      className={`hover-btn ${isActive ? "active" : ""}`}
       onClick={onClick}
     >
       {text}
       <style jsx>{`
         .hover-btn {
-          width: 10em;
+          width: clamp(8em, 15vw, 12em); /* Scales based on viewport */
+          height: clamp(3em, 5vw, 3.5em);
           position: relative;
-          height: 3.5em;
-          border: 3px ridge #F33A6A; // Border color - Squid Game pink
+          border: 3px ridge #f33a6a; /* Squid Game pink */
           outline: none;
           background-color: transparent;
           color: white;
-          transition: 1s;
+          transition: 0.5s;
           border-radius: 0.3em;
-          font-size: 16px;
+          font-size: clamp(14px, 1.2vw, 16px); /* Scales with screen */
           font-weight: bold;
           cursor: pointer;
         }
 
-        .hover-btn::after {
+        .hover-btn::after,
+        .hover-btn::before {
           content: "";
           position: absolute;
-          top: -10px;
-          left: 3%;
           width: 95%;
           height: 40%;
-          background-color: black; // Top glow - Black
+          background-color: black;
           transition: 0.5s;
           transform-origin: center;
         }
 
+        .hover-btn::after {
+          top: -10px;
+          left: 3%;
+        }
+
         .hover-btn::before {
-          content: "";
-          transform-origin: center;
-          position: absolute;
           top: 80%;
           left: 3%;
-          width: 95%;
-          height: 40%;
-          background-color: black; // Bottom glow - Black
-          transition: 0.5s;
         }
 
         .hover-btn:hover::before,
         .hover-btn:hover::after {
-          transform: scale(0); // Remove the glow effect when hovered
+          transform: scale(0);
         }
 
         .hover-btn:hover {
-          box-shadow: inset 0px 0px 25px #F76B8A; // Hover effect - Lighter pink
+          box-shadow: inset 0px 0px 25px #f76b8a;
         }
 
-        // Remove hover effect for active state
         .hover-btn.active {
-          box-shadow: none; // Remove box-shadow when button is active
+          box-shadow: none;
         }
 
         .hover-btn.active::before,
         .hover-btn.active::after {
-          transform: scale(0); // Remove top and bottom glow when button is active
+          transform: scale(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .hover-btn {
+            width: 80%;
+            font-size: 14px;
+            height: 3em;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hover-btn {
+            width: 90%;
+            font-size: 12px;
+            height: 2.8em;
+          }
         }
       `}</style>
     </button>

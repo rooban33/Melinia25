@@ -6,9 +6,11 @@ import DetailCard from "./DetailCard";
 import arrowIcon from "../Assets/icons/arrow_icon.png";
 import goldTrophy from "../Assets/icons/gold_medal.png";
 import silverTrophy from "../Assets/icons/silver_medal.png";
-import callIcon from "../Assets/icons/call.png";
 import events from "../Data/EventsInfo";
 import { Button } from "@mui/material";
+import CallIcon from "@mui/icons-material/Call";
+import ContinueApplicationButton from "./Continueapplication";
+import "./Event.css";
 const EventDetails = () => {
     const { id } = useParams();
     console.log({ id });
@@ -95,18 +97,17 @@ const EventDetails = () => {
                     <div className="text-gray-700 ml-4">
                         {event.contact.map((person, index) => (
                             <div key={index} className="flex items-center mt-2">
-                                <img src={callIcon} alt="Call Icon" className="w-6 h-6 mr-2" />
+                                <CallIcon className="text-[#F33A6A] mr-2" />
                                 <span>{person}</span>
                             </div>
                         ))}
                     </div>
                     {/* Registration Button */}
-                    <div className="mt-6 p-8">
-                        <a href="/register" className="bg-red-600 text-white px-6 py-2 rounded-lg text-lg font-semibold hover:bg-red-700 transition">
-                            Register Now
-                        </a>
-                    </div>
+
                 </div>
+            </div>
+            <div className="mt-6 p-8 flex justify-center">
+                <ContinueApplicationButton />
             </div>
         </div >
     );

@@ -72,3 +72,27 @@
     border-color: #ff3860;
     /* Squid Game Red */
 }
+
+@media (max-width: 768px) {
+    .pixel-card {
+        width: 95vw;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .hover-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pixel-card {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .hover-text {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,18 @@
+@keyframes scatter {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--x-move), var(--y-move)) scale(1.5);
+    }
+}
+
+.scatter-particle {
+    position: absolute;
+    --x-move: calc(100px - 50%);
+    --y-move: calc(100px - 50%);
+    animation: scatter 2s ease-out infinite;
+}

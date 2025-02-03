@@ -112,8 +112,7 @@ const NavBar = () => {
               </Nav.Link>
             </Nav.Item>
               <Nav.Item>
-                <Nav.Link className="scroll-link" onClick={handleScrollToEvents}
-                style={{ textDecoration: "none", color: "white" }}>
+                <Nav.Link className="scroll-link" as={Link} to="/events" onClick={() => updateExpanded(false)}>
                  
                   Events
                 </Nav.Link>

@@ -8,6 +8,7 @@ import Board from "./Components/Board/Board";
 import MainDescription from './Components/Events/MainDescription';
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact/Contact"
+import EventsPage from './Components/EventsPage';
 
 
 
@@ -45,7 +46,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/board" element={<Board />} />
-          <Route path="/events/:id" element={<MainDescription />} />
+          <Route path="/events" element={<EventsPage />} />
    
           <Route path="/developers" element={<Developers />} />
           <Route path="/contact" element={<Contact />} />

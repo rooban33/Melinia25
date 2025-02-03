@@ -2,76 +2,84 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { AiFillMail, AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import Ballpit from './BallPit';
 
 import './Footer.css';
 
 function Footer() {
   const handleClick = () => {
-    window.location.href = '/developers';
+    window.location.href = "/developers";
   };
 
   return (
-    <Container fluid className="footer" style={{
-      zIndex: '10',
-      position: 'relative',
-      minHeight: "150px",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-around",
-      overflow: "hidden",
-    }}>
-      {/* Ballpit Canvas Background */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: 0, // Puts Ballpit behind other elements
-        pointerEvents: 'none', // Ensures it doesn’t block clicks
-      }}>
-        <Ballpit
-          count={40}
-          gravity={0.1}
-          friction={1}
-          wallBounce={0.7}
-          followCursor={false}
-        />
-      </div>
-
-      <Row className="justify-content-around" style={{ position: "relative", zIndex: 2 }}>
+    <Container 
+      fluid 
+      className="footer"
+      style={{
+        zIndex: "10",
+        position: "relative",
+        minHeight: "150px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-around",
+        background: "rgb(73 72 72 / 20%)",  // Semi-transparent white
+        backdropFilter: "blur(10px)",  // Glassmorphism effect
+        WebkitBackdropFilter: "blur(10px)",  // Safari support
+        borderRadius: "10px",
+        padding: "20px",
+      }}
+    >
+      <Row className="justify-content-around text-center">
         <Col xs={12} md={6} lg={4} className="contactus">
-          <h3 className="d-none d-md-block" style={{ fontSize: "15px", color: "white" }}>For Updates..</h3>
-          <a href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u" style={{ textDecoration: "none", color: "white", fontSize: "20px" }}>
-            Follow Our <FaWhatsapp /> channel
+          <h3 className="d-none d-md-block" style={{ fontSize: "16px", color: "black", fontWeight: "bold" }}>
+            Stay Updated
+          </h3>
+          <a 
+            href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u" 
+            style={{ textDecoration: "none", color: "green", fontSize: "18px", fontWeight: "500", transform:"fontSize: '25px'" }}
+          >
+            Follow Our <FaWhatsapp /> Channel
           </a>
         </Col>
 
         <Col xs={12} md={6} lg={4} className="dum">
-          <div className="foot d-none d-md-block" style={{ fontSize: "20px", color: "white" }}>Our Connections</div>
-          <div className="icons" style={{ display: "flex", justifyContent: "space-around", fontSize: "30px", color: "white" }}>
-            <a href="mailto:melinia2k24@gmail.com" style={{ color: "white", textDecoration: 'none' }}>
-              <AiFillMail />
-            </a>
-
-            <a href="https://www.linkedin.com/in/melinia-cit-91810926b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style={{ color: "white", textDecoration: 'none' }}>
-              <FaLinkedinIn />
-            </a>
-
-            <a href="https://www.instagram.com/melinia.cit/?igsh=MWdxdmM0a3Jzd2Z0dQ%3D%3D" style={{ color: "white", textDecoration: 'none' }}>
-              <AiFillInstagram />
-            </a>
-
-            <a href="https://youtube.com/@meliniacit8188?si=SaWs2IP_NrfF4Ubh" style={{ color: "white", textDecoration: 'none' }}>
-              <AiFillYoutube />
-            </a>
+          <div className="foot d-none d-md-block" style={{ fontSize: "18px", color: "white", fontWeight: "bold", marginBottom: "10px" }}>
+            Connect With Us
           </div>
+          <div className="icons" style={{ display: "flex", justifyContent: "center", gap: "20px", fontSize: "28px" }}>
+  <a href="mailto:melinia2k24@gmail.com" className="footer-icon footer-icon-mail">
+    <span><AiFillMail /></span>
+  </a>
+  <a href="https://www.linkedin.com/in/melinia-cit-91810926b" className="footer-icon footer-icon-ln">
+    <span><FaLinkedinIn /></span>
+  </a>
+  <a href="https://www.instagram.com/melinia.cit" className="footer-icon footer-icon-ig">
+    <span><AiFillInstagram /></span>
+  </a>
+  <a href="https://youtube.com/@meliniacit8188" className="footer-icon footer-icon-yt">
+    <span><AiFillYoutube /></span>
+  </a>
+  <a href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u" className="footer-icon footer-icon-wa">
+    <span><FaWhatsapp /></span>
+  </a>
+</div>
+
+
         </Col>
       </Row>
 
-      <Row className="justify-content-center" style={{ position: "relative", zIndex: 2 }}>
-        <Col xs={12} className="developed-with-love" style={{ fontSize: "15px", color: "white", textDecoration: "underline" }} onClick={handleClick}>
+      <Row className="justify-content-center">
+        <Col 
+          xs={12} 
+          className="developed-with-love" 
+          style={{ 
+            fontSize: "14px", 
+            color: "white", 
+            textDecoration: "underline", 
+            cursor: "pointer",
+            fontWeight: "500"
+          }} 
+          onClick={handleClick}
+        >
           Dev Team
         </Col>
       </Row>

@@ -36,7 +36,7 @@ function Footer() {
           </h3>
 
           <a
-            href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u"
+            href="https://chat.whatsapp.com/Cta0Ye1ZoEb1aSXnheUZsV"
             style={{
               textDecoration: "none",
               color: "green",
@@ -67,7 +67,7 @@ function Footer() {
             <a href="https://youtube.com/@meliniacit8188" className="footer-icon footer-icon-yt">
               <span><AiFillYoutube /></span>
             </a>
-            <a href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u" className="footer-icon footer-icon-wa">
+            <a href="https://chat.whatsapp.com/Cta0Ye1ZoEb1aSXnheUZsV" className="footer-icon footer-icon-wa">
               <span><FaWhatsapp /></span>
             </a>
           </div>

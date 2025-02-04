@@ -10,10 +10,14 @@ import "@fontsource/poppins";
 import "@fontsource/montserrat";
 import { styled } from "@mui/system";
 import { Particle } from "../ParticlesBackground";
-import stanleyImage from '../../Assets/crew/stanley.jpg';
+import stanleyImage from '../../Assets/developers/shajith.jpeg';
 import deivaraniImage from '../../Assets/crew/deivarani.jpg';
 import manjuImage from '../../Assets/crew/manju.jpg';
 import kavithaImage from '../../Assets/crew/kavitha.jpg';
+import shajithImage from "../../Assets/developers/shajith.jpeg";
+import lokheshImage from "../../Assets/developers/lokhesh.jpeg";
+import pranavImage from "../../Assets/developers/pranav.jpeg";
+import rajanImage from "../../Assets/developers/rajan.jpeg";
 
 const StyledTypography = styled(Typography)({
   fontSize: "2.5rem",
@@ -54,7 +58,7 @@ class Developers extends React.Component {
       email: "71762131045@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/shajith-rooban-b26453221/", 
       instagram: "https://www.instagram.com/rooban_33/",
-      image: stanleyImage,
+      image: shajithImage,
     },
     {
       name: "Pranavarul K",
@@ -64,7 +68,7 @@ class Developers extends React.Component {
       email: "71762131034@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/pranavarul-karthikeyan-89945a223/",
       instagram: "https://www.instagram.com/_.pranav.19/",
-      image: deivaraniImage,
+      image: pranavImage,
     },
     {
       name: "Lokhesh R J",
@@ -74,7 +78,7 @@ class Developers extends React.Component {
       email: "71762131026@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/lokheshrj/",
       instagram: "https://www.instagram.com/predatory_knight/",
-      image: manjuImage,
+      image: lokheshImage,
     },
     {
       name: "Rajarajan A P",
@@ -84,7 +88,7 @@ class Developers extends React.Component {
       email: "71762131038@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/rajarajan-a-p/",
       instagram: "https://www.instagram.com/rajarajan_1105/",
-      image: kavithaImage,
+      image: rajanImage,
     },
     {
       name: "Karthick Roshan",

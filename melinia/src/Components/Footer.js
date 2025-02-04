@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { AiFillMail, AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import './Footer.css';
 
@@ -34,7 +35,7 @@ function Footer() {
             Stay Updated
           </h3>
           <a 
-            href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u" 
+            href="https://chat.whatsapp.com/Cta0Ye1ZoEb1aSXnheUZsV" 
             style={{ textDecoration: "none", color: "green", fontSize: "18px", fontWeight: "500", transform:"fontSize: '25px'" }}
           >
             Follow Our <FaWhatsapp /> Channel
@@ -58,7 +59,7 @@ function Footer() {
   <a href="https://youtube.com/@meliniacit8188" className="footer-icon footer-icon-yt">
     <span><AiFillYoutube /></span>
   </a>
-  <a href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u" className="footer-icon footer-icon-wa">
+  <a href="https://chat.whatsapp.com/Cta0Ye1ZoEb1aSXnheUZsV" className="footer-icon footer-icon-wa">
     <span><FaWhatsapp /></span>
   </a>
 </div>
@@ -67,22 +68,52 @@ function Footer() {
         </Col>
       </Row>
 
-      <Row className="justify-content-center">
-        <Col 
-          xs={12} 
-          className="developed-with-love" 
-          style={{ 
-            fontSize: "14px", 
-            color: "white", 
-            textDecoration: "underline", 
-            cursor: "pointer",
-            fontWeight: "500"
-          }} 
+      <Row className="justify-content-center py-3">
+      <Col 
+        xs={12} 
+        className="text-center"
+        style={{
+          fontSize: "14px",
+          color: "white",
+          fontWeight: "500",
+          cursor: "pointer",
+          position: "relative",
+          display: "inline-block",
+        }}
+      >
+        <motion.span 
           onClick={handleClick}
+          whileHover={{ scale: 1.1 }}
+          style={{ display: "inline-block" }}
         >
-          Dev Team
-        </Col>
-      </Row>
+          Brought to life by 
+          <span 
+            style={{
+              textDecoration: "underline",
+              marginLeft: "5px",
+              position: "relative",
+            }}
+          >
+            Dev Team
+            <span 
+              style={{
+                content: '""',
+                position: "absolute",
+                left: 0,
+                bottom: "-2px",
+                width: "100%",
+                height: "2px",
+                background: "white",
+                transform: "scaleX(0)",
+                transformOrigin: "right",
+                transition: "transform 0.3s ease-out",
+              }}
+              className="underline"
+            />
+          </span>
+        </motion.span>
+      </Col>
+    </Row>
     </Container>
   );
 }

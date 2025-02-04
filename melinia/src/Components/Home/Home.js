@@ -34,9 +34,9 @@ function Home() {
             {/* <AboutMelinia /> */}
             <CountdownTimer/>
           </Container>
-          <Container style={{ margin: 0, padding: 0, minWidth: '100%',marginBottom:"30px" }}>
+          {/* <Container style={{ margin: 0, padding: 0, minWidth: '100%',marginBottom:"30px" }}>
             <Events />
-          </Container>
+          </Container> */}
           <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom:"30px" }}>
             <Workshop />
           </Container>

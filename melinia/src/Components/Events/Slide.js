@@ -8,32 +8,27 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
     isCenterSlide,
     swipeTo,
     slideIndex,
-    onCardClick,
   } = StackedCarouselSlideProps;
 
   const coverImage = data[dataIndex].image;
   const text = data[dataIndex].text;
-  const path = data[dataIndex].path;
-
-  const handleClick = () => {
-    if (!isCenterSlide) {
-      swipeTo(slideIndex);
-    } else if (onCardClick) {
-      onCardClick(path);
-    }
-  };
 
   return (
-    <div className="card-card" draggable={true} onClick={handleClick}>
+    <div className="card-card" draggable={false}>
       <div className={`cover fill ${isCenterSlide ? "off" : "on"}`}>
-        <div className="card-overlay fill" />
+        <div
+          className="card-overlay fill"
+          onClick={() => {
+            if (!isCenterSlide) swipeTo(slideIndex);
+          }}
+        />
       </div>
       <div className="detail fill">
         <div className="discription">
           <p className="event-name">{text}</p>
         </div>
         <img
-          style={{ width: "100%", borderRadius: "10px" }}
+          style={{ width: "100%" , borderRadius: "10px"}}
           alt="cover"
           className="cover-image"
           src={coverImage}

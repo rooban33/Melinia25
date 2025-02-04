@@ -25,40 +25,40 @@ function Home() {
           <Container className="home-content">
             <Row>
               <Col className="home-header">
-                <HeroSection yearsImage={yearsImage} isEventCompleted={isEventCompleted}/>
+                <HeroSection yearsImage={yearsImage} isEventCompleted={isEventCompleted} />
               </Col>
-            
+
             </Row>
           </Container>
-          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom:"30px" }}>
+          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom: "30px" }}>
             {/* <AboutMelinia /> */}
-            <CountdownTimer/>
+            <CountdownTimer />
           </Container>
           {/* <Container style={{ margin: 0, padding: 0, minWidth: '100%',marginBottom:"30px" }}>
             <Events />
           </Container> */}
-          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom:"30px" }}>
+          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom: "30px" }}>
             <Workshop />
           </Container>
           {/* <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom:"30px" }}>
             <QueryCard />
           </Container> */}
-          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom:"30px" }}>
+          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom: "30px" }}>
             <Sponsors />
           </Container>
-          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom:"30px" }}>
+          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom: "30px" }}>
             <ChiefGuest />
           </Container>
-         
-          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom:"50px" }}>
+
+          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom: "50px" }}>
             <Timeline />
           </Container>
 
           {/* <div class="divv" style={{color: 'white',fontSize:'1.6rem',fontWeight: 700,fontFamily: "Audiowide"}}>Feel</div> */}
-          
-  
-   
-  
+
+
+
+
 
           {/* <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom:"0px" }}>
             <Contact />

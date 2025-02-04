@@ -1,202 +1,243 @@
 .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Fill the entire width of the viewport */
-    height: auto; /* Height will adjust based on content */
-    border-radius: 20px;
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    padding: 20px; /* Optional padding to prevent content from touching edges */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* Fill the entire width of the viewport */
+  height: auto;
+  /* Height will adjust based on content */
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  /* Optional padding to prevent content from touching edges */
+}
+
+
+/* Squid Game Style Animated Background */
+.squid-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 0, 0, 0.15), transparent);
+  animation: eerieGlow 3s infinite alternate;
+}
+
+@keyframes eerieGlow {
+  from {
+    transform: scale(1);
+    opacity: 0.5;
   }
-  
-  
-  /* Squid Game Style Animated Background */
-  .squid-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(255, 0, 0, 0.15), transparent);
-    animation: eerieGlow 3s infinite alternate;
-  }
-  
-  @keyframes eerieGlow {
-    from {
-      transform: scale(1);
-      opacity: 0.5;
-    }
-    to {
-      transform: scale(1.1);
-      opacity: 0.8;
-    }
-  }
-  
-  /* Hero Card with Marine Blue to Violet Gradient */
-  .hero-card {
-    /* background: linear-gradient(135deg, #002762, #310a40); Marine blue to violet */
-    backdrop-filter: blur(15px);
-    padding: 50px 80px;
-    border-radius: 20px;
-    /* box-shadow: 0px 15px 40px rgba(255, 0, 0, 0.5); */
-    /* border: 2px solid rgba(78, 8, 8, 0.3); */
-    max-width: 200%;
-    z-index: 10;
-  }
-  
-  /* Heading Styles */
-  .hero-heading {
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    opacity: 0.9;
-  }
-  
-  /* Subheading */
-  .hero-subheading {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-top: 10px;
-    opacity: 0.8;
-  }
-  
-  /* MELINIA Title */
-  .hero-title {
-    font-size: 6rem; /* Large size but not overwhelming */
-    font-weight: 900; /* Extra bold for impact */
-    margin-top: 20px;
-    letter-spacing: 2px; /* Balanced spacing */
-    position: relative;
-    font-family: "SquidGame", sans-serif;
-    color: #ffdab9; /* Squid Game pink */
-    
-    /* -webkit-text-stroke: 1.5px black; Subtle black outline */
-    /* text-shadow: 3px 3px 8px rgba(255, 0, 85, 0.6); Softer glow */
-    transform: skew(-3deg); /* Subtle skew for dynamic feel */
-  }
-  
-  
-  
-  /* Squid Game Highlight */
-  .squid-highlight {
-    color: #ff0055;
-    font-family: "SquidGame", sans-serif;
-    /* text-shadow: 0px 0px 30px rgba(255, 0, 0, 0.6); */
-  }
-  
-  /* Squid Game Shapes */
-  .squid-shapes {
-    margin-top: 10px;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .circle {
-    display: inline-block;
-    font-size: 4rem;
-    font-weight: bold;
-    text-shadow: 0px 0px 10px rgb(255, 0, 0);
-  }
-  .triangle {
-    display: inline-block;
-    font-size: 4rem;
-    font-weight: bold;
-    text-shadow: 0px 0px 10px #00ffff;
-  }
-  
-  .square {
-    display: inline-block;
-    font-size: 4rem;
-    font-weight: bold;
-    text-shadow: 0px 0px 10px #ff0000;
-  }
-  
-  /* Tagline */
-  .hero-tagline {
-    font-size: 1.3rem;
-    font-weight: 300;
-    margin-top: 15px;
-    opacity: 0.8;
-  }
-  
-  /* Squid Game Call-to-Action Button */
-  .squid-button {
-    margin-top: 30px;
-    padding: 14px 35px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: white;
-    background: linear-gradient(90deg, #ff0000, #8b0000);
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    /* box-shadow: 0px 10px 30px rgba(255, 0, 0, 0.6); */
-    position: relative;
-  }
-  
-  /* Mask Icon Hover */
-  .squid-button:hover {
+
+  to {
     transform: scale(1.1);
-    color: rgb(76, 76, 76);
-    background: linear-gradient(90deg, #00ffff, #00becc);
-    box-shadow: 0px 15px 40px rgba(0, 226, 230, 0.8);
+    opacity: 0.8;
   }
-  
-  /* Add Mask Emoji to Button */
-  .squid-button .mask-icon {
-    font-size: 1.4rem;
-    margin-right: 10px;
-  }
-
-  @media (max-width: 1024px) {
-    .hero-title {
-        font-size: 4rem;
-    }
-    .circle, .triangle, .square {
-        font-size: 2.5rem;
-    }
 }
 
+/* Hero Card with Marine Blue to Violet Gradient */
+.hero-card {
+  /* background: linear-gradient(135deg, #002762, #310a40); Marine blue to violet */
+  backdrop-filter: blur(15px);
+  padding: 50px 80px;
+  border-radius: 20px;
+  /* box-shadow: 0px 15px 40px rgba(255, 0, 0, 0.5); */
+  /* border: 2px solid rgba(78, 8, 8, 0.3); */
+  max-width: 200%;
+  z-index: 10;
+}
+
+/* Heading Styles */
+.hero-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* Subheading */
+.hero-subheading {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* MELINIA Title */
+.hero-title {
+  font-size: 6rem;
+  /* Large size but not overwhelming */
+  font-weight: 900;
+  /* Extra bold for impact */
+  margin-top: 20px;
+  letter-spacing: 2px;
+  /* Balanced spacing */
+  position: relative;
+  font-family: "SquidGame", sans-serif;
+  color: #ffdab9;
+  /* Squid Game pink */
+
+  /* -webkit-text-stroke: 1.5px black; Subtle black outline */
+  /* text-shadow: 3px 3px 8px rgba(255, 0, 85, 0.6); Softer glow */
+  transform: skew(-3deg);
+  /* Subtle skew for dynamic feel */
+}
+
+
+
+/* Squid Game Highlight */
+.squid-highlight {
+  color: #ff0055;
+  font-family: "SquidGame", sans-serif;
+  /* text-shadow: 0px 0px 30px rgba(255, 0, 0, 0.6); */
+}
+
+/* Squid Game Shapes */
+.squid-shapes {
+  margin-top: 10px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.circle {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px rgb(255, 0, 0);
+}
+
+.triangle {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px #00ffff;
+}
+
+.square {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px #ff0000;
+}
+
+/* Tagline */
+.hero-tagline {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
+/* Squid Game Call-to-Action Button */
+.squid-button {
+  margin-top: 30px;
+  padding: 14px 35px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, #ff0000, #8b0000);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* box-shadow: 0px 10px 30px rgba(255, 0, 0, 0.6); */
+  position: relative;
+}
+
+/* Mask Icon Hover */
+.squid-button:hover {
+  transform: scale(1.1);
+  color: rgb(76, 76, 76);
+  background: linear-gradient(90deg, #00ffff, #00becc);
+  box-shadow: 0px 15px 40px rgba(0, 226, 230, 0.8);
+}
+
+/* Add Mask Emoji to Button */
+.squid-button .mask-icon {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
+@media (max-width: 1024px) {
+  .hero-card {
+    padding: 40px 60px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .circle,
+  .triangle,
+  .square {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-    .hero-subheading {
-        font-size: 1rem;
-    }
-    .squid-shapes {
-        font-size: 1.5rem;
-    }
-    .squid-button {
-        font-size: 1rem;
-        padding: 10px 25px;
-    }
+  .hero-card {
+    padding: 30px 40px;
+    max-width: 95%;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subheading {
+    font-size: 1rem;
+  }
+
+  .squid-shapes {
+    font-size: 1.5rem;
+  }
+
+  .squid-button {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
 }
 
+/* Mobile Phones */
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 4rem;
-    }
-    .circle, .triangle, .square {
-        font-size: 2rem;
-    }
-    .hero-tagline {
-        font-size: 1rem;
-    }
+  .hero-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .circle,
+  .triangle,
+  .square {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .squid-button {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
 }
 
-  
-  @font-face {
-    font-family: "SquidGame";
-    src: url("../../../Assets/font/SquidGameFont.ttf");
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  body {
-    font-family: "SquidGame";
-  }
+
+@font-face {
+  font-family: "SquidGame";
+  src: url("../../../Assets/font/SquidGameFont.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "SquidGame";
+}

@@ -51,15 +51,15 @@ const GlassCard = styled(Card)({
 class Board extends React.Component {
   cardDataTeachers = [
     {
-      name: "Dr.C.Stanly Felix PhD",
-      role: "Faculty Coordinator",
+      name: "Dr.C.Stanly Felix",
+      role: "Faculty Advisor",
       department: "Department of Computing",
       phone: "+917845738898",
       email: "stanlyfelix@cit.edu.in",
       image: stanleyImage,
     },
     {
-      name: "Ms.S.Deivarani MCA.,M.Phil",
+      name: "Ms.S.Deivarani",
       role: "Faculty Coordinator",
       department: "Department of Computing",
       phone: "+919486624020",
@@ -67,7 +67,7 @@ class Board extends React.Component {
       image: deivaraniImage,
     },
     {
-      name: "Dr.D.Manju M.C.A,M.Phil,Ph.D",
+      name: "Dr.D.Manju",
       role: "Faculty Coordinator",
       department: "Department of Computing",
       phone: "+919865229679",
@@ -75,7 +75,7 @@ class Board extends React.Component {
       image: manjuImage,
     },
     {
-      name: "Dr.D. KAVITHA MCA,M.Phil,PhD",
+      name: "Dr.D. KAVITHA",
       role: "Faculty Coordinator",
       department: "Department of Computing",
       phone: "+918248164968",
@@ -84,44 +84,45 @@ class Board extends React.Component {
     },
   ];
 
-  cardDataStudent = [
-    {
-      name: "Suvetha A R",
-      role: "Faculty Coordinator",
-      department: "Department of Computing",
-      phone: "+917845738898",
-      email: "stanlyfelix@cit.edu.in",
-      image: suvethaImage,
-    },
-    {
-      name: "Mohan Raj M",
-      role: "Faculty Coordinator",
-      department: "Department of Computing",
-      phone: "+919486624020",
-      email: "deivarani@cit.edu.in",
-      image: mohanImage,
-    },
-    {
-      name: "Dharun",
-      role: "Faculty Coordinator",
-      department: "Department of Computing",
-      phone: "+919865229679",
-      email: "manju@cit.edu.in",
-      image: dharunImage,
-    },
-    {
-      name: "Naveen",
-      role: "Faculty Coordinator",
-      department: "Department of Computing",
-      phone: "+918248164968",
-      email: "kavithad@cit.edu.in",
-      image: naveenImage,
-    },
-  ];
+cardDataStudent = [
+  {
+    name: "Suvetha A R",
+    role: "Faculty Coordinator",
+    department: "M.Sc. Software Systems (4th Year)",
+    phone: "+917845738898",
+    email: "71762131053@cit.edu.in",
+    image: suvethaImage,
+  },
+  {
+    name: "Mohan Raj M",
+    role: "Faculty Coordinator",
+    department: "M.Sc. Data Science (4th Year)",
+    phone: "+919486624020",
+    email: "71762132025@cit.edu.in",
+    image: mohanImage,
+  },
+  {
+    name: "Dharun P A",
+    role: "Faculty Coordinator",
+    department: "M.Sc. Decision & Computing Sciences (4th Year)",
+    phone: "+919600878014",
+    email: "71762133011@cit.edu.in",
+    image: dharunImage,
+  },
+  {
+    name: "Naveen R",
+    role: "Faculty Coordinator",
+    department: "M.Sc. AI & Machine Learning (4th Year)",
+    phone: "+918248164968",
+    email: "71762134031@cit.edu.in",
+    image: naveenImage,
+  },
+];
+
 
   render() {
     return (
-      <div style={{ backgroundColor: "#1a1a2e", padding: "100px 0" }}>
+      <div style={{ backgroundColor: "transparent", padding: "100px 0" }}>
         <Particle />
         <StyledTypography variant="h4">Meet the Team</StyledTypography>
         <div className="board-container">
@@ -147,8 +148,8 @@ class Board extends React.Component {
               <CardMedia component="img" alt={data.name} height="320px" image={data.image} className="image-fit" />
               <CardContent>
                 <Typography variant="h5" className="card-title">{data.name}</Typography>
-                <Typography variant="body1" className="card-subtitle" style={{paddingTop:"0.5rem"}}>{data.role}</Typography>
                 <Typography variant="body2" className="card-text" style={{paddingTop:"0.5rem"}}>{data.department}</Typography>
+                <Typography variant="body1" className="card-subtitle" style={{paddingTop:"0.5rem"}}>{data.role}</Typography>
               </CardContent>
               <CardContent className="contact-icons">
                 <FontAwesomeIcon icon={faPhone} className="icon" onClick={() => window.location.href = `tel:${data.phone}`} />

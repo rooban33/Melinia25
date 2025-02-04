@@ -1,4 +1,10 @@
 
+.events{
+    font-size: 400%;
+    font-weight: bold;
+    color: white;
+}
+
 .card {
     opacity: 1 !important;
     background-color: transparent !important;
@@ -11,9 +17,7 @@
     top: 43%;
     box-shadow: none;
     border-radius: 50%;
-    /* Circular shape */
     width: 36px;
-    /* Adjust as needed */
     height: 36px;
     cursor: pointer;
     background-color: black;
@@ -44,9 +48,9 @@
 
 
 .react-stacked-center-carousel {
-    padding: 50px 0;
+    padding: 20px 0 50px 0;
     background-color: transparent !important;
-    height: 400px !important;
+    height: 650px !important;
     border-radius: 20px;
     opacity: 1;
 }
@@ -56,7 +60,7 @@
     cursor: pointer;
     width: 100%;
     border-radius: 15px;
-    height: 280px;
+    height: 550px;
     position: relative;
     background-color: transparent;
     border-color: transparent;
@@ -65,10 +69,11 @@
 
 .card-card:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 .react-stacked-center-carousel-slide-0 .card-card {
-    cursor: default;
+    cursor: pointer;
 }
 
 .react-stacked-center-carousel-slide-0 .card-card:hover {
@@ -104,46 +109,33 @@
 
 .card-card:hover .cover-image {
     filter: blur(3px);
-    /* Blur effect on hover */
     transform: scale(1.03);
-    /* Slight zoom to enhance effect */
 }
 
-/* Styles for the text on the card */
 .card-card .discription {
     position: absolute;
     bottom: 50%;
-    /* Center vertically */
     left: 50%;
-    /* Center horizontally */
     transform: translate(-50%, 50%);
     color: white;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     opacity: 0;
-    /* Hidden by default */
     z-index: 2;
-    /* Text appears above everything else */
     transition: opacity 300ms ease, transform 300ms ease;
-    /* Smooth fade-in and movement */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    /* Shadow for readability */
 }
 
 .card-card:hover .discription {
     opacity: 1;
-    /* Show the text on hover */
     transform: translate(-50%, -50%);
-    /* Center text fully */
 }
 
-/* Center slide-specific styles */
 .react-stacked-center-carousel-slide-0 .card-card .cover {
     transition: opacity 300ms ease, z-index 0ms 300ms;
 }
 
-/* Cover (acts as a clickable area for non-center slides) */
 .card-card .cover {
     position: absolute;
     transition: opacity 300ms ease;
@@ -159,13 +151,10 @@
     z-index: -1;
 }
 
-/* Hover effect for text description */
 .card-card .discription:hover {
     color: #ffcc00;
-    /* Highlight text color on hover */
 }
 
-/* Indicator styles */
 .indicators {
     display: flex;
     justify-content: center;
@@ -187,81 +176,4 @@
 
 .indicator.active {
     background-color: #3f51b5;
-}
-
-@media (max-width: 426px) {
-    .react-stacked-center-carousel {
-        width: 100% !important;
-        max-width: 360px;
-        margin: 0 auto;
-        height: 250px !important;
-        border-radius: 15px;
-        overflow: visible;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
-
-    .card-card {
-        width: 75% !important;
-        height: 180px !important;
-        border-radius: 15px !important;
-        position: relative;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .react-stacked-center-carousel-slide {
-        transform: scale(0.8);
-        transition: transform 0.3s ease;
-        opacity: 0.7;
-    }
-
-    .react-stacked-center-carousel-slide-0 {
-        transform: scale(1) !important;
-        opacity: 1 !important;
-    }
-
-    .card-card .cover-image {
-        border-radius: 15px;
-        object-fit: cover;
-        width: 100% !important;
-        height: 100% !important;
-        margin: 0 0 0 47px;
-    }
-
-    .card .card-button {
-        width: 32px;
-        height: 32px;
-        font-size: 18px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 2;
-    }
-
-    .card .card-button.left {
-        left: 0px;
-        /* Adjusted to move right */
-    }
-
-    .card .card-button.right {
-        right: 0px;
-    }
-
-    .react-stacked-center-carousel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .discription {
-        font-size: 14px;
-        bottom: 40%;
-    }
-
-    .indicator {
-        width: 8px;
-        height: 8px;
-    }
 }

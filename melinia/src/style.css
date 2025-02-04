@@ -60,12 +60,12 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #401950;
+  background: black;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(191, 121, 216, 0.959);
+  background: #401950;
   border-radius: 12px;
 }
 
@@ -369,7 +369,7 @@ button:focus {
   text-align: center;
   width: 100%;
   min-height: 300px;
-  background-color: #0c0915 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
   border-radius: 20px;
 
 }
@@ -626,7 +626,7 @@ button:focus {
     text-align: start;
     width: 100%;
     min-height: 300px;
-    background-color: rgba(21, 15, 35, 0.6) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
     /* Adjust the alpha value (0.0 to 1.0) for the desired transparency */
   }
 
@@ -707,7 +707,8 @@ button:focus {
   }
 
   .events-grid {
-    grid-template-columns: 1fr; /* Stacks cards on smaller screens */
+    grid-template-columns: 1fr;
+    /* Stacks cards on smaller screens */
   }
 }
 

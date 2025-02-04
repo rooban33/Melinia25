@@ -1,103 +1,131 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
-import abhi from '../../Assets/developers/abhiniveshCompress.jpg'
-import janu from '../../Assets/developers/janumathi.jpg'
-import susma from '../../Assets/developers/susmaCompress.png'
-import rithik from '../../Assets/developers/rithik.png'
-import "./Developers.css"
-import {
-  AiFillMail,
-  AiFillInstagram,
-  AiFillPhone,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import "@fontsource/poppins";
+import "@fontsource/montserrat";
+import { styled } from "@mui/system";
+import { Particle } from "../ParticlesBackground";
+import stanleyImage from '../../Assets/crew/stanley.jpg';
+import deivaraniImage from '../../Assets/crew/deivarani.jpg';
+import manjuImage from '../../Assets/crew/manju.jpg';
+import kavithaImage from '../../Assets/crew/kavitha.jpg';
 
+const StyledTypography = styled(Typography)({
+  fontSize: "2.5rem",
+  fontWeight: 700,
+  color: "rgba(255, 255, 255, 0.9)",
+  textAlign: "center",
+  marginBottom: "20px",
+  fontFamily: "Poppins, sans-serif",
+  textTransform: "uppercase",
+  backdropFilter: "blur(10px)",
+  padding: "10px 20px",
+  borderRadius: "12px",
+  background: "rgba(255, 255, 255, 0.1)",
+});
 
-
-const developers = [
-  {
-    name: 'Abhinivesh S',
-    department: 'MSc DCS',
-    email: 'abhinivi67@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/abhinivesh0305/',
-    instagram: 'https://www.instagram.com/sound_of_keys/',
-    phone: '9345884174',
-    photoUrl: abhi,
+const GlassCard = styled(Card)({
+  borderRadius: "18px",
+  width: "100%",
+  maxWidth: "280px",
+  backdropFilter: "blur(15px)",
+  background: "rgba(255, 255, 255, 0.15)",
+  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
+  transition: "transform 0.3s ease-in-out",
+  padding: "20px",
+  '&:hover': {
+    transform: "scale(1.05)",
+    boxShadow: "0 12px 40px rgba(0, 0, 0, 0.4)",
   },
-  {
-    name: 'Susma V',
-    department: 'MSc SS',
-    email: 'susmav1012@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/susmav?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagram: 'https://www.instagram.com/susmavijayakumar?igsh=MTN6dGx1dWs3dXlieQ==',
-    phone: '6385480548',
-    photoUrl: susma,
-  },
-  {
-    name: 'Janumathi G P',
-    department: 'MSc SS',
-    email: 'janusivan05@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/janumathi-g-p/',
-    phone: '9360628869',
-    photoUrl: janu,
-  },
-  {
-    name: 'Rithik Suthan ',
-    department: 'MSc SS',
-    email: 'rithiksuthan123@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/rithiksuthan/',
-    instagram: 'https://www.instagram.com/rithik_suthan/',
-    phone: '6383704021',
-    photoUrl: rithik,
-  },
-];
+});
+
+class Developers extends React.Component {
+  cardDataUs = [
+    {
+      name: "Shajithrooban G G",
+      role: "Web Developer",
+      department: "M.Sc. Software Systems (4th Year)",
+      phone: "+917845738898",
+      email: "71762131045@cit.edu.in",
+      linkedin: "https://www.linkedin.com/in/shajith-rooban-b26453221/", 
+      instagram: "https://www.instagram.com/rooban_33/",
+      image: stanleyImage,
+    },
+    {
+      name: "Pranavarul K",
+      role: "Web Developer",
+      department: "M.Sc. Software Systems (4th Year)",
+      phone: "+919486624020",
+      email: "71762131034@cit.edu.in",
+      linkedin: "https://www.linkedin.com/in/pranavarul-karthikeyan-89945a223/",
+      instagram: "https://www.instagram.com/_.pranav.19/",
+      image: deivaraniImage,
+    },
+    {
+      name: "Lokhesh R J",
+      role: "Web Developer",
+      department: "M.Sc. Software Systems (4th Year)",
+      phone: "+919865229679",
+      email: "71762131026@cit.edu.in",
+      linkedin: "https://www.linkedin.com/in/lokheshrj/",
+      instagram: "https://www.instagram.com/predatory_knight/",
+      image: manjuImage,
+    },
+    {
+      name: "Rajarajan A P",
+      role: "Web Developer",
+      department: "M.Sc. Software Systems (4th Year)",
+      phone: "+918248164968",
+      email: "71762131038@cit.edu.in",
+      linkedin: "https://www.linkedin.com/in/rajarajan-a-p/",
+      instagram: "https://www.instagram.com/rajarajan_1105/",
+      image: kavithaImage,
+    },
+    {
+      name: "Karthick Roshan",
+      role: "Web Developer",
+      department: "M.Sc. Software Systems (4th Year)",
+      phone: "+918248164968",
+      email: "71762131024@cit.edu.in",
+      linkedin: "https://www.linkedin.com/in/karthick-roshan/",
+      instagram: "https://www.instagram.com/karthick._.roshan/",
+      image: kavithaImage,
+    },
+  ];
 
 
-const Developers = () => {
-  return (
-    <>
+  render() {
+    return (
+      <div style={{ backgroundColor: "transparent", padding: "100px 0" }}>
+        <Particle />
+        <StyledTypography variant="h4">Development Team</StyledTypography>
+        <div className="board-container">
+          {this.cardDataUs.map((data, index) => (
+            <GlassCard key={index}>
+              <CardMedia component="img" alt={data.name} height="320px" image={data.image} className="image-fit" />
+              <CardContent>
+                <Typography variant="h5" className="card-title">{data.name}</Typography>
+                <Typography variant="body1" className="card-subtitle" style={{ paddingTop: "0.5rem" }}>{data.role}</Typography>
+                <Typography variant="body2" className="card-text" style={{ paddingTop: "0.5rem" }}>{data.department}</Typography>
+              </CardContent>
+              <CardContent className="contact-icons" style={{ display: "flex", justifyContent: "center", gap: "15px", paddingTop: "10px" }}>
+              <FontAwesomeIcon icon={faPhone} className="icon" onClick={() => window.location.href = `tel:${data.phone}`} style={{ fontSize: "1.5rem", cursor: "pointer" }} />
+              <FontAwesomeIcon icon={faEnvelope} className="icon" onClick={() => window.location.href = `mailto:${data.email}`} style={{ fontSize: "1.5rem", cursor: "pointer" }} />
+              <FontAwesomeIcon icon={faLinkedin} className="icon" onClick={() => window.open(`${data.linkedin}`, "_blank")} style={{ fontSize: "1.5rem", cursor: "pointer"}} />
+              <FontAwesomeIcon icon={faInstagram} className="icon" onClick={() => window.open(`${data.instagram}`, "_blank")} style={{ fontSize: "1.5rem", cursor: "pointer"}} />
+            </CardContent>
 
-
-      <h3 className="aboutFont" style={{ marginTop: '100px', textAlign:"center", right:"0 !important"}}>DEVELOPMENT TEAM</h3>
-
-
-      <div className="develop d-flex flex-wrap justify-content-around" style={{ margin: '50px' }}>
-
-        {developers.map((developer, index) => (
-          <Card key={index} className="mb-4" style={{ width: '18rem', backgroundColor: 'transparent', borderColor: 'white' }}>
-            <div className="circle-image" style={{ marginTop: "20px" }}>
-              <Card.Img src={developer.photoUrl} />
-            </div>
-
-            <Card.Body>
-              <Card.Title style={{ color: 'white' }}>{developer.name}</Card.Title>
-              <Card.Subtitle className="mb-2" style={{ color: 'white' }}>
-                {developer.department}
-              </Card.Subtitle>
-              <div className='icons'>
-                <a href={`mailto:${developer.email}`} target="_blank" rel="noopener noreferrer">
-                  <AiFillMail />
-                </a>
-                <a href={developer.linkedin} target="_blank" rel="noopener noreferrer">
-                  <FaLinkedinIn />
-                </a>
-
-                {developer.instagram && (
-                  <a href={developer.instagram} target="_blank" rel="noopener noreferrer">
-                    <AiFillInstagram />
-                  </a>
-                )}
-
-                <a href={`tel:${developer.phone}`} style={{ textDecoration: 'none' }}>
-                  <AiFillPhone />
-                </a>
-              </div>
-            </Card.Body>
-          </Card>
-        ))}
+            </GlassCard>
+          ))}
+        </div>
       </div>
-    </>
-  );
-};
+    );
+  }
+}
 
 export default Developers;

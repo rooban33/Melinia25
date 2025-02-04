@@ -1,5 +1,34 @@
-a{
-  text-decoration: none !important;
-  color: white !important;
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: all 0.3s ease-in-out;
+  color: #b6b3b3; /* Default color */
+  text-decoration: none;
 }
 
+.footer-icon span {
+  pointer-events: none; /* Ensures the hover effect applies on the <a> tag */
+}
+
+/* Social media hover effects */
+.footer-icon-mail:hover {
+  color: #D44638; /* Gmail Red */
+}
+
+.footer-icon-ln:hover {
+  color: #0A66C2; /* LinkedIn Blue */
+}
+
+.footer-icon-ig:hover {
+  color: #E4405F; /* Instagram Pink */
+}
+
+.footer-icon-yt:hover {
+  color: #FF0000; /* YouTube Red */
+}
+
+.footer-icon-wa:hover {
+  color: #25D366; /* WhatsApp Green */
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { AiFillMail, AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import './Footer.css';
 
 function Footer() {
@@ -11,8 +11,8 @@ function Footer() {
   };
 
   return (
-    <Container 
-      fluid 
+    <Container
+      fluid
       className="footer"
       style={{
         zIndex: "10",
@@ -33,12 +33,20 @@ function Footer() {
           <h3 className="d-none d-md-block" style={{ fontSize: "16px", color: "black", fontWeight: "bold" }}>
             Stay Updated
           </h3>
-          <a 
-            href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u" 
-            style={{ textDecoration: "none", color: "green", fontSize: "18px", fontWeight: "500", transform:"fontSize: '25px'" }}
+
+          <a
+            href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u"
+            style={{
+              textDecoration: "none",
+              color: "green",
+              fontSize: "18px",
+              fontWeight: "500"
+            }}
           >
-            Follow Our <FaWhatsapp /> Channel
+            Follow Our <WhatsAppIcon /> Channel
           </a>
+
+
         </Col>
 
         <Col xs={12} md={6} lg={4} className="dum">
@@ -46,38 +54,38 @@ function Footer() {
             Connect With Us
           </div>
           <div className="icons" style={{ display: "flex", justifyContent: "center", gap: "20px", fontSize: "28px" }}>
-  <a href="mailto:melinia2k24@gmail.com" className="footer-icon footer-icon-mail">
-    <span><AiFillMail /></span>
-  </a>
-  <a href="https://www.linkedin.com/in/melinia-cit-91810926b" className="footer-icon footer-icon-ln">
-    <span><FaLinkedinIn /></span>
-  </a>
-  <a href="https://www.instagram.com/melinia.cit" className="footer-icon footer-icon-ig">
-    <span><AiFillInstagram /></span>
-  </a>
-  <a href="https://youtube.com/@meliniacit8188" className="footer-icon footer-icon-yt">
-    <span><AiFillYoutube /></span>
-  </a>
-  <a href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u" className="footer-icon footer-icon-wa">
-    <span><FaWhatsapp /></span>
-  </a>
-</div>
+            <a href="mailto:melinia2k24@gmail.com" className="footer-icon footer-icon-mail">
+              <span><AiFillMail /></span>
+            </a>
+            <a href="https://www.linkedin.com/in/melinia-cit-91810926b" className="footer-icon footer-icon-ln">
+              <span><FaLinkedinIn /></span>
+            </a>
+            <a href="https://www.instagram.com/melinia.cit" className="footer-icon footer-icon-ig">
+              <span><AiFillInstagram /></span>
+            </a>
+            <a href="https://youtube.com/@meliniacit8188" className="footer-icon footer-icon-yt">
+              <span><AiFillYoutube /></span>
+            </a>
+            <a href="https://whatsapp.com/channel/0029VaMavcO0QeaqNYTjzW3u" className="footer-icon footer-icon-wa">
+              <span><FaWhatsapp /></span>
+            </a>
+          </div>
 
 
         </Col>
       </Row>
 
       <Row className="justify-content-center">
-        <Col 
-          xs={12} 
-          className="developed-with-love" 
-          style={{ 
-            fontSize: "14px", 
-            color: "white", 
-            textDecoration: "underline", 
+        <Col
+          xs={12}
+          className="developed-with-love"
+          style={{
+            fontSize: "14px",
+            color: "white",
+            textDecoration: "underline",
             cursor: "pointer",
             fontWeight: "500"
-          }} 
+          }}
           onClick={handleClick}
         >
           Dev Team

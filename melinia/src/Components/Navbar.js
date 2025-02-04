@@ -5,9 +5,9 @@ import Container from "react-bootstrap/Container";
 import { useMediaQuery } from "react-responsive";
 import { FiMoreVertical } from "react-icons/fi";
 
-  import { Link, useLocation, useNavigate } from 'react-router-dom';
-  import citlogo from '../Assets/logo/log.png';
-  import cit from '../Assets/logo/mobile.png';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import citlogo from '../Assets/logo/log.png';
+import cit from '../Assets/logo/mobile.png';
 
 const NavBar = () => {
   const [expand, updateExpanded] = useState(false);
@@ -87,7 +87,7 @@ const NavBar = () => {
           />
         ) : ""}
 
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav" style={{ display: "flex !important", visibility: "visible" }}>
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link className="scroll-link" as={Link} to="/" onClick={() => updateExpanded(false)}>
@@ -111,13 +111,11 @@ const NavBar = () => {
                 Contact
               </Nav.Link>
             </Nav.Item>
-              <Nav.Item>
-                <Nav.Link className="scroll-link" onClick={handleScrollToEvents}
-                style={{ textDecoration: "none", color: "white" }}>
-                 
-                  Events
-                </Nav.Link>
-              </Nav.Item>
+            <Nav.Item>
+              <Nav.Link className="scroll-link" as={Link} to="/events" onClick={() => updateExpanded(false)}>
+                Events
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -8,9 +8,9 @@ import Board from "./Components/Board/Board";
 import MainDescription from './Components/Events/MainDescription';
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact/Contact"
-
-
-
+import EventsPage from "./Components/Events";
+import { ThemeProvider } from "@material-tailwind/react";
+import EventDetails from './Components/Event';
 import {
   BrowserRouter as Router,
   Route,
@@ -23,8 +23,8 @@ import Developers from './Components/Developers/Developers';
 import mixpanel from 'mixpanel-browser';
 // import Achievements from "./Components/Achievements/Achievements";
 
-mixpanel.init("80b2a21992bf5ce950bb5dbd06b144a7",{
-  debug:true
+mixpanel.init("80b2a21992bf5ce950bb5dbd06b144a7", {
+  debug: true
 })
 
 function App() {
@@ -37,26 +37,31 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar style={{display:'flex', justifyContent:'end'}} />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/board" element={<Board />} />
-          <Route path="/events/:id" element={<MainDescription />} />
-   
-          <Route path="/developers" element={<Developers />} />
-          <Route path="/contact" element={<Contact />} />
-
-
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Preloader load={load} />
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <Navbar style={{ display: 'flex', justifyContent: 'end' }} />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/board" element={<Board />} />
+            <Route path="/events/:id" element={<MainDescription />} />
+            <Route path="/events" element={<EventsPage />} />
+            <Route path="/developers" element={<Developers />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/event/:id" element={<EventDetails />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 
 }
 
+
 export default App;
+
+
+

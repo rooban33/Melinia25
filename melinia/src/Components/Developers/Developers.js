@@ -18,6 +18,7 @@ import shajithImage from "../../Assets/developers/shajith.jpeg";
 import lokheshImage from "../../Assets/developers/lokhesh.jpeg";
 import pranavImage from "../../Assets/developers/pranav.jpeg";
 import rajanImage from "../../Assets/developers/rajan.jpeg";
+import karthickImage from "../../Assets/developers/roshan.jpeg";
 
 const StyledTypography = styled(Typography)({
   fontSize: "2.5rem",
@@ -98,7 +99,7 @@ class Developers extends React.Component {
       email: "71762131024@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/karthick-roshan/",
       instagram: "https://www.instagram.com/karthick._.roshan/",
-      image: kavithaImage,
+      image: karthickImage,
     },
   ];
 

@@ -3,10 +3,12 @@ import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 import './Contact.css';
 import { Particle } from '../ParticlesBackground';
+import { motion } from 'framer-motion'; // Import Framer Motion
+import BlurText from '../BlurText';
 
-const SERVICE_ID = "service_ahi3duf";
-const TEMPLATE_ID = "template_r4ya1dd";
-const PUBLIC_KEY = "kjhxSKhqQ4DCCoy3Q";
+const SERVICE_ID = "service_dqvz8pd";
+const TEMPLATE_ID = "template_0atr5bz";
+const PUBLIC_KEY = "o5lAfhX2jUPshde1J";
 
 const Contact = () => {
   const handleOnSubmit = (e) => {
@@ -17,74 +19,69 @@ const Contact = () => {
         Swal.fire({
           icon: 'success',
           title: 'Message Sent Successfully'
-        })
+        });
       }, (error) => {
         console.log(error.text);
         Swal.fire({
           icon: 'error',
           title: 'Ooops, something went wrong',
           text: error.text,
-        })
+        });
       });
-    e.target.reset()
+    e.target.reset();
   };
 
   return (
-  
+    <div>
+      <Particle />
 
-  
-  <>
-  <Particle></Particle>
-  {/* <div class="heading"> Feel free to ask</div> */}
-  <div class="contactbackground">
-  <div class="contactcontainer">
-    <div class="screen">
-      <div class="screen-header">
-        <div class="screen-header-left">
-          <div class="screen-header-button close"></div>
-          <div class="screen-header-button maximize"></div>
-          <div class="screen-header-button minimize"></div>
-        </div>
-        <div class="screen-header-right">
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-        </div>
-      </div>
-      <div class="screen-body">
-        <div class="screen-body-item left">
-          <div class="app-title">
-            <span>ANY</span>
-            <span>QUERIES?</span>
+      <div className="hero-container1">
+        {/* Background Animation */}
+        <div className="squid-bg"></div>
+        <div className='hero-card1'>
+
+        {/* Hero Card */}
+        {/*<motion.div
+          className="contactcontainer"
+          initial={{ opacity: 0, scale: 0.5, y: -50 }} // Start small and above
+          animate={{ opacity: 1, scale: 1, y: 0 }} // Animate to full size and center
+          transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+        >*/}
+          {/* Title */}
+          <div className="app-title" style = {{fontFamily: "Main"}}>
+            <BlurText
+              text="Any Queries?"
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="text-2xl mb-8"
+              style = {{fontFamily: "Main"}}
+            />
           </div>
-         
-        </div>
-        <div class="screen-body-item" >
-          <form class="app-form" onSubmit={handleOnSubmit}>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="NAME" name="from_name" />
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="EMAIL" name="from_email"/>
-            </div>
-            
-            <div class="app-form-group message">
-              <input class="app-form-control" placeholder="MESSAGE" name='message'/>
-            </div>
-            <div class="app-form-group buttons">
-              
-              <button type="submit" class="app-form-button">SEND</button>
-            </div>
-          </form>
+
+          {/* Form */}
+          <div className="screen-body-item">
+            <form className="app-form" onSubmit={handleOnSubmit}>
+              <div className="app-form-group">
+                <input className="app-form-control" placeholder="NAME" name="from_name" />
+              </div>
+              <div className="app-form-group">
+                <input className="app-form-control" placeholder="EMAIL" name="from_email" />
+              </div>
+              <div className="app-form-group message">
+                {/*<textarea className="app-form-control" placeholder="MESSAGE" name="message" rows="4"></textarea>*/}
+                <input className="app-form-control" placeholder="MESSAGE" name="message"></input>
+              </div>
+              <div className="app-form-group buttons">
+                <button type="submit" className="app-form-button">SEND</button>
+              </div>
+            </form>
+          </div>
+        {/*</motion.div>*/}
         </div>
       </div>
     </div>
-    
-  </div>
-</div>
-</>
-
   );
-}
+};
 
 export default Contact;

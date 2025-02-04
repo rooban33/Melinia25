@@ -151,6 +151,44 @@
     font-size: 1.4rem;
     margin-right: 10px;
   }
+
+  @media (max-width: 1024px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    .circle, .triangle, .square {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-subheading {
+        font-size: 1rem;
+    }
+    .squid-shapes {
+        font-size: 1.5rem;
+    }
+    .squid-button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    .circle, .triangle, .square {
+        font-size: 2rem;
+    }
+    .hero-tagline {
+        font-size: 1rem;
+    }
+}
+
   
   @font-face {
     font-family: "SquidGame";

@@ -1,19 +1,15 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&family=Rajdhani:wght@300&display=swap');
-html {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
-  );
 
-  --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
-  );
+html {
+  --section-background-color: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.582),
+      rgba(12, 8, 24, 0.904));
+
+  --image-gradient: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.678),
+      rgba(12, 10, 22, 0.863));
   /* 70e1f0 c770f0 */
-   --imp-text-color: #70eef0; 
+  --imp-text-color: #70eef0;
 }
 
 .purple {
@@ -45,8 +41,7 @@ button:focus {
 }
 
 
-.img-fluid
-{
+.img-fluid {
   border-radius: 50%;
 }
 
@@ -88,7 +83,7 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   /* box-shadow: 0px 10px 10px 0px rgb(60, 15, 30) !important; */
   backdrop-filter: blur(15px) !important;
-  color:#17050b
+  color: #17050b
 }
 
 .navbar {
@@ -97,8 +92,8 @@ button:focus {
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
 }
-.scroll
-{
+
+.scroll {
   color: inherit;
 }
 
@@ -148,21 +143,23 @@ button:focus {
     font-size: 1.4rem !important;
     /* background-color: #181a27 !important; */
   }
-   .navbar-nav .nav-item a {
+
+  .navbar-nav .nav-item a {
     background-color: #150F23;
   }
-  
+
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
 }
+
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
 }
 
 .logo {
   position: relative;
-  height: 50px!important;
+  height: 50px !important;
   width: 175px !important;
 }
 
@@ -180,19 +177,22 @@ button:focus {
   .nav-link {
     padding: 0.7rem 1rem !important;
   }
+
   .navbar-nav .nav-item a {
     background-color: #150F23;
   }
-  
+
 }
 
 .navbar-nav .nav-item {
   position: relative;
   margin-left: 20px;
 }
-.navbar-nav .nav-item a.scroll-link{
-  color:white;
+
+.navbar-nav .nav-item a.scroll-link {
+  color: white;
 }
+
 .navbar-nav .nav-item a {
   font-weight: 400;
   font-family: "Raleway", serif !important;
@@ -216,26 +216,32 @@ button:focus {
   transition: all 0.3s ease-out 0s;
 }
 
-.scroll, .navbar-nav .nav-item a:hover::after {
+.scroll,
+.navbar-nav .nav-item a:hover::after {
   width: 100%;
 }
 
 .navbar-nav .nav-item a.scroll-link:hover::after {
   width: 100%;
 }
-.mobile{
+
+.mobile {
   width: 50px;
-  height:50px
+  height: 50px
 }
 
 /* --------- */
 /* Home section */
 /* --------- */
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
@@ -243,24 +249,33 @@ button:focus {
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
+
   30% {
     transform: rotate(14deg);
   }
+
   40% {
     transform: rotate(-4deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
+
+  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
@@ -269,7 +284,7 @@ button:focus {
 
 .home-header {
   /* padding-top: 3px !important; */
-  color:#ffffff;
+  color: #ffffff;
   text-align: center;
   width: 100%;
   min-height: 300px;
@@ -279,8 +294,10 @@ button:focus {
 
 .workshopMainBox {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: flex-start; /* Aligns content to the top */
+  justify-content: center;
+  /* Centers horizontally */
+  align-items: flex-start;
+  /* Aligns content to the top */
   text-align: center;
   flex-direction: column;
   width: 100%;
@@ -304,7 +321,7 @@ button:focus {
   justify-content: center;
 }
 
-.eventImage{
+.eventImage {
   width: 330px;
   height: 220px;
   margin-top: 10px;
@@ -314,14 +331,15 @@ button:focus {
   rotate: 0deg;
 }
 
-.workshopImage{
+.workshopImage {
   width: 300px;
   height: 220px;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
 }
-.aboutFont{
+
+.aboutFont {
   background: linear-gradient(56deg, #d96caf, #ba0072);
   background-size: 300%;
   -webkit-background-clip: text;
@@ -333,11 +351,12 @@ button:focus {
   font-family: 'Audiowide', sans-serif;
   font-weight: 100 !important;
   font-size: 2em !important;
-  
+
   position: relative;
   /* right: 10px; */
 }
-.aboutBox{
+
+.aboutBox {
   display: flex;
   flex-direction: column;
   justify-items: start;
@@ -345,56 +364,59 @@ button:focus {
   padding-top: 30px;
   align-items: center;
   padding-bottom: 30px;
-  
-  color:#ffffff;
+
+  color: #ffffff;
   text-align: center;
   width: 100%;
   min-height: 300px;
   background-color: rgba(255, 255, 255, 0.1) !important;
   border-radius: 20px;
-  
+
 }
 
-.workshopBox{
-  
+.workshopBox {
+
   display: flex;
   flex-direction: column;
   padding-top: 30px;
   padding-bottom: 30px;
-  
-  color:#000000;
+
+  color: #000000;
   width: 100%;
   min-height: 300px;
   background-color: #b5b5b5 !important;
 
-  
+
 }
-.aboutBox2{
+
+.aboutBox2 {
   display: flex;
   flex-direction: column;
-  
+
   padding-top: 30px;
   padding-bottom: 30px;
-  
-  color:#ffffff;
+
+  color: #ffffff;
   width: 100%;
   min-height: 300px;
   /* text-align: center; */
 
-  background-color:#241939;
+  background-color: #241939;
 
-  
+
 }
-.buttonFont{
+
+.buttonFont {
   font-family: 'Audiowide', sans-serif !important;
-  background-color:'#61016e';
+  background-color: '#61016e';
 }
 
-.buttonFont:hover{
+.buttonFont:hover {
   cursor: pointer;
   z-index: initial;
 }
-.workshopSubFont{
+
+.workshopSubFont {
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
   font-size: 1.5em;
@@ -406,22 +428,25 @@ button:focus {
   font-family: 'Orbitron', sans-serif;
 }
 
-.font{
+.font {
   font-family: 'Orbitron', sans-serif;
   font-size: medium;
 }
-.verticalDivider{
+
+.verticalDivider {
   display: none;
 }
-.horizontalDivider{
+
+.horizontalDivider {
   display: block;
 }
 
 .heading-name {
   font-size: 4em !important;
-  
+
 }
-.fontColor{
+
+.fontColor {
   background: linear-gradient(45deg, rgb(212 98 205), #512158);
   background-size: 300%;
   -webkit-background-clip: text;
@@ -433,30 +458,32 @@ button:focus {
   font-family: 'Audiowide', sans-serif;
   font-weight: 100 !important;
   font-size: 3em !important;
-  
+
   position: relative;
   right: 10px;
 }
 
-.citLogo{
+.citLogo {
   margin-top: 20px;
   height: 75px;
 }
 
 @media (min-width:1200px) {
-  .reverseFlex{
+  .reverseFlex {
     display: flex;
     flex-direction: row-reverse;
     justify-content: start;
   }
-  .verticalDivider{
+
+  .verticalDivider {
     display: block;
   }
-  .horizontalDivider{
+
+  .horizontalDivider {
     display: none;
   }
 
-  .workshopBox{
+  .workshopBox {
     z-index: 0;
     display: flex;
     flex-direction: row;
@@ -466,21 +493,22 @@ button:focus {
     padding-bottom: 30px;
     padding-right: 95px;
     padding-left: 120px;
-    color:#000000;
+    color: #000000;
     text-align: start;
     width: 100%;
     min-height: 300px;
     background-color: #d8d8d8 !important;
-  
-    
+
+
   }
 
-  .workshopSubFont{
+  .workshopSubFont {
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     font-size: 1.6rem;
   }
-  .workshopFont{
+
+  .workshopFont {
     background: linear-gradient(56deg, #d96caf, #ba0072);
     background-size: 300%;
     -webkit-background-clip: text;
@@ -492,11 +520,12 @@ button:focus {
     font-family: 'Audiowide', sans-serif;
     font-weight: 100 !important;
     font-size: 2.0em !important;
-    
+
 
   }
 }
-.workshopFont{
+
+.workshopFont {
   background: linear-gradient(56deg, #d96caf, #ba0072);
   background-size: 300%;
   -webkit-background-clip: text;
@@ -510,9 +539,10 @@ button:focus {
   font-size: 2.2em !important;
 
 }
+
 @media (min-width:900px) {
 
-  .eventImage{
+  .eventImage {
     width: 500px !important;
     height: 320px;
     margin-top: 10px;
@@ -521,7 +551,8 @@ button:focus {
     border-radius: 10px;
     rotate: 0deg;
   }
-  .workshopImage{
+
+  .workshopImage {
     width: 500px !important;
     height: 320px;
     margin-top: 10px;
@@ -531,7 +562,7 @@ button:focus {
     rotate: 0deg;
   }
 
-  .fontColor{
+  .fontColor {
     background: linear-gradient(45deg, rgb(212 98 205), #512158);
     background-size: 300%;
     -webkit-background-clip: text;
@@ -543,11 +574,12 @@ button:focus {
     font-family: 'Audiowide', sans-serif;
     font-weight: 100 !important;
     font-size: 3em !important;
-    
+
     position: relative;
     right: 10px;
   }
-  .aboutFont{
+
+  .aboutFont {
     background: linear-gradient(56deg, #d96caf, #ba0072);
     background-size: 300%;
     -webkit-background-clip: text;
@@ -559,27 +591,29 @@ button:focus {
     font-family: 'Audiowide', sans-serif;
     font-weight: 100 !important;
     font-size: 3em !important;
-    
+
     position: relative;
     right: 10px;
   }
-  .aboutBox2{
+
+  .aboutBox2 {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-right: 95px;
     padding-left: 120px;
-    color:#ffffff;
+    color: #ffffff;
     width: 100%;
     min-height: 300px;
     /* text-align: center; */
-  
-    background-color:#241939;
-  
-    
+
+    background-color: #241939;
+
+
   }
-  .aboutBox{
+
+  .aboutBox {
     display: flex;
     flex-direction: row;
     justify-items: start;
@@ -588,20 +622,21 @@ button:focus {
     padding-bottom: 30px;
     padding-right: 95px;
     padding-left: 120px;
-    color:#ffffff;
+    color: #ffffff;
     text-align: start;
     width: 100%;
     min-height: 300px;
-    background-color: rgba(255, 255, 255, 0.1) !important; /* Adjust the alpha value (0.0 to 1.0) for the desired transparency */
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    /* Adjust the alpha value (0.0 to 1.0) for the desired transparency */
   }
 
-  
+
 }
 
-@media (min-width: 544px) { 
-  
-  
-  .citLogo{
+@media (min-width: 544px) {
+
+
+  .citLogo {
     margin-top: 20px;
     height: 100px;
   }
@@ -610,17 +645,18 @@ button:focus {
     font-size: 8em !important;
     padding-left: 45px !important;
   }
+
   .heading {
     font-size: 1.5em !important;
     letter-spacing: 0.2 em;
     font-family: 'Orbitron', sans-serif;
   }
 
-  .rajdhaniFont{
+  .rajdhaniFont {
     font-family: 'Rajdhani', sans-serif;
     font-weight: bold;
     text-align: center;
-  } 
+  }
 }
 
 .main-name {
@@ -632,9 +668,21 @@ button:focus {
   color: #6ad1df !important;
   font-weight: 600 !important;
 }
+
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #62d6ce !important;
+}
+
+@media (max-width: 480px) {
+.filter1{
+  margin-top: 90px;
+}
+
+.back1{
+display: none;
+}
+
 }
 
 @media (max-width: 767px) {
@@ -643,6 +691,7 @@ button:focus {
     font-weight: 500 !important;
     position: absolute !important;
   }
+
   .Typewriter__cursor {
     display: none !important;
   }
@@ -669,7 +718,8 @@ button:focus {
   }
 
   .events-grid {
-    grid-template-columns: 1fr; /* Stacks cards on smaller screens */
+    grid-template-columns: 1fr;
+    /* Stacks cards on smaller screens */
   }
 }
 
@@ -685,11 +735,12 @@ button:focus {
   padding-bottom: 20px !important;
   text-align: center;
 }
-.rajdhaniFont{
+
+.rajdhaniFont {
   font-family: 'Rajdhani', sans-serif;
   font-weight: bold;
   text-align: center;
-} 
+}
 
 .home-about-body {
   padding-top: 50px;
@@ -766,8 +817,9 @@ button:focus {
   background-color: rgb(10, 4, 22);
   bottom: 0 !important;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-bottom: 8px !important;
 }
+
 .footer-copywright {
   text-align: center !important;
 }
@@ -793,6 +845,7 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+
 .footer-icons {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
@@ -802,6 +855,7 @@ button:focus {
 .blockquote-footer {
   color: #88bbc0 !important;
 }
+
 /* --------- */
 /* Projects */
 /* --------- */
@@ -828,6 +882,7 @@ button:focus {
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
+
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
@@ -888,10 +943,12 @@ button:focus {
   background-color: #20afc5d7 !important;
   border-color: #20b2c5d7 !important;
 }
+
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 .project-heading {
   color: white !important;
   font-size: 2.3em !important;
@@ -937,6 +994,7 @@ button:focus {
   overflow: hidden !important;
   border: 2.2px solid rgba(115, 228, 230, 0.883) !important;
 }
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
@@ -959,6 +1017,7 @@ button:focus {
     padding-top: 0 !important;
   }
 }
+
 /* --------- */
 /* Resume */
 /* --------- */
@@ -996,6 +1055,7 @@ button:focus {
     padding-left: 15px !important;
   }
 }
+
 .resume .resume-title {
   font-size: 2em;
   font-weight: 700;
@@ -1072,10 +1132,12 @@ button:focus {
   animation-fill-mode: forwards;
   animation-duration: 0.85s;
 }
+
 @keyframes likeAnimation {
   0% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
@@ -1099,6 +1161,7 @@ button:focus {
   background-color: #4dd1d386 !important;
   border-color: #4dd3ce86 !important;
 }
+
 .fork-btn-inner::after {
   display: none !important;
 }
@@ -1112,32 +1175,33 @@ button:focus {
 
 
 
-.inputclass{
-  width:50%;
+.inputclass {
+  width: 50%;
   height: 80px;
-   padding-left: 12px;
-   border: 1px solid #ccc;
-   border-radius: 4px;
-   resize: vertical;
-   background: 0;
-   color: white;
- }
- input[type=submit] {
-   background-color:#5f80f8;
-   color: white;
-   padding: 12px 20px;
-   border: none;
-   border-radius: 4px;
-   cursor: pointer;
-   float: center;
- }
- 
- input[type=submit]:hover {
-   background-color:var(--imp-text-color);
- }
+  padding-left: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background: 0;
+  color: white;
+}
 
- h2{
-  color:white;
+input[type=submit] {
+  background-color: #5f80f8;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: var(--imp-text-color);
+}
+
+h2 {
+  color: white;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -1196,16 +1260,19 @@ button:focus {
   height: 100%;
 }
 
-.font1{
+.font1 {
   font-family: 'Audiowide', sans-serif;
 }
-.font2{
+
+.font2 {
   font-family: 'Orbitron', sans-serif;
 }
-.font3{
+
+.font3 {
   font-family: 'Rajdhani', sans-serif;
 }
-.meliniaFont{
+
+.meliniaFont {
   padding-bottom: 20px;
   text-align: center;
   font-family: 'Audiowide', sans-serif;
@@ -1222,13 +1289,15 @@ button:focus {
 
 
 @keyframes animate {
-  0%{
+  0% {
     background-position: 0 50%;
   }
-  50%{
+
+  50% {
     background-position: 100% 50%;
   }
-  100%{
+
+  100% {
     background-position: 0 50%;
   }
 }
@@ -1238,6 +1307,19 @@ button:focus {
 
 
 
-h1{
+h1 {
   color: white;
+}
+
+
+.custom-glow {
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.group:hover .custom-glow {
+  opacity: 1 !important;
+  transform: scale(1.1);
+  filter: blur(8px);
 }

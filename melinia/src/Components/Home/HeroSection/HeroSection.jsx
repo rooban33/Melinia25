@@ -10,7 +10,6 @@ const HeroSection = () => {
 
       {/* Hero Card */}
       <div className="hero-card">
-        {/* Squid Game-Inspired Title */}
         <motion.h1 
           initial={{ opacity: 0, y: -50 }} 
           animate={{ opacity: 1, y: 0 }} 
@@ -29,7 +28,6 @@ const HeroSection = () => {
           Department of Computing <br /> MSc SS | DS | DCS | AIML
         </motion.h2>
 
-        {/* MELINIA 2K25 Squid Game Style */}
         <motion.h1
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -38,7 +36,8 @@ const HeroSection = () => {
         >
           mElinia <span className="squid-highlight">2K25</span>
         </motion.h1>
-        {/* Shapes (Circle, Triangle, Square) */}
+        
+        {/* Shapes */}
         <div className="squid-shapes">
           <span className="circle">○</span>
           <span className="triangle">△</span>
@@ -55,7 +54,7 @@ const HeroSection = () => {
           National Level Technical Symposium
         </motion.p>
 
-        {/* Call-to-Action Button with Mask Hover */}
+        {/* Call-to-Action Button */}
         <motion.button 
           initial={{ opacity: 0, scale: 0.9 }} 
           animate={{ opacity: 1, scale: 1 }} 

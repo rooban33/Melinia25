@@ -8,6 +8,7 @@
     --mouse-x: 50%;
     --mouse-y: 50%;
     --spotlight-color: rgba(255, 255, 255, 0.05);
+    justify-items: center !important;
   }
   
   .card-spotlight::before {
@@ -21,6 +22,7 @@
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
+    justify-items: center !important;
   }
   
   .card-spotlight:hover::before,

@@ -145,7 +145,7 @@ button:focus {
   }
 
   .navbar-nav .nav-item a {
-    background-color: #150F23;
+    background-color: black;
   }
 
   .navbar-nav .nav-item a::after {
@@ -179,7 +179,7 @@ button:focus {
   }
 
   .navbar-nav .nav-item a {
-    background-color: #150F23;
+    background-color: black;
   }
 
 }
@@ -209,7 +209,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #5b122c;
+  background: black;
   bottom: 1px;
   left: 0;
   z-index: -1;

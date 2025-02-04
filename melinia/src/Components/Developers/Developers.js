@@ -55,7 +55,7 @@ class Developers extends React.Component {
       name: "Shajithrooban G G",
       role: "Web Developer",
       department: "M.Sc. Software Systems (4th Year)",
-      phone: "+917845738898",
+      phone: "+919489425649",
       email: "71762131045@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/shajith-rooban-b26453221/", 
       instagram: "https://www.instagram.com/rooban_33/",
@@ -65,7 +65,7 @@ class Developers extends React.Component {
       name: "Pranavarul K",
       role: "Web Developer",
       department: "M.Sc. Software Systems (4th Year)",
-      phone: "+919486624020",
+      phone: "+917904014618",
       email: "71762131034@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/pranavarul-karthikeyan-89945a223/",
       instagram: "https://www.instagram.com/_.pranav.19/",
@@ -75,7 +75,7 @@ class Developers extends React.Component {
       name: "Lokhesh R J",
       role: "Web Developer",
       department: "M.Sc. Software Systems (4th Year)",
-      phone: "+919865229679",
+      phone: "+916379273963",
       email: "71762131026@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/lokheshrj/",
       instagram: "https://www.instagram.com/predatory_knight/",
@@ -85,7 +85,7 @@ class Developers extends React.Component {
       name: "Rajarajan A P",
       role: "Web Developer",
       department: "M.Sc. Software Systems (4th Year)",
-      phone: "+918248164968",
+      phone: "+916380554857",
       email: "71762131038@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/rajarajan-a-p/",
       instagram: "https://www.instagram.com/rajarajan_1105/",
@@ -95,7 +95,7 @@ class Developers extends React.Component {
       name: "Karthick Roshan",
       role: "Web Developer",
       department: "M.Sc. Software Systems (4th Year)",
-      phone: "+918248164968",
+      phone: "+916383594135",
       email: "71762131024@cit.edu.in",
       linkedin: "https://www.linkedin.com/in/karthick-roshan/",
       instagram: "https://www.instagram.com/karthick._.roshan/",
@@ -112,7 +112,7 @@ class Developers extends React.Component {
         <div className="board-container">
           {this.cardDataUs.map((data, index) => (
             <GlassCard key={index}>
-              <CardMedia component="img" alt={data.name} height="320px" image={data.image} className="image-fit" />
+              <CardMedia component="img" alt={data.name} height="320px" image={data.image} className="image-fit" style={{borderRadius:"10px"}}/>
               <CardContent>
                 <Typography variant="h5" className="card-title">{data.name}</Typography>
                 <Typography variant="body1" className="card-subtitle" style={{ paddingTop: "0.5rem" }}>{data.role}</Typography>

@@ -89,7 +89,7 @@ cardDataStudent = [
     name: "Suvetha A R",
     role: "Faculty Coordinator",
     department: "M.Sc. Software Systems (4th Year)",
-    phone: "+917845738898",
+    phone: "+918148002445",
     email: "71762131053@cit.edu.in",
     image: suvethaImage,
   },
@@ -97,7 +97,7 @@ cardDataStudent = [
     name: "Mohan Raj M",
     role: "Faculty Coordinator",
     department: "M.Sc. Data Science (4th Year)",
-    phone: "+919486624020",
+    phone: "+919360738976",
     email: "71762132025@cit.edu.in",
     image: mohanImage,
   },
@@ -113,7 +113,7 @@ cardDataStudent = [
     name: "Naveen R",
     role: "Faculty Coordinator",
     department: "M.Sc. AI & Machine Learning (4th Year)",
-    phone: "+918248164968",
+    phone: "+918940521094",
     email: "71762134031@cit.edu.in",
     image: naveenImage,
   },
@@ -128,7 +128,7 @@ cardDataStudent = [
         <div className="board-container">
           {this.cardDataTeachers.map((data, index) => (
             <GlassCard key={index}>
-              <CardMedia component="img" alt={data.name} height="320px" image={data.image} className="image-fit" />
+              <CardMedia component="img" alt={data.name} height="320px" image={data.image} className="image-fit" style={{borderRadius:"10px"}}/>
               <CardContent>
                 <Typography variant="h5" className="card-title">{data.name}</Typography>
                 <Typography variant="body1" className="card-subtitle" style={{paddingTop:"0.5rem"}}>{data.role}</Typography>
@@ -145,7 +145,7 @@ cardDataStudent = [
         <div className="board-container">
           {this.cardDataStudent.map((data, index) => (
             <GlassCard key={index}>
-              <CardMedia component="img" alt={data.name} height="320px" image={data.image} className="image-fit" />
+              <CardMedia component="img" alt={data.name} height="320px" image={data.image} className="image-fit" style={{borderRadius:"10px"}}/>
               <CardContent>
                 <Typography variant="h5" className="card-title">{data.name}</Typography>
                 <Typography variant="body2" className="card-text" style={{paddingTop:"0.5rem"}}>{data.department}</Typography>

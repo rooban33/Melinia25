@@ -46,7 +46,7 @@ function Workshop() {
 
   const handleRegisterClick = () => {
     mixpanel.track("hackathon button clicked", { page: "home" });
-    window.open("https://unstop.com/o/WJEbn31?lb=D5CxNBMi", "_blank");
+    window.open("https://unstop.com/o/IGpR5Js?lb=PETC6GS6", "_blank");
   };
 
   const handleRegisterClick1 = () => {

@@ -29,4 +29,15 @@
   .card-spotlight:focus-within::before {
     opacity: 0.6;
   }
+
+  @media (max-width: 480px) {
+    .card-spotlight {
+      justify-items: center !important;
+    }
+
+    .card-spotlight::before {
+      justify-items: center !important;
+    }
+    
+    }
   

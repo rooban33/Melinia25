@@ -21,7 +21,8 @@ import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Developers from './Components/Developers/Developers';
 import mixpanel from 'mixpanel-browser';
-// import Achievements from "./Components/Achievements/Achievements";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 
 mixpanel.init("80b2a21992bf5ce950bb5dbd06b144a7", {
   debug: true
@@ -40,6 +41,8 @@ function App() {
     <ThemeProvider>
       <Router>
         <Preloader load={load} />
+        <SpeedInsights/>
+        <Analytics />
         <div className="App" id={load ? "no-scroll" : "scroll"}>
           <Navbar style={{ display: 'flex', justifyContent: 'end' }} />
           <ScrollToTop />

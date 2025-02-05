@@ -160,9 +160,6 @@ input {
   outline: none;
 }
 
-.app-form-button:hover {
-  color: blueviolet;
-}
 
 @media screen and (max-width: 520px) {
   .screen-body {
@@ -242,6 +239,7 @@ input {
   border-radius: 20px;
   /* box-shadow: 0px 15px 40px rgba(255, 0, 0, 0.5); */
   /* border: 2px solid rgba(78, 8, 8, 0.3); */
+  min-width: 40%;
   max-width: 200%;
   z-index: 10;
   box-shadow: 0px 0px 10px #FF1199;
@@ -284,4 +282,16 @@ input {
 .app-form-control::-webkit-scrollbar-thumb:hover {
   background: #777;
   /* Hover effect */
+}
+
+.app-form-button {
+  background: #FF1199;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
 }

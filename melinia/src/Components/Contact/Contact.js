@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 import './Contact.css';
@@ -11,8 +11,37 @@ const TEMPLATE_ID = "template_0atr5bz";
 const PUBLIC_KEY = "o5lAfhX2jUPshde1J";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ from_name: '', from_email: '', message: '' });
+  
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+  
   const handleOnSubmit = (e) => {
     e.preventDefault();
+    
+    if (!formData.from_name || !formData.from_email || !formData.message) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Ooops, Enter Data',
+        text: 'Please fill all fields',
+      });
+      return;
+    }
+    
+    if (!validateEmail(formData.from_email)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid Email',
+        text: 'Please enter a valid email address',
+      });
+      return;
+    }
+    
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
@@ -29,25 +58,15 @@ const Contact = () => {
         });
       });
     e.target.reset();
+    setFormData({ from_name: '', from_email: '', message: '' });
   };
 
   return (
     <div>
       <Particle />
-
       <div className="hero-container1">
-        {/* Background Animation */}
         <div className="squid-bg"></div>
         <div className='hero-card1'>
-
-        {/* Hero Card */}
-        {/*<motion.div
-          className="contactcontainer"
-          initial={{ opacity: 0, scale: 0.5, y: -50 }} // Start small and above
-          animate={{ opacity: 1, scale: 1, y: 0 }} // Animate to full size and center
-          transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
-        >*/}
-          {/* Title */}
           <div className="app-title" style = {{fontFamily: "Main"}}>
             <BlurText
               text="Any Queries?"
@@ -59,25 +78,22 @@ const Contact = () => {
             />
           </div>
 
-          {/* Form */}
           <div className="screen-body-item">
             <form className="app-form" onSubmit={handleOnSubmit}>
               <div className="app-form-group">
-                <input className="app-form-control" placeholder="NAME" name="from_name" />
+                <input className="app-form-control" placeholder="NAME" name="from_name" value={formData.from_name} onChange={handleChange} />
               </div>
               <div className="app-form-group">
-                <input className="app-form-control" placeholder="EMAIL" name="from_email" />
+                <input className="app-form-control" placeholder="EMAIL" name="from_email" value={formData.from_email} onChange={handleChange} />
               </div>
               <div className="app-form-group message">
-                {/*<textarea className="app-form-control" placeholder="MESSAGE" name="message" rows="4"></textarea>*/}
-                <input className="app-form-control" placeholder="MESSAGE" name="message"></input>
+                <input className="app-form-control" placeholder="MESSAGE" name="message" value={formData.message} onChange={handleChange}></input>
               </div>
               <div className="app-form-group buttons">
                 <button type="submit" className="app-form-button">SEND</button>
               </div>
             </form>
           </div>
-        {/*</motion.div>*/}
         </div>
       </div>
     </div>

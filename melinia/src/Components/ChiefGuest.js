@@ -32,7 +32,7 @@ function ChiefGuest() {
       >
         <h2
           style={{
-            color: "white",
+            color: "#d96caf",
             fontSize: "2rem",
             fontWeight: "bold",
             textTransform: "uppercase",
@@ -71,7 +71,7 @@ function ChiefGuest() {
           className="coco-gothic-text"
           style={{
             color: "#d3d3d3",
-            fontSize: "1.5rem",
+            fontSize: "1.2rem",
             fontWeight: "500",
             marginTop: "15px",
             lineHeight: "1.6",

@@ -14,7 +14,8 @@ button {
 }
 
 button.learn-more {
-    width: 12rem;
+    width: 10rem;
+    /* Reduced width */
     height: auto;
 }
 
@@ -23,10 +24,11 @@ button.learn-more .circle {
     position: relative;
     display: block;
     margin: 0;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    /* Reduced circle size */
+    height: 2rem;
     background: #282936;
-    border-radius: 1.625rem;
+    border-radius: 1rem;
 }
 
 button.learn-more .circle .icon {
@@ -40,21 +42,25 @@ button.learn-more .circle .icon {
 
 button.learn-more .circle .icon.arrow {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    left: 0.625rem;
-    width: 1.125rem;
-    height: 0.125rem;
+    left: 0.4rem;
+    /* Adjusted left position */
+    width: 0.8rem;
+    /* Reduced arrow width */
+    height: 0.1rem;
+    /* Reduced arrow height */
     background: none;
 }
 
 button.learn-more .circle .icon.arrow::before {
     position: absolute;
     content: "";
-    top: -0.29rem;
-    right: 0.0625rem;
-    width: 0.625rem;
-    height: 0.625rem;
-    border-top: 0.125rem solid #fff;
-    border-right: 0.125rem solid #fff;
+    top: -0.2rem;
+    /* Adjusted for smaller size */
+    right: 0.05rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-top: 0.1rem solid #fff;
+    border-right: 0.1rem solid #fff;
     transform: rotate(45deg);
 }
 
@@ -65,10 +71,14 @@ button.learn-more .button-text {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem;
+    padding: 0.40rem 0;
+    /* Reduced padding */
+    margin: 0 0 0 1.5rem;
+    /* Adjusted text position */
     color: #282936;
     font-weight: 700;
+    font-size: 0.8rem;
+    /* Reduced font size */
     line-height: 1.6;
     text-align: center;
     text-transform: uppercase;
@@ -80,7 +90,8 @@ button:hover .circle {
 
 button:hover .circle .icon.arrow {
     background: #fff;
-    transform: translate(1rem, 0);
+    transform: translate(0.8rem, 0);
+    /* Adjusted movement */
 }
 
 button:hover .button-text {

@@ -8,9 +8,9 @@ import Board from "./Components/Board/Board";
 import MainDescription from './Components/Events/MainDescription';
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact/Contact"
-import EventsPage from "./Components/Events";
+import EventsPage from "./Components/EventPage/Events";
 import { ThemeProvider } from "@material-tailwind/react";
-import EventDetails from './Components/Event';
+import EventDetails from './Components/EventPage/Event';
 import {
   BrowserRouter as Router,
   Route,

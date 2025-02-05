@@ -8,6 +8,8 @@ import Button from "@mui/material/Button";
 import { FaArrowRight } from "react-icons/fa";
 import mixpanel from "mixpanel-browser";
 import SpotlightCard from "./SpotlightCard/SpotlightCard";
+import hackathonicon from '../Assets/icons/hackathon.png';
+import pitch from '../Assets/icons/pitch.png'
 
 function Workshop() {
   const [ideathonSlots, setIdeathonSlots] = useState(0);
@@ -44,12 +46,12 @@ function Workshop() {
 
   const handleRegisterClick = () => {
     mixpanel.track("hackathon button clicked", { page: "home" });
-    window.open("https://unstop.com/o/WJEbn31?lb=D5CxNBMi", "_blank");
+    window.open("https://unstop.com/o/IGpR5Js?lb=PETC6GS6", "_blank");
   };
 
   const handleRegisterClick1 = () => {
-    mixpanel.track("paperpresentation button clicked", { page: "home" });
-    window.open("https://unstop.com/p/paper-presentation-coimbatore-institute-of-technology-cit-coimbatore-886885", "_blank");
+    mixpanel.track("Hackathon button clicked", { page: "home" });
+    window.open("https://unstop.com/o/FoaGhvO", "_blank");
   };
 
   const blinkingStyle = {
@@ -96,8 +98,8 @@ function Workshop() {
             }}
           >
             <img
-              src="https://cdn-icons-png.flaticon.com/512/7326/7326897.png"
-              alt="Ideathon Logo"
+              src={hackathonicon}
+              alt="Hackathon Logo"
               style={{ width: "60px", height: "60px", marginBottom: "10px" }}
             />
             <h3 className="greater-theory-text" style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>Hackathon 2025</h3>
@@ -110,7 +112,7 @@ function Workshop() {
 
             {/* Available Slots */}
             <p style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px", ...(ideathonSlots < 10 ? blinkingStyle : {}) }}>
-              Slots Available: {ideathonSlots}
+              Slots Available: {hackathonSlots}
             </p>
 
             <button
@@ -132,8 +134,6 @@ function Workshop() {
               View More Info
             </button>
           </SpotlightCard>
-
-          {/* Hackathon Spotlight Card */}
           <SpotlightCard
             className="custom-spotlight-card"
             spotlightColor="rgba(0, 229, 255, 0.2)"
@@ -162,8 +162,8 @@ function Workshop() {
             }}
           >
             <img
-              src="https://cdn-icons-png.flaticon.com/512/7326/7326897.png"
-              alt="Hackathon Logo"
+              src={pitch}
+              alt="Pitch Logo"
               style={{ width: "60px", height: "60px", marginBottom: "10px" }}
             />
             <h3 className="greater-theory-text" style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>The Pitch Pit 2025</h3>
@@ -175,7 +175,7 @@ function Workshop() {
 
             {/* Available Slots */}
             <p style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px", ...(hackathonSlots < 10 ? blinkingStyle : {}) }}>
-              Slots Available: {hackathonSlots}
+              Slots Available: {ideathonSlots}
             </p>
 
             <button

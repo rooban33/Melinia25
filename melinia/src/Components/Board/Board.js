@@ -84,55 +84,55 @@ class Board extends React.Component {
     },
   ];
 
-cardDataStudent = [
-  {
-    name: "Suvetha A R",
-    role: "Faculty Coordinator",
-    department: "M.Sc. Software Systems (4th Year)",
-    phone: "+917845738898",
-    email: "71762131053@cit.edu.in",
-    image: suvethaImage,
-  },
-  {
-    name: "Mohan Raj M",
-    role: "Faculty Coordinator",
-    department: "M.Sc. Data Science (4th Year)",
-    phone: "+919486624020",
-    email: "71762132025@cit.edu.in",
-    image: mohanImage,
-  },
-  {
-    name: "Dharun P A",
-    role: "Faculty Coordinator",
-    department: "M.Sc. Decision & Computing Sciences (4th Year)",
-    phone: "+919600878014",
-    email: "71762133011@cit.edu.in",
-    image: dharunImage,
-  },
-  {
-    name: "Naveen R",
-    role: "Faculty Coordinator",
-    department: "M.Sc. AI & Machine Learning (4th Year)",
-    phone: "+918248164968",
-    email: "71762134031@cit.edu.in",
-    image: naveenImage,
-  },
-];
+  cardDataStudent = [
+    {
+      name: "Suvetha A R",
+      role: "Faculty Coordinator",
+      department: "M.Sc. Software Systems (4th Year)",
+      phone: "+917845738898",
+      email: "71762131053@cit.edu.in",
+      image: suvethaImage,
+    },
+    {
+      name: "Mohan Raj M",
+      role: "Faculty Coordinator",
+      department: "M.Sc. Data Science (4th Year)",
+      phone: "+919486624020",
+      email: "71762132025@cit.edu.in",
+      image: mohanImage,
+    },
+    {
+      name: "Dharun P A",
+      role: "Faculty Coordinator",
+      department: "M.Sc. Decision & Computing Sciences (4th Year)",
+      phone: "+919600878014",
+      email: "71762133011@cit.edu.in",
+      image: dharunImage,
+    },
+    {
+      name: "Naveen R",
+      role: "Faculty Coordinator",
+      department: "M.Sc. AI & Machine Learning (4th Year)",
+      phone: "+918248164968",
+      email: "71762134031@cit.edu.in",
+      image: naveenImage,
+    },
+  ];
 
 
   render() {
     return (
       <div style={{ backgroundColor: "transparent", padding: "100px 0" }}>
         <Particle />
-        <StyledTypography variant="h4">Meet the Team</StyledTypography>
+        <StyledTypography variant="h4" style={{ fontFamily: "Topic", letterSpacing: "5px" }}>Meet the Team</StyledTypography>
         <div className="board-container">
           {this.cardDataTeachers.map((data, index) => (
             <GlassCard key={index}>
               <CardMedia component="img" alt={data.name} height="320px" image={data.image} className="image-fit" />
               <CardContent>
                 <Typography variant="h5" className="card-title">{data.name}</Typography>
-                <Typography variant="body1" className="card-subtitle" style={{paddingTop:"0.5rem"}}>{data.role}</Typography>
-                <Typography variant="body2" className="card-text" style={{paddingTop:"0.5rem"}}>{data.department}</Typography>
+                <Typography variant="body1" className="card-subtitle" style={{ paddingTop: "0.5rem" }}>{data.role}</Typography>
+                <Typography variant="body2" className="card-text" style={{ paddingTop: "0.5rem" }}>{data.department}</Typography>
               </CardContent>
               <CardContent className="contact-icons">
                 <FontAwesomeIcon icon={faPhone} className="icon" onClick={() => window.location.href = `tel:${data.phone}`} />
@@ -141,15 +141,15 @@ cardDataStudent = [
             </GlassCard>
           ))}
         </div>
-        <StyledTypography variant="h4">Student Coordinators</StyledTypography>
+        <StyledTypography variant="h4" style={{ fontFamily: "Topic", letterSpacing: "5px" }}>Student Coordinators</StyledTypography>
         <div className="board-container">
           {this.cardDataStudent.map((data, index) => (
             <GlassCard key={index}>
               <CardMedia component="img" alt={data.name} height="320px" image={data.image} className="image-fit" />
               <CardContent>
                 <Typography variant="h5" className="card-title">{data.name}</Typography>
-                <Typography variant="body2" className="card-text" style={{paddingTop:"0.5rem"}}>{data.department}</Typography>
-                <Typography variant="body1" className="card-subtitle" style={{paddingTop:"0.5rem"}}>{data.role}</Typography>
+                <Typography variant="body2" className="card-text" style={{ paddingTop: "0.5rem" }}>{data.department}</Typography>
+                <Typography variant="body1" className="card-subtitle" style={{ paddingTop: "0.5rem" }}>{data.role}</Typography>
               </CardContent>
               <CardContent className="contact-icons">
                 <FontAwesomeIcon icon={faPhone} className="icon" onClick={() => window.location.href = `tel:${data.phone}`} />

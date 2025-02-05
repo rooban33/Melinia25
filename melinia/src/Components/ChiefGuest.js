@@ -36,9 +36,9 @@ function ChiefGuest() {
             fontSize: "2rem",
             fontWeight: "bold",
             textTransform: "uppercase",
-            letterSpacing: "1.5px",
             marginBottom: "15px",
           }}
+          className="ds-digib-text"
         >
           Meet Our Chief Guest
         </h2>
@@ -68,15 +68,16 @@ function ChiefGuest() {
         </p>
 
         <p
+          className="coco-gothic-text"
           style={{
             color: "#d3d3d3",
-            fontSize: "1.2rem",
+            fontSize: "1.5rem",
             fontWeight: "500",
             marginTop: "15px",
             lineHeight: "1.6",
           }}
         >
-          Excitement fills the air as we announce Sathish Nandagopal as the Chief Guest for our techfest. As a leader overseeing 3200+ employees, he is committed to fostering inclusivity and excellence in the workplace. Join us for an insightful session with a visionary leader!
+          Excitement fills the air as we announce Sathish Nandagopal as the Chief Guest for our techfest. As a leader overseeing <span className="numbers">3200+</span> employees, he is committed to fostering inclusivity and excellence in the workplace. Join us for an insightful session with a visionary leader!
         </p>
       </Container>
     </Box>

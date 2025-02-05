@@ -28,29 +28,29 @@ const CountdownTimer = () => {
 	}, []);
 
 	return (
-    
-		<div className='countdown'>
-      <TiltedCard
-        imageSrc={TimerImage} // Set TimerImage here
-        altText="Timer Image"
-        captionText=" "
-        containerHeight="300px"
-        containerWidth="300px"
-        imageHeight="300px"
-        imageWidth="300px"
-        rotateAmplitude={12}
-        scaleOnHover={1.2}
-        showMobileWarning={false}
-        showTooltip={false}
-        displayOverlayContent={true}
-        overlayContent={
-          <div></div>
-        }
-      />
 
-      <h4 className="aboutFont" >
-        PRIZE POOL : 70,000 RS
-      </h4>
+		<div className='countdown'>
+			<TiltedCard
+				imageSrc={TimerImage} // Set TimerImage here
+				altText="Timer Image"
+				captionText=" "
+				containerHeight="300px"
+				containerWidth="300px"
+				imageHeight="300px"
+				imageWidth="300px"
+				rotateAmplitude={12}
+				scaleOnHover={1.2}
+				showMobileWarning={false}
+				showTooltip={false}
+				displayOverlayContent={true}
+				overlayContent={
+					<div></div>
+				}
+			/>
+
+			<h4 className="aboutFont ds-digib-text">
+				PRIZE POOL : 70,000 RS
+			</h4>
 			<div className='content'>
 				{Object.entries(timeLeft).map((el) => {
 					const label = el[0];

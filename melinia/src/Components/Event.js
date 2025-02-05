@@ -33,7 +33,7 @@ const EventDetails = () => {
                 {/* <div className="flex flex-col md:flex-row p-6 h-screen overflow-y-auto"> */}
                 {/* Left Column - 40% Width, Normal Scrolling */}
                 <div className="w-full md:w-2/5 flex justify-center p-12">
-                    <PixelCard eventTitle={event.title} eventImage={event.image} />
+                    <PixelCard eventTitle={event.title} eventImage={event.image} className="ds-digib-text" />
                 </div>
 
                 {/* Right Column - 60% Width, Scrollable Event Details */}

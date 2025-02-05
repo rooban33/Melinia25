@@ -519,7 +519,7 @@ button:focus {
     /* font-family: 'Orbitron', sans-serif; */
     font-family: 'Audiowide', sans-serif;
     font-weight: 100 !important;
-    font-size: 2.0em !important;
+    font-size: 3.0em !important;
 
 
   }
@@ -675,13 +675,13 @@ button:focus {
 }
 
 @media (max-width: 480px) {
-.filter1{
-  margin-top: 90px;
-}
+  .filter1 {
+    margin-top: 90px;
+  }
 
-.back1{
-display: none;
-}
+  .back1 {
+    display: none;
+  }
 
 }
 
@@ -1322,4 +1322,56 @@ h1 {
   opacity: 1 !important;
   transform: scale(1.1);
   filter: blur(8px);
+}
+
+@font-face {
+  font-family: 'Topic';
+  src: url('./Assets/f/DS-DIGIB.TTF');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ds-digib-text {
+  font-family: 'Topic', sans-serif;
+  font-size: 58px !important;
+  letter-spacing: 5px;
+}
+
+/* Media query for screens smaller than 500px */
+@media (max-width: 500px) {
+  .ds-digib-text {
+    font-size: 32px !important;
+    /* Reduce font size */
+  }
+}
+
+@font-face {
+  font-family: 'Event-Heading';
+  src: url('./Assets/f/GreaterTheory.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.greater-theory-text {
+  font-family: 'Event-Heading', sans-serif;
+  font-size: 20px !important;
+  letter-spacing: 2px;
+}
+
+@font-face {
+  font-family: 'Event-Content';
+  src: url('./Assets/f/Coco-Gothic-Regular-trial.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.coco-gothic-text {
+  font-family: 'Event-Content', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.numbers {
+  font-family: 'Arial', sans-serif;
+  /* Use a font that supports numbers */
 }

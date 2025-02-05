@@ -18,11 +18,11 @@ const events = [
 function Timeline() {
   return (
     <div className="timeline-container">
-      <h2 className="timeline-heading">Event Line-up</h2>
+      <h2 className="timeline-heading ds-digib-text">Event Line-up</h2>
       <div className="timeline">
         {events.map((event, index) => (
-          <motion.div 
-            key={index} 
+          <motion.div
+            key={index}
             className={`timeline-box ${index % 2 === 0 ? 'left' : 'right'}`}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ function Timeline() {
             <img src={event.img} alt={event.title} className="timeline-icon" />
             <div className="timeline-info">
               <h6>{event.time}</h6>
-              <p>{event.title}</p>
+              <p style={{ color: "white" }}>{event.title}</p>
             </div>
           </motion.div>
         ))}

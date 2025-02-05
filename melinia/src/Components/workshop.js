@@ -61,7 +61,7 @@ function Workshop() {
       <div className="aboutBox" style={{ marginBottom: "30px", textAlign: "center", display: "grid", justifyContent: "center" }}>
         {/* Centered Title */}
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", marginBottom: "20px" }}>
-          <span className="workshopFont font-weight-bold" style={{ fontSize: "24px" }}>
+          <span className="workshopFont font-weight-bold ds-digib-text" style={{}}>
             FLAGSHIP EVENTS
           </span>
         </div>
@@ -100,9 +100,9 @@ function Workshop() {
               alt="Ideathon Logo"
               style={{ width: "60px", height: "60px", marginBottom: "10px" }}
             />
-            <h3 style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>Hackathon 2025</h3>
-            <p style={{ fontSize: "14px", opacity: "0.9", marginBottom: "15px" }}>
-            Melinia Hackathon 2025 is a premier innovation-driven competition designed to foster creativity, problem-solving skills, and collaboration among participants. This flagship event challenges students to develop groundbreaking solutions to real-world problems across diverse domains, pushing the boundaries of technology and innovation. 
+            <h3 className="greater-theory-text" style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>Hackathon 2025</h3>
+            <p className="coco-gothic-text" style={{ fontSize: "14px", opacity: "0.9", marginBottom: "15px" }}>
+              Melinia Hackathon is a premier innovation-driven competition designed to foster creativity, problem-solving skills, and collaboration among participants. This flagship event challenges students to develop groundbreaking solutions to real-world problems across diverse domains, pushing the boundaries of technology and innovation.
             </p>
             <p style={{ fontSize: "12px", fontWeight: "500", opacity: "0.8", marginBottom: "10px", paddingBottom: "8px" }}>
               📍 MBCH | 🗓️ March 5-7, 2025
@@ -166,9 +166,9 @@ function Workshop() {
               alt="Hackathon Logo"
               style={{ width: "60px", height: "60px", marginBottom: "10px" }}
             />
-            <h3 style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>The Pitch Pit 2025</h3>
-            <p style={{ fontSize: "14px", opacity: "0.9", marginBottom: "15px" }}>
-            The Pitch Pit is an exciting opportunity to present your ideas, receive expert guidance, and gain the support needed to turn your vision into reality. More than just an ideathon, this platform encourages innovation across both technical and non-technical fields. Participants are challenged to develop creative solutions to real-world problems.</p>
+            <h3 className="greater-theory-text" style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>The Pitch Pit 2025</h3>
+            <p className="coco-gothic-text" style={{ fontSize: "14px", opacity: "0.9", marginBottom: "15px" }}>
+              The Pitch Pit is an exciting opportunity to present your ideas, receive expert guidance, and gain the support needed to turn your vision into reality. More than just an ideathon, this platform encourages innovation across both technical and non-technical fields. Participants are challenged to develop creative solutions to real-world problems.</p>
             <p style={{ fontSize: "12px", fontWeight: "500", opacity: "0.8", marginBottom: "10px", paddingBottom: "8px" }}>
               📍 IT 212, IT 213 | 🗓️ March 7, 2025
             </p>

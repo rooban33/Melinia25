@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
-  --primary: #865dff;
+  --primary: #d96caf;
+  ;
   --light: #ffffff;
   --dark: #222222;
   --red: #f31559;
@@ -51,6 +52,7 @@ body {
   0% {
     height: 0;
   }
+
   100% {
     height: 100%;
   }

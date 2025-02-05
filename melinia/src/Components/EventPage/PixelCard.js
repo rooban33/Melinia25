@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import '../PixelCard.css';
-import events from "../Data/EventsInfo";
+import './PixelCard.css';
 class Pixel {
     constructor(canvas, context, x, y, color, speed, delay) {
         this.width = canvas.width;

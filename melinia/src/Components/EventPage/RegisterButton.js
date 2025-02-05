@@ -1,7 +1,7 @@
 import React from "react";
-import "./ContinueApplicationButton.css"; // Ensure the styles are correctly linked
+import "./RegisterButton.css"; // Ensure the styles are correctly linked
 
-const ContinueApplicationButton = () => {
+const RegisterButton = () => {
     const handleClick = () => {
         window.location.href = "https://mail.google.com";
     };
@@ -29,4 +29,4 @@ const ContinueApplicationButton = () => {
     );
 };
 
-export default ContinueApplicationButton;
+export default RegisterButton;

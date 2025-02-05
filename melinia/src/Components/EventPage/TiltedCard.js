@@ -150,10 +150,10 @@ export default function TiltedCard({
 
             {displayOverlayContent && overlayContent && (
                 <motion.div
-                    className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray bg-opacity-80 rounded-lg p-4 text-center"
+                    className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-gray bg-opacity-80 rounded-lg p-4 text-center"
                     style={{ width: imageWidth }}
                 >
-                    <p className="text-lg text-gray-800 font-medium">{overlayContent}</p>
+                    <p className="text-lg text-gray-800 font-medium mb-2">{overlayContent}</p>
                     <button className="learn-more" onClick={handleEventClick}>
                         <span className="circle" aria-hidden="true">
                             <span className="icon arrow"></span>

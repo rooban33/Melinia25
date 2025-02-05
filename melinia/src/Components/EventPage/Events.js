@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Button } from "@material-tailwind/react";
-import TiltedCard from "./NewCard";
-import "../style.css";
-import events from "../Data/EventsInfo";
-import FilterButton from "./Check";
-import HoverButton from "./dsubscribe";
+import TiltedCard from "./TiltedCard";
+import "../../style.css";
+import events from "../../Data/EventsInfo";
+import HoverButton from "./HoverButton";
 import CustomButton from "./backbutton";
 const EventsPage = () => {
     const [activeCategory, setActiveCategory] = useState("Technical");
@@ -24,7 +23,7 @@ const EventsPage = () => {
             <header className="w-full py-8 sm:py-12 lg:py-16">
                 <nav className="flex flex-wrap justify-center gap-2 sm:gap-4 filter1">
                     {["Technical", "Non-Technical", "Flagship"].map((category) => (
-                        <div key={category} className="w-auto" style={{padding:"10px"}}>
+                        <div key={category} className="w-auto" style={{ padding: "10px" }}>
                             <HoverButton
                                 text={category}
                                 onClick={() => setActiveCategory(category)}
@@ -70,8 +69,8 @@ const EventsPage = () => {
                                     displayOverlayContent={true}
                                     overlayContent={
                                         <div className="w-full">
-                                            <p className="text-sm sm:text-base lg:text-lg text-white mb-4">
-                                                {event.description}
+                                            <p className="text-sm sm:text-base lg:text-lg text-white">
+                                                {event.title}
                                             </p>
                                         </div>
                                     }

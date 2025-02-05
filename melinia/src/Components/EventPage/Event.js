@@ -3,13 +3,13 @@ import React from "react";
 import PixelCard from "./PixelCard";
 import DecryptedText from "./DecryptedText";
 import DetailCard from "./DetailCard";
-import arrowIcon from "../Assets/icons/arrow_icon.png";
-import goldTrophy from "../Assets/icons/gold_medal.png";
-import silverTrophy from "../Assets/icons/silver_medal.png";
-import events from "../Data/EventsInfo";
+import arrowIcon from "../../Assets/icons/arrow_icon.png";
+import goldTrophy from "../../Assets/icons/gold_medal.png";
+import silverTrophy from "../../Assets/icons/silver_medal.png";
+import events from "../../Data/EventsInfo";
 import { Button } from "@mui/material";
 import CallIcon from "@mui/icons-material/Call";
-import ContinueApplicationButton from "./Continueapplication";
+import RegisterButton from "./RegisterButton";
 import CustomButton from "./backbutton";
 import "./Event.css";
 const EventDetails = () => {
@@ -40,6 +40,8 @@ const EventDetails = () => {
                 <div className="w-full md:w-3/5 p-2  bg-transparent text-left">
                     {/* Title */}
                     <DecryptedText
+                        className="ds-digib-text"
+                        encryptedClassName="ds-digib-text"
                         text={event.title}
                         animateOn="view"
                         revealDirection="center"
@@ -104,7 +106,7 @@ const EventDetails = () => {
                 </div>
             </div>
             <div className="mt-6 p-8 flex justify-center">
-                <ContinueApplicationButton />
+                <RegisterButton />
             </div>
         </div >
 

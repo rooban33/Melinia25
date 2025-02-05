@@ -15,11 +15,10 @@ export const Particle = () => {
                 fps = 1000 / elapsedTime;
 
                 const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-                const speed = connection ? connection.downlink : 5; // Default to 5 Mbps if unknown
-                const memory = navigator.deviceMemory || 2;
+                const speed = connection ? connection.downlink : 5;
 
-                if (speed < 2) {
-                    window.alert(fps,speed);
+                if (speed < 0.2) {
+                    
                     setUseParticles(false);
                 }
             });

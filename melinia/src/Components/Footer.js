@@ -55,7 +55,7 @@ function Footer() {
             Connect With Us
           </div>
           <div className="icons" style={{ display: "flex", justifyContent: "center", gap: "20px", fontSize: "28px" }}>
-            <a href="mailto:melinia2k24@gmail.com" className="footer-icon footer-icon-mail">
+            <a href="mailto:melinia052025@gmail.com" className="footer-icon footer-icon-mail">
               <span><AiFillMail /></span>
             </a>
             <a href="https://www.linkedin.com/in/melinia-cit-91810926b" className="footer-icon footer-icon-ln">

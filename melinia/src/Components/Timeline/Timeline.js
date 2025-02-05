@@ -1,6 +1,6 @@
 import React from 'react';
 import './Timeline.css';
-import launch from '../../Assets/timeline/launch.png';
+import launch from '../../Assets/timeline/start.png';
 import event from '../../Assets/timeline/event.png';
 import dance from '../../Assets/timeline/dance.png';
 import valediction from '../../Assets/timeline/valediction.png';
@@ -8,17 +8,18 @@ import lunch from '../../Assets/timeline/lunch.png';
 import { motion } from 'framer-motion';
 
 const events = [
-  { time: '08.30 am - 09.30 am', title: 'Inauguration Ceremony', img: launch },
-  { time: '10.00 am - 01.30 pm', title: 'Technical & Non-Technical Events', img: event },
-  { time: '01.30 pm - 02.30 pm', title: 'Lunch Break', img: lunch },
-  { time: '03.00 pm - 04.00 pm', title: 'Cultural Fest', img: dance },
-  { time: '04.00 pm - 05.00 pm', title: 'Valediction Ceremony', img: valediction }
+  { time: '08:30 AM - 09:30 AM', title: 'Inauguration Ceremony', img: launch },
+  { time: '10:00 AM - 01:30 PM', title: 'Technical & Non-Technical Events', img: event },
+  { time: '01:30 PM - 02:00 PM', title: 'Lunch Break', img: lunch },
+  { time: '02:00 PM - 03:00 PM', title: 'Events Finals', img: dance },
+  { time: '03:15 PM - 04:15 PM', title: 'Cultural Fest', img: dance },
+  { time: '04:15 PM - 05:30 PM', title: 'Valediction Ceremony', img: valediction }
 ];
 
 function Timeline() {
   return (
     <div className="timeline-container">
-      <h2 className="timeline-heading ds-digib-text">Event Line-up</h2>
+      <h2 className="timeline-heading ds-digib-text">General Timeline </h2>
       <div className="timeline">
         {events.map((event, index) => (
           <motion.div

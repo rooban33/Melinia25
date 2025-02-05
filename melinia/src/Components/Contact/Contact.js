@@ -64,9 +64,9 @@ const Contact = () => {
   return (
     <div>
       <Particle />
-      <div className="hero-container">
+      <div className="hero-container1">
         <div className="squid-bg"></div>
-        <div className='hero-card'>
+        <div className='hero-card1'>
           <div className="app-title" style = {{fontFamily: "Main"}}>
             <BlurText
               text="Any Queries?"

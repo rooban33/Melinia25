@@ -65,13 +65,13 @@ button:focus {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #401950;
+  background: #c90f78;
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(216, 130, 235, 0.911);
+  background: #FF1199;
   border-radius: 12px;
 }
 

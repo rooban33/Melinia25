@@ -43,9 +43,9 @@ function Home() {
           {/* <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom:"30px" }}>
             <QueryCard />
           </Container> */}
-          <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom: "30px" }}>
+          {/* <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom: "30px" }}>
             <Sponsors />
-          </Container>
+          </Container> */}
           <Container style={{ margin: 0, padding: 0, minWidth: '100%', marginBottom: "30px" }}>
             <ChiefGuest />
           </Container>

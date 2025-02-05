@@ -49,7 +49,7 @@ const CountdownTimer = () => {
 			/>
 
 			<h4 className="aboutFont ds-digib-text">
-				PRIZE POOL : 70,000 RS
+				PRIZE POOL : RS 70,000
 			</h4>
 			<div className='content'>
 				{Object.entries(timeLeft).map((el) => {

@@ -50,8 +50,8 @@ function Workshop() {
   };
 
   const handleRegisterClick1 = () => {
-    mixpanel.track("paperpresentation button clicked", { page: "home" });
-    window.open("https://unstop.com/p/paper-presentation-coimbatore-institute-of-technology-cit-coimbatore-886885", "_blank");
+    mixpanel.track("Hackathon button clicked", { page: "home" });
+    window.open("https://unstop.com/o/FoaGhvO", "_blank");
   };
 
   const blinkingStyle = {
@@ -112,7 +112,7 @@ function Workshop() {
 
             {/* Available Slots */}
             <p style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px", ...(ideathonSlots < 10 ? blinkingStyle : {}) }}>
-              Slots Available: {ideathonSlots}
+              Slots Available: {hackathonSlots}
             </p>
 
             <button
@@ -175,7 +175,7 @@ function Workshop() {
 
             {/* Available Slots */}
             <p style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px", ...(hackathonSlots < 10 ? blinkingStyle : {}) }}>
-              Slots Available: {hackathonSlots}
+              Slots Available: {ideathonSlots}
             </p>
 
             <button

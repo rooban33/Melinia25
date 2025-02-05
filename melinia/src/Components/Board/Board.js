@@ -87,7 +87,7 @@ class Board extends React.Component {
 cardDataStudent = [
   {
     name: "Suvetha A R",
-    role: "Faculty Coordinator",
+    role: "Student Coordinator",
     department: "M.Sc. Software Systems (4th Year)",
     phone: "+918148002445",
     email: "71762131053@cit.edu.in",
@@ -95,7 +95,7 @@ cardDataStudent = [
   },
   {
     name: "Mohan Raj M",
-    role: "Faculty Coordinator",
+    role: "Student Coordinator",
     department: "M.Sc. Data Science (4th Year)",
     phone: "+919360738976",
     email: "71762132025@cit.edu.in",
@@ -103,7 +103,7 @@ cardDataStudent = [
   },
   {
     name: "Dharun P A",
-    role: "Faculty Coordinator",
+    role: "Student Coordinator",
     department: "M.Sc. Decision & Computing Sciences (4th Year)",
     phone: "+919600878014",
     email: "71762133011@cit.edu.in",
@@ -111,7 +111,7 @@ cardDataStudent = [
   },
   {
     name: "Naveen R",
-    role: "Faculty Coordinator",
+    role: "Student Coordinator",
     department: "M.Sc. AI & Machine Learning (4th Year)",
     phone: "+918940521094",
     email: "71762134031@cit.edu.in",

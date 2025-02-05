@@ -372,6 +372,9 @@ button:focus {
   background-color: rgba(255, 255, 255, 0.1) !important;
   border-radius: 20px;
 
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-flex-direction: column;
 }
 
 .workshopBox {
@@ -627,6 +630,10 @@ button:focus {
     width: 100%;
     min-height: 300px;
     background-color: rgba(255, 255, 255, 0.1) !important;
+
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-flex-direction: column;
     /* Adjust the alpha value (0.0 to 1.0) for the desired transparency */
   }
 

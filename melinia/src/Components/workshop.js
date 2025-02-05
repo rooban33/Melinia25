@@ -83,7 +83,6 @@ function Workshop() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              justifyItems:"center",
               alignItems: "center",
               textAlign: "center",
               transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",

@@ -1,7 +1,7 @@
 import React from "react";
 import { Avatar } from "@mui/material";
 import { Box, Container } from "@mui/system";
-import chief from "../Assets/crew/chief.jpg";
+import chief from "../Assets/crew/chief.jpeg";
 
 function ChiefGuest() {
   return (
@@ -58,13 +58,10 @@ function ChiefGuest() {
         />
 
         <h3 style={{ color: "#f1f1f1", marginTop: "15px", fontSize: "1.6rem", fontWeight: "bold" }}>
-          Mr. Sathish Nandagopal
+          Mr. Ashok Kumar
         </h3>
         <p style={{ color: "#d3d3d3", fontSize: "1rem", fontWeight: "500", margin: "4px 0" }}>
-          Location Head HR, Wipro Technologies
-        </p>
-        <p style={{ color: "#d3d3d3", fontSize: "1rem", fontWeight: "500", margin: "4px 0" }}>
-          FSC - CIS Coimbatore
+          Senior Director, Quinbay Technologies
         </p>
 
         <p
@@ -77,8 +74,7 @@ function ChiefGuest() {
             lineHeight: "1.6",
           }}
         >
-          Excitement fills the air as we announce Sathish Nandagopal as the Chief Guest for our techfest. As a leader overseeing <span className="numbers">3200+</span> employees, he is committed to fostering inclusivity and excellence in the workplace. Join us for an insightful session with a visionary leader!
-        </p>
+          We are ecstatic to have Ashok Kumar as our event's chief guest! Leading a team of more than <span className="numbers">100</span> people, he has over <span className="numbers">15</span> years of experience in the field and is a driving force behind innovation in large-scale e-commerce solutions. He is a graduate of IIT Madras Machine Learning, and his proficiency in Full Stack Development and AI-driven scalability has revolutionized user experiences. Prepare yourself for a thought-provoking meeting with a vibrant tech executive! </p>
       </Container>
     </Box>
   );

@@ -96,6 +96,12 @@ const NavBar = () => {
             </Nav.Item>
 
             <Nav.Item>
+              <Nav.Link className="scroll-link" as={Link} to="/events" onClick={() => updateExpanded(false)}>
+                Events
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
               <Nav.Link
                 className="scroll-link"
                 as={Link}
@@ -106,14 +112,20 @@ const NavBar = () => {
               </Nav.Link>
             </Nav.Item>
 
+            {/* <Nav.Item>
+              <Nav.Link
+                className="scroll-link"
+                as={Link}
+                to="/gallery"
+                onClick={() => updateExpanded(false)}
+              >
+                Gallery
+              </Nav.Link>
+            </Nav.Item> */}
+
             <Nav.Item>
               <Nav.Link className="scroll-link" as={Link} to="/contact" onClick={() => updateExpanded(false)}>
                 Contact
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className="scroll-link" as={Link} to="/events" onClick={() => updateExpanded(false)}>
-                Events
               </Nav.Link>
             </Nav.Item>
           </Nav>

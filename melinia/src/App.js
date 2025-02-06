@@ -23,6 +23,7 @@ import Developers from './Components/Developers/Developers';
 import mixpanel from 'mixpanel-browser';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
+import Gallery from './Components/Gallery/Gallery';
 
 mixpanel.init("80b2a21992bf5ce950bb5dbd06b144a7", {
   debug: true
@@ -51,6 +52,7 @@ function App() {
             <Route path="/board" element={<Board />} />
             <Route path="/events/:id" element={<MainDescription />} />
             <Route path="/events" element={<EventsPage />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/developers" element={<Developers />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/event/:id" element={<EventDetails />} />

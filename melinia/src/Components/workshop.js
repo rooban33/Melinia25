@@ -169,7 +169,21 @@ function Workshop() {
             <p style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px", ...(ideathonSlots < 10 ? blinkingStyle : {}) }}>
               Slots Available: {ideathonSlots}
             </p>
-            <button onClick={handleRegisterClick}>View More Info</button>
+            <button
+            style={{
+                background: "#00a6fb",
+                color: "white",
+                padding: "8px 15px",
+                border: "none",
+                borderRadius: "5px",
+                fontSize: "14px",
+                fontWeight: "bold",
+                cursor: "pointer",
+                transition: "background 0.3s ease-in-out",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = "#007bb5")}
+              onMouseLeave={(e) => (e.currentTarget.style.background = "#00a6fb")}
+             onClick={handleRegisterClick}>View More Info</button>
           </SpotlightCard>
         </div>
       </div>

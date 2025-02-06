@@ -61,14 +61,14 @@ const EventDetails = () => {
                     <div className="mt-16 flex justify-center">
                         <DetailCard venue={event.venue} date="March 07, 2025" time={event.time} />
                     </div>
-                    <h3 className="mt-12 text-lg font-semibold !text-white ">Description:</h3>
-                    <p className=" text-gray-700 ml-8">
+                    <h3 className="mt-12 text-lg font-semibold " style={{color:"cornsilk"}}>Description:</h3>
+                    <p className=" !text-white ml-8">
                         {event.description}
                     </p>
 
                     {/* Rules */}
-                    <h3 className="mt-6 text-lg font-semibold !text-white">Rules:</h3>
-                    <ul className="list-none space-y-2 text-gray-700">
+                    <h3 className="mt-6 text-lg font-semibold" style={{color:"cornsilk"}}>Rules:</h3>
+                    <ul className="list-none space-y-2 !text-white">
                         {event.rules.map((rule, index) => (
                             <li key={index} className="flex items-center">
                                 <img src={arrowIcon} alt="icon" className="w-5 h-5 mr-2" />
@@ -79,8 +79,8 @@ const EventDetails = () => {
 
 
                     {/* Prize Section */}
-                    <h3 className="mt-6 text-lg font-semibold !text-white">Prize:</h3>
-                    <div className="flex items-center space-x-6 text-gray-700 ml-4 ">
+                    <h3 className="mt-6 text-lg font-semibold" style={{color:"cornsilk"}}>Prize:</h3>
+                    <div className="flex items-center space-x-6 !text-white ml-4 ">
                         <div className="flex items-center">
                             <img src={goldTrophy} alt="Gold Trophy" className="w-8 h-8 mr-2" />
                             <span>1st Place: {event.prizes.first}</span>
@@ -92,8 +92,8 @@ const EventDetails = () => {
                     </div>
 
                     {/* Contact Info */}
-                    <h3 className="mt-6 text-lg font-semibold !text-white">Contact Info:</h3>
-                    <div className="text-gray-700 ml-4">
+                    <h3 className="mt-6 text-lg font-semibold" style={{color:"cornsilk"}}>Contact Info:</h3>
+                    <div className="!text-white ml-4">
                         {event.contact.map((person, index) => (
                             <div key={index} className="flex items-center mt-2">
                                 <CallIcon className="text-[#F33A6A] mr-2" />

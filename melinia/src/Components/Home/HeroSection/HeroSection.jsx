@@ -1,8 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./HeroSection.css";
+import mixpanel from "mixpanel-browser";
 
 const HeroSection = () => {
+
+  const handleRegisterClick = () => {
+    mixpanel.track("Register button clicked", { page: "home" });
+    window.open("https://unstop.com/p/melinia-25-a-national-level-symposium-melinia-2k25-coimbatore-institute-of-technology-cit-coimbatore-1389457", "_blank");
+  };
   return (
     <div className="hero-container">
       {/* Background Animation */}
@@ -51,7 +57,7 @@ const HeroSection = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
           className="hero-tagline"
         >
-          National Level Technical Symposium
+         A National Level Technical Symposium
         </motion.p>
 
         {/* Call-to-Action Button */}
@@ -60,6 +66,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }} 
           transition={{ duration: 1, ease: "easeOut", delay: 1 }}
           className="squid-button"
+          onClick={handleRegisterClick}
         >
            Register Now
         </motion.button>

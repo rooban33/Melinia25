@@ -30,6 +30,7 @@
     "cra-template": "^1.2.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.0.6",
+    "gl-matrix": "^3.4.3",
     "install": "^0.13.0",
     "mixpanel-browser": "^2.48.1",
     "npm": "^11.0.0",

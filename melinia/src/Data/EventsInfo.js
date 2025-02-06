@@ -19,7 +19,7 @@ const events = [
             second: "₹3,000"
         },
         contact: ["Sai Nikhil S - 9080861273"],
-        category: ["Technical", "Flagship"],
+        category: ["Flagship"],
         is_flagship: true
     },
     {
@@ -41,7 +41,7 @@ const events = [
             second: "₹4000"
         },
         contact: ["Karthik Krishna - +91 9092723034", "Shanmugapriyaa D - +91 8248594018"],
-        category: ["Technical", "Flagship"],
+        category: ["Flagship"],
         is_flagship: true
     },
     {

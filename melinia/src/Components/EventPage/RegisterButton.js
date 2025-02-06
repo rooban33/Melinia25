@@ -3,7 +3,7 @@ import "./RegisterButton.css"; // Ensure the styles are correctly linked
 
 const RegisterButton = () => {
     const handleClick = () => {
-        window.location.href = "https://mail.google.com";
+        window.location.href = "https://unstop.com/p/melinia-25-a-national-level-symposium-melinia-2k25-coimbatore-institute-of-technology-cit-coimbatore-1389457";
     };
 
     return (

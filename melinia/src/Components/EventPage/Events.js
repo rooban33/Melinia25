@@ -6,13 +6,15 @@ import events from "../../Data/EventsInfo";
 import HoverButton from "./HoverButton";
 import CustomButton from "./backbutton";
 const EventsPage = () => {
-    const [activeCategory, setActiveCategory] = useState("Technical");
+    const [activeCategory, setActiveCategory] = useState("All");
 
-    const filteredEvents = events.filter((event) =>
-        Array.isArray(event.category)
-            ? event.category.includes(activeCategory)
-            : event.category === activeCategory
-    );
+    const filteredEvents = activeCategory === "All"
+        ? events
+        : events.filter((event) =>
+            Array.isArray(event.category)
+                ? event.category.includes(activeCategory)
+                : event.category === activeCategory
+        );
 
     return (
         <div className="min-h-screen px-4 sm:px-6 lg:px-8">
@@ -22,7 +24,7 @@ const EventsPage = () => {
             {/* Buttons section */}
             <header className="w-full py-8 sm:py-12 lg:py-16">
                 <nav className="flex flex-wrap justify-center gap-2 sm:gap-4 filter1">
-                    {["Technical", "Non-Technical", "Flagship"].map((category) => (
+                    {["All", "Technical", "Non-Technical", "Flagship"].map((category) => (
                         <div key={category} className="w-auto" style={{ padding: "10px" }}>
                             <HoverButton
                                 text={category}

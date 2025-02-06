@@ -42,8 +42,17 @@ export default function TiltedCard({
     const [stars, setStars] = useState([]);
 
     const handleEventClick = () => {
-        navigate(`/event/${eventId}`);
+        const registrationLinks = {
+            "1": "https://unstop.com/p/melinia-hackathon-2025-coimbatore-institute-of-technology-cit-coimbatore-1389350",
+            "2": "https://unstop.com/p/the-pitch-pit-coimbatore-institute-of-technology-cit-coimbatore-1389526?lb=PETC6GS6",
+        };
+        if (registrationLinks[eventId]) {
+            window.location.href = registrationLinks[eventId]; // Redirect to registration page
+        } else {
+            navigate(`/event/${eventId}`); // Navigate to the event page if not in the list
+        }
     };
+
 
     function handleMouse(e) {
         if (!ref.current) return;

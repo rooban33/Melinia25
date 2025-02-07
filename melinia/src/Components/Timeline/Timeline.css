@@ -88,6 +88,7 @@ body {
   height: 60px;
   border-radius: 50%;
   border: 3px solid var(--light);
+  background: black;
 }
 
 .left img {
@@ -144,7 +145,8 @@ body {
   .timeline-box img {
     position: absolute;
     left: -40px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    background: black;
   }
 }

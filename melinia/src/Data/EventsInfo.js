@@ -1,3 +1,4 @@
+import images from "../Assets/EventImages/Imageloader";
 const events = [
     {
         id: 1,
@@ -35,7 +36,7 @@ const events = [
             "Bring Laptop and power adapter",
             "Plagiarism leads to direct disqualification"
         ],
-        image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        image: images.pitchpit,
         prizes: {
             first: "₹6500",
             second: "₹4000"
@@ -55,7 +56,7 @@ const events = [
             "Bring two laptops per team mandatory",
             "No common WiFi will be provided."
         ],
-        image: "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        image: images.redlightgreencode,
         prizes: {
             first: "₹3500",
             second: "₹2500"
@@ -77,7 +78,7 @@ const events = [
             "Follow time limits - delays will result in penalties.",
             "Brace yourself - the biggest twist is the one you'll never see coming!"
         ],
-        image: "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        image: images.racetocode,
         prizes: {
             first: "₹3,000",
             second: "₹2,000"
@@ -87,7 +88,26 @@ const events = [
         is_flagship: false
     },
     {
-        id: 5,
+        "id": 5,
+        "title": "Player 456’s Revenge",
+        "time": "10:30 AM",
+        "venue": "MS103",
+        "description": "In this event, teams are thrust into a series of high-stakes challenges where precision, teamwork, and creativity are their only weapons for survival. Participants must work together to complete tasks such as complete tasks with their legs tied, cracking cryptic codes, playing Reverse Pictionary, and balancing a platform with cups. Every mistake could result in elimination, with the pressure mounting like a game of life or death. Success in each round brings teams closer to the ultimate prize, but only those who can balance speed, strategy, and flawless execution will make it to the end.",
+        "rules": [
+            "Team size: 2",
+            "Any sabotage or cheating will be disqualified immediately"
+        ],
+        "image": images.player456,
+        "prizes": {
+            "first": "₹2500",
+            "second": "₹1500"
+        },
+        "contact": ["Sashwathan S - 7904733589"],
+        "category": ["Non-Technical"],
+        "is_flagship": false
+    },
+    {
+        id: 6,
         title: "Cipher Quest: The Data Mystery",
         time: "10:30 AM",
         venue: "104",
@@ -101,7 +121,7 @@ const events = [
             "Teams must submit their final model and present a brief justification.",
             "Bonus marks for visualizations."
         ],
-        image: "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        image: images.datamystery,
         prizes: {
             first: "₹3000",
             second: "₹1500"
@@ -114,7 +134,7 @@ const events = [
         is_flagship: false
     },
     {
-        id: 6,
+        id: 7,
         title: "The Professor's Last Lecture",
         time: "11:00 AM",
         venue: "MS 106",
@@ -124,7 +144,7 @@ const events = [
             "Mobile phones are restricted",
             "Sharing the clues between teams is not allowed"
         ],
-        image: "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        image: images.professor,
         prizes: {
             first: "₹2500",
             second: "₹1500"
@@ -138,7 +158,7 @@ const events = [
     }
     ,
     {
-        "id": 7,
+        "id": 8,
         "title": "Exit Plan: The Campus Edition",
         "time": "10:30 AM",
         "venue": "MS207",
@@ -171,25 +191,6 @@ const events = [
             "Venkateshwaran S V - 6382129482",
             "Aishvarya S - 9488915001"
         ],
-        "category": ["Non-Technical"],
-        "is_flagship": false
-    },
-    {
-        "id": 8,
-        "title": "Player 456’s Revenge",
-        "time": "10:30 AM",
-        "venue": "MS103",
-        "description": "In this event, teams are thrust into a series of high-stakes challenges where precision, teamwork, and creativity are their only weapons for survival. Participants must work together to complete tasks such as complete tasks with their legs tied, cracking cryptic codes, playing Reverse Pictionary, and balancing a platform with cups. Every mistake could result in elimination, with the pressure mounting like a game of life or death. Success in each round brings teams closer to the ultimate prize, but only those who can balance speed, strategy, and flawless execution will make it to the end.",
-        "rules": [
-            "Team size: 2",
-            "Any sabotage or cheating will be disqualified immediately"
-        ],
-        "image": "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-        "prizes": {
-            "first": "₹2500",
-            "second": "₹1500"
-        },
-        "contact": ["Sashwathan S - 7904733589"],
         "category": ["Non-Technical"],
         "is_flagship": false
     },

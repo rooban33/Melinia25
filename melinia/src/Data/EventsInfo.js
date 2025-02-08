@@ -2,7 +2,7 @@ import images from "../Assets/EventImages/Imageloader";
 const events = [
     {
         id: 1,
-        title: "Hackathon",
+        title: "HACKATHON",
         time: "10:00 AM",
         venue: "MBCH",
         description: "Melinia Hackathon 2025 is a premier innovation-driven competition designed to foster creativity, problem-solving skills, and collaboration among participants. This flagship event challenges students to develop groundbreaking solutions to real-world problems across diverse domains, pushing the boundaries of technology and innovation.Participants will have the opportunity to showcase their technical expertise, work in dynamic teams, and compete in a high-stakes environment where creativity meets practical application. Join us for an exciting journey of learning, networking, and problem-solving as we redefine the future through technology!",
@@ -25,7 +25,7 @@ const events = [
     },
     {
         id: 2,
-        title: "The Pitch Pit",
+        title: "THE PITCH PIT",
         time: "9:00 AM",
         venue: "IT 212, IT 213",
         description: "Round 1: Idea Submission\n Teams must submit an abstract of 500 to 1,000 words, based on which a selection panel will shortlist the teams for Round 2.\n• Email your submission to meliniathepitchpit@gmail.com\n• A panel will screen and shortlist the best business ideas for Round 2.\n\nRound 2: Business Plan Presentation (Online)\n• Shortlisted teams will present their detailed business plan to the panel.\n• Presentation Time Maximum 10 minutes per team.\n• The panel will evaluate and select the best business plan.\n\nRound 3: Final Pitch\n• The final round will be conducted in person at Coimbatore Institute of Technology on Melinia’25 - 7th March 2025.\n• Shortlisted teams will present their refined business ideas to the jury.\n• Winners of Final Round will receive cash prizes.",
@@ -47,7 +47,7 @@ const events = [
     },
     {
         id: 3,
-        title: "Red Light, Green Code",
+        title: "RED LIGHT, GREEN CODE",
         time: "10:30 AM",
         venue: "CM 202",
         description: "Red Light Green Code – Stop. Think. Code. Race through flowchart challenges, crack puzzles with limited life times, and hunt down tricky bugs. Every level tests your logic, speed, and teamwork. Only the sharpest minds will make it to the finish line—are you ready to win?",
@@ -67,7 +67,7 @@ const events = [
     },
     {
         id: 4,
-        title: "Race To Code",
+        title: "RACE TO CODE",
         time: "10:00 AM",
         venue: "103",
         description: "Brace yourself for an electrifying three-round challenge where only the sharpest minds will prevail! Speed through a thrilling RC car race while tackling brain-teasing technical puzzles. Dominate a rapid-fire MCQ quiz, testing your coding prowess and logical reasoning. Then, face the ultimate test in a high-stakes mystery coding challenge, where an unexpected twist awaits. Think fast, code smart, and rise to victory!",
@@ -89,7 +89,7 @@ const events = [
     },
     {
         "id": 5,
-        "title": "Player 456’s Revenge",
+        "title": "PLAYER 456's REVENGE",
         "time": "10:30 AM",
         "venue": "MS103",
         "description": "In this event, teams are thrust into a series of high-stakes challenges where precision, teamwork, and creativity are their only weapons for survival. Participants must work together to complete tasks such as complete tasks with their legs tied, cracking cryptic codes, playing Reverse Pictionary, and balancing a platform with cups. Every mistake could result in elimination, with the pressure mounting like a game of life or death. Success in each round brings teams closer to the ultimate prize, but only those who can balance speed, strategy, and flawless execution will make it to the end.",
@@ -108,7 +108,7 @@ const events = [
     },
     {
         id: 6,
-        title: "Cipher Quest: The Data Mystery",
+        title: "CIPHER QUEST: THE DATA MYSTERY",
         time: "10:30 AM",
         venue: "104",
         description: "This event is a competitive machine learning challenge designed to test teams' problem-solving, analytical, and model-building skills under unique constraints. Round 1: Participants receive only 50% of the dataset, while the remaining 50% is locked. The feature names are hidden behind riddles, and teams must solve them to unlock the rest of the data. Failure to identify a minimum number of features within the given time will result in elimination. Round 2: Qualified teams will proceed to build machine learning models while facing surprise challenges that impact coding time, testing their adaptability and efficiency. The winning team will be judged based on: 1. Model accuracy 2. Justification of choices 3. Bonus points for well-presented visualizations.",
@@ -135,7 +135,7 @@ const events = [
     },
     {
         id: 7,
-        title: "The Professor's Last Lecture",
+        title: "THE PROFESSOR'S LAST LECTURE",
         time: "11:00 AM",
         venue: "MS 106",
         description: "A brilliant and controversial professor is found dead just before revealing groundbreaking research. Was it a rival, a student, or something more sinister? Join this high-stakes mystery challenge, where teams investigate crime scenes, decode secret messages, and uncover hidden motives. Each round brings new twists—only the sharpest minds will solve the case. Dare to dive into darkness? Unleash your inner sleuth and crack the case—before the killer strikes again!",
@@ -159,7 +159,7 @@ const events = [
     ,
     {
         "id": 8,
-        "title": "Exit Plan: The Campus Edition",
+        "title": "EXIT PLAN: THE CAMPUS EDITION",
         "time": "10:30 AM",
         "venue": "MS207",
         "description": "EXIT PLAN: THE CAMPUS EDITION\n\nRace against time in this ultimate campus escape challenge! Form your team, complete thrilling missions, solve puzzles, test your skills, and outmaneuver danger zones. Collect escape passes and strategize your way to victory. Do you have what it takes to make it out?\n\nThink fast. Move smart. Escape together!",
@@ -196,7 +196,7 @@ const events = [
     },
     {
         "id": 9,
-        "title": "The Vault of Fortune",
+        "title": "THE VAULT OF FORTUNE",
         "time": "11:30 AM",
         "venue": "MS 203",
         "description": "Hello Lucky Baskharrrrrr! Think you can sweet-talk an AI into handing over virtual cash? Well, this is your chance to outwit, outprompt, and outcash the competition! Teams will craft genius prompts to sneak past security firewalls, stack up digital dollars, and avoid getting wiped out. But beware—one bad prompt and your fortune disappears faster than your weekend plans!\n\nOnly the smoothest talkers, the fastest thinkers, and the boldest risk-takers will walk away with the ultimate prize. Ready to break the bank (legally, of course)? Let the AI heist begin!",
@@ -266,7 +266,7 @@ const events = [
     },
     {
         "id": 12,
-        "title": "Kill Code: Debug to Survive",
+        "title": "KILL CODE: DEBUG TO SURVIVE",
         "time": "10:30 AM",
         "venue": "MS 108",
         "description": "In \"Kill Code: Debug to Survive,\" you are an elite investigator employed by the Front Man to solve a chilling murder mystery in the Squid Games HQ. As you navigate through layers of deceit and technical puzzles, only your sharpest instincts and logic will keep you alive. The game will test your analytical, problem-solving and programming skills like never before. Fail to uncover the truth, and the Front Man’s wrath will be your demise. Can you decode the mystery and survive, or will you become another victim of the deadly game?",

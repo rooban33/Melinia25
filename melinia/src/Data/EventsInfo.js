@@ -14,7 +14,7 @@ const events = [
             "Round 3: Shortlisting will be based on further project progress. Mentors will provide guidance and feedback to help teams advance to the finals.",
             "Final Round: The final evaluation will be conducted by department staff or super seniors, assessing the final project and presentation."
         ],
-        image: "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        image: images.hackathon,
         prizes: {
             first: "₹5,000",
             second: "₹3,000"
@@ -182,7 +182,7 @@ const events = [
             "A team is fully disqualified if all members are eliminated in Danger Zones.",
             "Survive. Solve. Escape!"
         ],
-        "image": "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        "image": images.exitplan,
         "prizes": {
             "first": "₹2,500",
             "second": "₹1,500"
@@ -209,7 +209,7 @@ const events = [
             "Teams that use inappropriate words or context in their prompts will be immediately eliminated.",
             "The final decision regarding the winning team rests solely with the organizing team."
         ],
-        "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        "image": images.vaultoffortune,
         "prizes": {
             "first": "₹3500",
             "second": "₹2000"
@@ -234,7 +234,7 @@ const events = [
             "Decisions made by event organizers are final.",
             "Bring your own laptops."
         ],
-        "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        "image": images.codingduel,
         "prizes": {
             "first": "₹3500",
             "second": "₹2000"
@@ -255,7 +255,7 @@ const events = [
             "Players must not reveal their card placements to their opponents before the swap.",
             "Decisions made by event organizers are final."
         ],
-        "image": "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        "image": images.survivetheswap,
         "prizes": {
             "first": "₹2500",
             "second": "₹1500"

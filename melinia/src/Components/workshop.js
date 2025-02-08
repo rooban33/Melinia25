@@ -13,8 +13,8 @@ function Workshop() {
     const fetchSlots = async () => {
       try {
         const [ideathonRes, hackathonRes] = await Promise.all([
-          fetch("https://melinia-backend.onrender.com/available_seats/ideathon"),
-          fetch("https://melinia-backend.onrender.com/available_seats/hackathon"),
+          fetch("https://melinia-backend-6hoh.onrender.com/available_seats/ideathon"),
+          fetch("https://melinia-backend-6hoh.onrender.com/available_seats/hackathon"),
         ]);
 
         const ideathonData = await ideathonRes.json();

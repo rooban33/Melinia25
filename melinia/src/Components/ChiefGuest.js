@@ -51,7 +51,7 @@ function ChiefGuest() {
             border: "4px solid white",
             boxShadow: "0px 5px 15px rgba(255, 255, 255, 0.2)",
             transition: "transform 0.3s ease-in-out",
-            '&:hover': {
+            "&:hover": {
               transform: "scale(1.1)",
             },
           }}
@@ -64,7 +64,7 @@ function ChiefGuest() {
           Senior Director, Quinbay Technologies
         </p>
 
-        <p
+        <div
           className="coco-gothic-text"
           style={{
             color: "#d3d3d3",
@@ -72,9 +72,22 @@ function ChiefGuest() {
             fontWeight: "500",
             marginTop: "15px",
             lineHeight: "1.6",
+            textAlign: "justify",
           }}
         >
-          We are ecstatic to have Ashok Kumar as our event's chief guest! Leading a team of more than <span className="numbers">100</span> people, he has over <span className="numbers">15</span> years of experience in the field and is a driving force behind innovation in large-scale e-commerce solutions. He is a graduate of IIT Madras Machine Learning, and his proficiency in Full Stack Development and AI-driven scalability has revolutionized user experiences. Prepare yourself for a thought-provoking meeting with a vibrant tech executive! </p>
+          We are delighted to introduce Ashok Kumar Subramanian, a seasoned technology leader with over <span className="numbers">15</span> years of experience. 
+          Currently a Senior Director at Quinbay Technologies, he began his journey as a Mobile Application developer and later 
+          expanded into Java, frontend technologies, and full-stack development.
+          <br />
+          <br />
+          Leading a team of <span className="numbers">100</span>+ professionals, he plays a key role in managing a high-scale e-commerce platform serving millions 
+          of users. One of his major achievements is implementing ML-driven solutions that handle sudden traffic surges, scaling 
+          user volumes from thousands to millions in seconds.
+          <br />
+          <br />
+          With a strong Machine Learning foundation from IIT-Madras, Ashok Kumar continues to drive innovation and scalability in 
+          the e-commerce space.
+        </div>
       </Container>
     </Box>
   );

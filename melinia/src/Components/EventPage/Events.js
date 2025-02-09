@@ -71,9 +71,31 @@ const EventsPage = () => {
                                     displayOverlayContent={true}
                                     overlayContent={
                                         <div className="w-full">
-                                            <p className="text-sm sm:text-base lg:text-lg text-white">
+                                            {/* <p
+                                                className="text-sm sm:text-base lg:text-lg"
+                                                style={{
+                                                    color: "white",
+                                                    textShadow: "-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black",
+                                                }}
+                                            >
+                                                {event.title}
+                                            </p> */}
+
+                                            <p
+                                                className="text-sm sm:text-base lg:text-lg"
+                                                style={{
+                                                    color: "white",
+                                                    textShadow: `
+                                                        -2px -2px 0 black, 2px -2px 0 black,
+                                                        -2px 2px 0 black, 2px 2px 0 black,
+                                                        -2px 0px 0 black, 2px 0px 0 black,
+                                                        0px -2px 0 black, 0px 2px 0 black
+                                                    `,
+                                                }}
+                                            >
                                                 {event.title}
                                             </p>
+
                                         </div>
                                     }
                                     buttonText="Learn More"

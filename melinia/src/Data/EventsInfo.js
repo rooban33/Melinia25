@@ -279,7 +279,7 @@ const events = [
             "Time-limited challenges may apply in some sections.",
             "Decisions made by event organizers are final."
         ],
-        "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+        "image": images.killcode,
         "prizes": {
             "first": "₹3,500",
             "second": "₹2,000"

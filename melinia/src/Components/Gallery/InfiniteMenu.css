@@ -117,6 +117,8 @@
     .face-description
     {
       margin-top: 12.5rem;
+      justify-items: center;
+      align-items: center;
     }
   }
 

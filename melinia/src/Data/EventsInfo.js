@@ -47,25 +47,22 @@ const events = [
     },
     {
         id: 3,
-        title: "THE PROFESSOR'S LAST LECTURE",
-        time: "11:00 AM",
-        venue: "MS 106",
-        description: "A brilliant and controversial professor is found dead just before revealing groundbreaking research. Was it a rival, a student, or something more sinister? Join this high-stakes mystery challenge, where teams investigate crime scenes, decode secret messages, and uncover hidden motives. Each round brings new twists—only the sharpest minds will solve the case. Dare to dive into darkness? Unleash your inner sleuth and crack the case—before the killer strikes again!",
+        title: "RED LIGHT, GREEN CODE",
+        time: "10:30 AM",
+        venue: "CM 202",
+        description: "Red Light Green Code – Stop. Think. Code. Race through flowchart challenges, crack puzzles with limited life times, and hunt down tricky bugs. Every level tests your logic, speed, and teamwork. Only the sharpest minds will make it to the finish line—are you ready to win?",
         rules: [
-            "Team Size - 3 or 4",
-            "Mobile phones are restricted",
-            "Sharing the clues between teams is not allowed"
+            "2 or 4 per team",
+            "Bring two laptops per team mandatory",
+            "No common WiFi will be provided."
         ],
-        image: images.professor,
+        image: images.redlightgreencode,
         prizes: {
-            first: "₹2500",
-            second: "₹1500"
+            first: "₹3500",
+            second: "₹2000"
         },
-        contact: [
-            "Yashvitha - 9894060392",
-            "Riza - 9894074180"
-        ],
-        category: ["Non-Technical"],
+        contact: ["S. Suhaina - 9790941992"],
+        category: ["Technical"],
         is_flagship: false
     },
     {
@@ -111,22 +108,25 @@ const events = [
     },
     {
         id: 6,
-        title: "RED LIGHT, GREEN CODE",
-        time: "10:30 AM",
-        venue: "CM 202",
-        description: "Red Light Green Code – Stop. Think. Code. Race through flowchart challenges, crack puzzles with limited life times, and hunt down tricky bugs. Every level tests your logic, speed, and teamwork. Only the sharpest minds will make it to the finish line—are you ready to win?",
+        title: "THE PROFESSOR'S LAST LECTURE",
+        time: "11:00 AM",
+        venue: "MS 106",
+        description: "A brilliant and controversial professor is found dead just before revealing groundbreaking research. Was it a rival, a student, or something more sinister? Join this high-stakes mystery challenge, where teams investigate crime scenes, decode secret messages, and uncover hidden motives. Each round brings new twists—only the sharpest minds will solve the case. Dare to dive into darkness? Unleash your inner sleuth and crack the case—before the killer strikes again!",
         rules: [
-            "2 or 4 per team",
-            "Bring two laptops per team mandatory",
-            "No common WiFi will be provided."
+            "Team Size - 3 or 4",
+            "Mobile phones are restricted",
+            "Sharing the clues between teams is not allowed"
         ],
-        image: images.redlightgreencode,
+        image: images.professor,
         prizes: {
-            first: "₹3500",
-            second: "₹2000"
+            first: "₹2500",
+            second: "₹1500"
         },
-        contact: ["S. Suhaina - 9790941992"],
-        category: ["Technical"],
+        contact: [
+            "Yashvitha - 9894060392",
+            "Riza - 9894074180"
+        ],
+        category: ["Non-Technical"],
         is_flagship: false
     },
     {

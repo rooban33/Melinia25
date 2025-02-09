@@ -16,8 +16,8 @@ const events = [
         ],
         image: images.hackathon,
         prizes: {
-            first: "₹5,000",
-            second: "₹3,000"
+            first: "₹6,500",
+            second: "₹4,000"
         },
         contact: ["Sai Nikhil S - 9080861273"],
         category: ["Flagship"],
@@ -47,22 +47,25 @@ const events = [
     },
     {
         id: 3,
-        title: "RED LIGHT, GREEN CODE",
-        time: "10:30 AM",
-        venue: "CM 202",
-        description: "Red Light Green Code – Stop. Think. Code. Race through flowchart challenges, crack puzzles with limited life times, and hunt down tricky bugs. Every level tests your logic, speed, and teamwork. Only the sharpest minds will make it to the finish line—are you ready to win?",
+        title: "THE PROFESSOR'S LAST LECTURE",
+        time: "11:00 AM",
+        venue: "MS 106",
+        description: "A brilliant and controversial professor is found dead just before revealing groundbreaking research. Was it a rival, a student, or something more sinister? Join this high-stakes mystery challenge, where teams investigate crime scenes, decode secret messages, and uncover hidden motives. Each round brings new twists—only the sharpest minds will solve the case. Dare to dive into darkness? Unleash your inner sleuth and crack the case—before the killer strikes again!",
         rules: [
-            "2 or 4 per team",
-            "Bring two laptops per team mandatory",
-            "No common WiFi will be provided."
+            "Team Size - 3 or 4",
+            "Mobile phones are restricted",
+            "Sharing the clues between teams is not allowed"
         ],
-        image: images.redlightgreencode,
+        image: images.professor,
         prizes: {
-            first: "₹3500",
-            second: "₹2500"
+            first: "₹2500",
+            second: "₹1500"
         },
-        contact: ["S. Suhaina - 9790941992"],
-        category: ["Technical"],
+        contact: [
+            "Yashvitha - 9894060392",
+            "Riza - 9894074180"
+        ],
+        category: ["Non-Technical"],
         is_flagship: false
     },
     {
@@ -80,7 +83,7 @@ const events = [
         ],
         image: images.racetocode,
         prizes: {
-            first: "₹3,000",
+            first: "₹3,500",
             second: "₹2,000"
         },
         contact: ["Tarun S R - 8870881201"],
@@ -108,6 +111,26 @@ const events = [
     },
     {
         id: 6,
+        title: "RED LIGHT, GREEN CODE",
+        time: "10:30 AM",
+        venue: "CM 202",
+        description: "Red Light Green Code – Stop. Think. Code. Race through flowchart challenges, crack puzzles with limited life times, and hunt down tricky bugs. Every level tests your logic, speed, and teamwork. Only the sharpest minds will make it to the finish line—are you ready to win?",
+        rules: [
+            "2 or 4 per team",
+            "Bring two laptops per team mandatory",
+            "No common WiFi will be provided."
+        ],
+        image: images.redlightgreencode,
+        prizes: {
+            first: "₹3500",
+            second: "₹2000"
+        },
+        contact: ["S. Suhaina - 9790941992"],
+        category: ["Technical"],
+        is_flagship: false
+    },
+    {
+        id: 7,
         title: "CIPHER QUEST: THE DATA MYSTERY",
         time: "10:30 AM",
         venue: "104",
@@ -123,8 +146,8 @@ const events = [
         ],
         image: images.datamystery,
         prizes: {
-            first: "₹3000",
-            second: "₹1500"
+            first: "₹3500",
+            second: "₹2000"
         },
         contact: [
             "Priyadarshini - 9500862244",
@@ -134,31 +157,29 @@ const events = [
         is_flagship: false
     },
     {
-        id: 7,
-        title: "THE PROFESSOR'S LAST LECTURE",
-        time: "11:00 AM",
-        venue: "MS 106",
-        description: "A brilliant and controversial professor is found dead just before revealing groundbreaking research. Was it a rival, a student, or something more sinister? Join this high-stakes mystery challenge, where teams investigate crime scenes, decode secret messages, and uncover hidden motives. Each round brings new twists—only the sharpest minds will solve the case. Dare to dive into darkness? Unleash your inner sleuth and crack the case—before the killer strikes again!",
-        rules: [
-            "Team Size - 3 or 4",
-            "Mobile phones are restricted",
-            "Sharing the clues between teams is not allowed"
+        "id": 8,
+        "title": "SURVIVE THE SWAP",
+        "time": "10:30 AM",
+        "venue": "MS 107",
+        "description": "\"Survive the Swap\" is a high-stakes 1v1 strategy game that challenges players' intuition, deception, and decision-making skills. Players must carefully place their cards, analyse their opponent’s tactics, and make the right swaps to ensure their survival. With every round, the intensity rises, making it a thrilling knockout-style event where only the most strategic player advances to ultimate victory.",
+        "rules": [
+            "The game is played in a 1v1 format throughout all rounds.",
+            "No external assistance is allowed.",
+            "Players must not reveal their card placements to their opponents before the swap.",
+            "Decisions made by event organizers are final."
         ],
-        image: images.professor,
-        prizes: {
-            first: "₹2500",
-            second: "₹1500"
+        "image": images.survivetheswap,
+        "prizes": {
+            "first": "₹2500",
+            "second": "₹1500"
         },
-        contact: [
-            "Yashvitha - 9894060392",
-            "Riza - 9894074180"
-        ],
-        category: ["Non-Technical"],
-        is_flagship: false
+        "contact": ["Sudeep K - 7598323217"],
+        "category": ["Non-Technical"],
+        "is_flagship": false
     }
     ,
     {
-        "id": 8,
+        "id": 9,
         "title": "EXIT PLAN: THE CAMPUS EDITION",
         "time": "10:30 AM",
         "venue": "MS207",
@@ -195,7 +216,29 @@ const events = [
         "is_flagship": false
     },
     {
-        "id": 9,
+        "id": 10,
+        "title": "CODE DUEL",
+        "time": "10:30 AM",
+        "venue": "MS208",
+        "description": "\"CODE DUEL\" is a thrilling 1 vs. 1 coding showdown that pits programmers against each other in a series of fast-paced, knockout-style battles. Designed to challenge participants' coding expertise, logical thinking, and adaptability, this competition delivers an electrifying experience for coders. Only the sharpest minds and fastest fingers will survive each round to claim ultimate glory. Each round introduces a mystery puzzle—the first team to solve it will receive unique perks that can either benefit themselves or put their opponent at a disadvantage in the head-to-head battle.",
+        "rules": [
+            "Teams must have 2-4 members (minimum one for coding challenge and one for puzzle challenge).",
+            "No internet usage is allowed.",
+            "Teams may use any offline coding platforms.",
+            "Decisions made by event organizers are final.",
+            "Bring your own laptops."
+        ],
+        "image": images.codingduel,
+        "prizes": {
+            "first": "₹3500",
+            "second": "₹2000"
+        },
+        "contact": ["Logesh - 8248211569"],
+        "category": ["Technical"],
+        "is_flagship": false
+    },
+    {
+        "id": 11,
         "title": "THE VAULT OF FORTUNE",
         "time": "11:30 AM",
         "venue": "MS 203",
@@ -221,49 +264,8 @@ const events = [
         "category": ["Technical"],
         "is_flagship": false
     },
-    {
-        "id": 10,
-        "title": "CODE DUEL",
-        "time": "10:30 AM",
-        "venue": "MS208",
-        "description": "\"CODE DUEL\" is a thrilling 1 vs. 1 coding showdown that pits programmers against each other in a series of fast-paced, knockout-style battles. Designed to challenge participants' coding expertise, logical thinking, and adaptability, this competition delivers an electrifying experience for coders. Only the sharpest minds and fastest fingers will survive each round to claim ultimate glory. Each round introduces a mystery puzzle—the first team to solve it will receive unique perks that can either benefit themselves or put their opponent at a disadvantage in the head-to-head battle.",
-        "rules": [
-            "Teams must have 2-4 members (minimum one for coding challenge and one for puzzle challenge).",
-            "No internet usage is allowed.",
-            "Teams may use any offline coding platforms.",
-            "Decisions made by event organizers are final.",
-            "Bring your own laptops."
-        ],
-        "image": images.codingduel,
-        "prizes": {
-            "first": "₹3500",
-            "second": "₹2000"
-        },
-        "contact": ["Logesh - 8248211569"],
-        "category": ["Technical"],
-        "is_flagship": false
-    },
-    {
-        "id": 11,
-        "title": "SURVIVE THE SWAP",
-        "time": "10:30 AM",
-        "venue": "MS 107",
-        "description": "\"Survive the Swap\" is a high-stakes 1v1 strategy game that challenges players' intuition, deception, and decision-making skills. Players must carefully place their cards, analyse their opponent’s tactics, and make the right swaps to ensure their survival. With every round, the intensity rises, making it a thrilling knockout-style event where only the most strategic player advances to ultimate victory.",
-        "rules": [
-            "The game is played in a 1v1 format throughout all rounds.",
-            "No external assistance is allowed.",
-            "Players must not reveal their card placements to their opponents before the swap.",
-            "Decisions made by event organizers are final."
-        ],
-        "image": images.survivetheswap,
-        "prizes": {
-            "first": "₹2500",
-            "second": "₹1500"
-        },
-        "contact": ["Sudeep K - 7598323217"],
-        "category": ["Non-Technical"],
-        "is_flagship": false
-    },
+
+
     {
         "id": 12,
         "title": "KILL CODE: DEBUG TO SURVIVE",

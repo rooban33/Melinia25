@@ -132,6 +132,7 @@ export default function TiltedCard({
             onMouseMove={handleMouse}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={handleEventClick}
         >
             {showMobileWarning && (
                 <div className="absolute top-4 text-center text-sm block sm:hidden">
@@ -163,12 +164,7 @@ export default function TiltedCard({
                     style={{ width: imageWidth }}
                 >
                     <p className="text-lg text-gray-800 font-medium mb-2">{overlayContent}</p>
-                    <button className="learn-more" onClick={handleEventClick}>
-                        <span className="circle" aria-hidden="true">
-                            <span className="icon arrow"></span>
-                        </span>
-                        <span className="button-text">{buttonText}</span>
-                    </button>
+
                 </motion.div>
             )}
 

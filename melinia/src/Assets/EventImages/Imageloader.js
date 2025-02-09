@@ -1,7 +1,7 @@
 const images = {
     hackathon: require("./H0.jpg"),
     pitchpit: require("./PitchPit.png"),
-    redlightgreencode: require("./try.jpeg"),
+    redlightgreencode: require("./RLGC3.jpg"),
     racetocode: require("./RTC2.webp"),
     player456: require("./Player456.jpg"),
     datamystery: require("./DataMystery.png"),

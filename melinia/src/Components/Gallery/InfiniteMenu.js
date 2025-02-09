@@ -874,7 +874,6 @@ export default function InfiniteMenu({ items = [] }) {
   const canvasRef = useRef(null);
   const [activeItem, setActiveItem] = useState(null);
   const [isMoving, setIsMoving] = useState(false);
-  const [isGlobeView, setIsGlobeView] = useState(true);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -891,10 +890,7 @@ export default function InfiniteMenu({ items = [] }) {
         items.length ? items : defaultItems,
         handleActiveItem,
         setIsMoving,
-        (sk) => {
-            sk.run();
-            sk.camera.position[2] = isGlobeView ? 8 : 3;  // Start with a zoomed-out view
-          }
+        (sk) => sk.run()
       );
     }
 
@@ -911,13 +907,7 @@ export default function InfiniteMenu({ items = [] }) {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [items,isGlobeView]);
-
-  const handleInteraction = () => {
-    if (isGlobeView) {
-      setIsGlobeView(false);  // 🛑 Once interacted, switch to normal mode
-    }
-  };
+  }, [items]);
 
   const handleButtonClick = () => {
     if (!activeItem?.link) return;
@@ -929,25 +919,24 @@ export default function InfiniteMenu({ items = [] }) {
   };
 
   return (
-    <div
-      style={{ position: 'relative', width: '100%', height: '100%' }}
-      onPointerDown={handleInteraction}  // Detect any user interaction
-      onTouchStart={handleInteraction}
-      onWheel={handleInteraction}
-    >
-      <canvas ref={canvasRef} id="infinite-grid-menu-canvas" />
+    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+      <canvas
+        id="infinite-grid-menu-canvas"
+        ref={canvasRef}
+      />
 
-      {activeItem && !isGlobeView && (
+      {/* Feel free to customize what's displayed when the menu is not being dragged and an item is displayed in the center */}
+      {activeItem && (
         <>
-          <h2 className={`face-title ${isMoving ? 'inactive' : 'active'}`} style={{ color: "white" }}>
+          <h2 className={`face-title ${isMoving ? 'inactive' : 'active'}`} style={{color:'wheat'}}>
             {activeItem.title}
           </h2>
-          <p className={`face-description ${isMoving ? 'inactive' : 'active'}`} style={{ color: "white" }}>
-            {activeItem.description}
-          </p>
+
+          <p className={`face-description ${isMoving ? 'inactive' : 'active'}`} style={{color:'white'}}> {activeItem.description}</p>
+
         </>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 }
-

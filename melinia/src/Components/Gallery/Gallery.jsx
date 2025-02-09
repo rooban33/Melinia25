@@ -1,33 +1,52 @@
-import InfiniteMenu from './InfiniteMenu'
+import InfiniteMenu from './InfiniteMenu';
+import img1 from '../../Assets/gallery/start.jpg';
+import img2 from '../../Assets/gallery/stco.JPG';
+import img3 from '../../Assets/gallery/win.JPG';
+import img4 from '../../Assets/gallery/flashmob.jpg';
+import img5 from '../../Assets/gallery/inaguration.JPG';
+import img6 from '../../Assets/gallery/chief.JPG';
 
 const Gallery = () => {
     
     const items = [
         {
-          image: 'https://picsum.photos/300/300?grayscale',
+          image: img2,
           link: 'https://google.com/',
-          title: 'Item 1',
-          description: 'This is pretty cool, right?'
+          title: "Melinia'24",
+          description: "Melinia'24 Student Coordinators"
         },
         {
-          image: 'https://picsum.photos/400/400?grayscale',
+          image: img3,
           link: 'https://google.com/',
-          title: 'Item 2',
-          description: 'This is pretty cool, right?'
+          title: "Melinia'24",
+          description: "Overall trophy winners of Melinia'24"
         },
         {
-          image: 'https://picsum.photos/500/500?grayscale',
+          image: img4,
           link: 'https://google.com/',
-          title: 'Item 3',
-          description: 'This is pretty cool, right?'
+          title: "Melinia'24",
+          description: 'Students conducting Flash mob'
         },
         {
-          image: 'https://picsum.photos/600/600?grayscale',
+          image: img5,
           link: 'https://google.com/',
-          title: 'Item 4',
-          description: 'This is pretty cool, right?'
+          title: "Melinia'24",
+          description: 'Inaguration Ceremony'
+        },
+        {
+          image: img1,
+          title: "Welcome to",
+          link: 'https://google.com/',
+          description: "Try rotating the globe 🌍🖐"
+        },
+        {
+          image: img6,
+          link: 'https://google.com/',
+          title: "Melinia'24",
+          description: 'Chief Guest addressing students'
         }
       ];
+
       
   
     return (

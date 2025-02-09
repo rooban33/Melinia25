@@ -110,8 +110,13 @@
   }
   
   @media (max-width: 1500px) {
-    .face-title, .face-description {
+    .face-title {
       display: none;
+    }
+
+    .face-description
+    {
+      margin-top: 12.5rem;
     }
   }
 

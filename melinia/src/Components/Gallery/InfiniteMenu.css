@@ -132,9 +132,11 @@
 @media (max-width: 600px) {
   .face-title {
     font-size: clamp(1.2rem, 6vw, 2rem);
+    display: none;
   }
 
   .face-description {
-    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    /* font-size: clamp(0.9rem, 4vw, 1.2rem); */
+    margin-top: 9rem;
   }
 }

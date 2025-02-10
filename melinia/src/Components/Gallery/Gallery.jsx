@@ -20,19 +20,19 @@ const Gallery = () => {
           image: img2,
           link: 'https://google.com/',
           title: "Melinia'24",
-          description: "Melinia'24 Student Coordinators"
+          description: "Student Coordinators"
         },
         {
           image: img3,
           link: 'https://google.com/',
           title: "Melinia'24",
-          description: "Overall trophy winners of Melinia'24"
+          description: "Overall trophy winners"
         },
         {
           image: img4,
           link: 'https://google.com/',
           title: "Melinia'24",
-          description: 'Students conducting Flash mob'
+          description: 'Flash Mob by Students'
         },
         {
           image: img5,
@@ -44,13 +44,13 @@ const Gallery = () => {
           image: img6,
           link: 'https://google.com/',
           title: "Melinia'24",
-          description: 'Chief Guest addressing students'
+          description: 'Chief Guest Addressing'
         },
         {
           image: img7,
           title: "Melinia'24",
           link: 'https://google.com/',
-          description: "Mr.Melinia of the year 2024"
+          description: "Mr. Melinia 2024"
         },
       ];
 

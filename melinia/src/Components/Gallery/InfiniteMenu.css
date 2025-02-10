@@ -1,131 +1,140 @@
-/* Note: this CSS is only an example, you can overlay whatever you want using the activeItem logic */
-
+/* Infinite Grid Canvas */
 #infinite-grid-menu-canvas {
-    cursor: grab;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    outline: none;
-  }
-  
-  #infinite-grid-menu-canvas:active {
-    cursor: grabbing;
-  }
-  
-  .action-button {
-    position: absolute;
-    left: 50%;
-    z-index: 10;
-    width: 60px;
-    height: 60px;
-    display: grid;
-    place-items: center;
-    background: cyan;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 5px solid #000;
-  }
-  
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  outline: none;
+}
+
+/* Title Styling */
+.face-title {
+  user-select: none;
+  position: absolute;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 4rem);
+  left: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: normal; /* Allow wrapping */
+  word-wrap: break-word;
+  max-width: 35vw; /* Prevent overflow */
+  color: wheat;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.face-title.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.face-title.inactive {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Description Styling */
+.face-description {
+  user-select: none;
+  position: absolute;
+  max-width: 35vw; /* Dynamic width */
+  top: 55%;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  right: 5vw;
+  transform: translateY(-50%);
+  text-align: right;
+  white-space: normal; /* Allow wrapping */
+  word-wrap: break-word;
+  color: white;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.face-description.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.face-description.inactive {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Action Button */
+.action-button {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  background: cyan;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 5px solid #000;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.action-button.active {
+  bottom: 3.8em;
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.action-button.inactive {
+  bottom: -80px;
+  transform: translateX(-50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
   .face-title {
-    user-select: none;
-    position: absolute;
-    font-weight: 900;
-    font-size: 4rem;
-    left: 1.6em;
-    top: 50%;
+    max-width: 50vw; /* Allow more space */
   }
-  
-  .action-button-icon {
-    user-select: none;
-    position: relative;
-    color: #060606;
-    top: 2px;
-    font-size: 26px;
-  }
-  
-  .face-title {
-    position: absolute;
-    top: 50%;
-    transform: translate(20%, -50%);
-  }
-  
-  .face-title.active {
-    opacity: 1;
-    transform: translate(20%, -50%);
-    pointer-events: auto;
-    transition: 0.5s ease;
-  }
-  
-  .face-title.inactive {
-    pointer-events: none;
-    opacity: 0;
-    transition: 0.1s ease;
-  }
-  
   .face-description {
-    user-select: none;
-    position: absolute;
-    max-width: 10ch;
-    top: 50%;
-    font-size: 1.5rem;
-    right: 1%;
-    transform: translate(0, -50%);
+    max-width: 50vw;
   }
-  
-  .face-description.active {
-    opacity: 1;
-    transform: translate(-90%, -50%);
-    pointer-events: auto;
-    transition: 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+  .face-title {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    max-width: 60vw;
   }
-  
-  .face-description.inactive {
-    pointer-events: none;
-    transform: translate(-60%, -50%);
-    opacity: 0;
-    transition: 0.1s ease;
+
+  .face-description {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    max-width: 60vw;
   }
-  
-  .action-button {
-    position: absolute;
+}
+
+@media (max-width: 768px) {
+  .face-title {
     left: 50%;
-  }
-  
-  .action-button.active {
-    bottom: 3.8em;
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-    pointer-events: auto;
-    transition: 0.5s ease;
-  }
-  
-  .action-button.inactive {
-    bottom: -80px;
-    transform: translateX(-50%) scale(0);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.1s ease;
-  }
-  
-  @media (max-width: 1500px) {
-    .face-title {
-      display: none;
-    }
-
-    .face-description
-    {
-      margin-top: 12.5rem;
-      margin-left: 15.1rem;
-    }
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 80vw;
   }
 
-  .face-title, .face-description {
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
+  .face-description {
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+    max-width: 80vw;
   }
-  
-  .face-title.active, .face-description.active {
-    opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .face-title {
+    font-size: clamp(1.2rem, 6vw, 2rem);
   }
+
+  .face-description {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+  }
+}

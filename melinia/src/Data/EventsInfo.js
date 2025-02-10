@@ -47,14 +47,15 @@ const events = [
     },
     {
         id: 3,
-        title: "RED LIGHT, GREEN CODE",
+        title: "RED LIGHT GREEN CODE",
         time: "10:30 AM",
         venue: "CM 202",
-        description: "Red Light Green Code – Stop. Think. Code. Race through flowchart challenges, crack puzzles with limited life times, and hunt down tricky bugs. Every level tests your logic, speed, and teamwork. Only the sharpest minds will make it to the finish line—are you ready to win?",
+        description: "Red Light Green Code - Stop. Think. Code. Navigate through mind-bending flowchart challenges, ThinkWizard to unlock questions, crack puzzles to unlock test cases, and track down elusive bugs. Each level is packed with thrilling twists that test your logic,speed and teamwork. With excitement at every turn, only the sharpest minds will reach the finish line. Are you ready to code your way to victory?",
         rules: [
-            "2 or 4 per team",
-            "Bring two laptops per team mandatory",
-            "No common WiFi will be provided."
+            "2 or 4 per team - choose your team wisely",
+            "Bring your laptops",
+            "Plagiarism is strictly prohibited",
+            "Come prepared with your own internet access"
         ],
         image: images.redlightgreencode,
         prizes: {

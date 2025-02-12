@@ -113,7 +113,7 @@ function Workshop() {
               📍 MBCH | 🗓️ March 5-7, 2025
             </p>
             <p style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px", ...(hackathonSlots < 10 ? blinkingStyle : {}) }}>
-              Slots Available: 32
+              Slots Available: 12
             </p>
             <button
               style={{
@@ -167,7 +167,7 @@ function Workshop() {
               📍 IT 212, IT 213 | 🗓️ March 7, 2025
             </p>
             <p style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px", ...(ideathonSlots < 10 ? blinkingStyle : {}) }}>
-              Slots Available: 72
+              Slots Available: 52
             </p>
             <button
             style={{

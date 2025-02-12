@@ -9,12 +9,11 @@ import finals from '../../Assets/timeline/finals.png';
 import { motion } from 'framer-motion';
 
 const events = [
-  { time: '08:30 AM - 09:30 AM', title: 'Inauguration Ceremony', img: launch },
+  { time: '09:30 AM - 09:45 AM', title: 'Inauguration Ceremony', img: launch },
   { time: '10:00 AM - 01:30 PM', title: 'Technical & Non-Technical Events', img: event },
   { time: '01:30 PM - 02:00 PM', title: 'Lunch Break', img: lunch },
-  { time: '02:00 PM - 03:00 PM', title: 'Events Finals', img: finals },
-  { time: '03:15 PM - 04:15 PM', title: 'Cultural Fest', img: dance },
-  { time: '04:15 PM - 05:30 PM', title: 'Valediction Ceremony', img: valediction }
+  { time: '02:00 PM - 03:00 PM', title: 'Finale', img: finals },
+  { time: '04:00 PM - 05:30 PM', title: 'Valediction Ceremony', img: valediction }
 ];
 
 function Timeline() {

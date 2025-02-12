@@ -7,6 +7,11 @@ import img5 from '../../Assets/gallery/inaguration.JPG';
 import img6 from '../../Assets/gallery/chief.JPG';
 import img7 from '../../Assets/gallery/mr.JPG';
 import img8 from '../../Assets/gallery/tech.JPG';
+import img9 from '../../Assets/gallery/music.JPG';
+import img10 from '../../Assets/gallery/audiance.JPG';
+import img11 from '../../Assets/gallery/reveal.jpg';
+import img12 from '../../Assets/gallery/team.JPG';
+
 
 const Gallery = () => {
     
@@ -58,6 +63,30 @@ const Gallery = () => {
           title: "Melinia'24",
           link: 'https://google.com/',
           description: "Technical Event"
+        },
+        {
+          image: img9,
+          link: 'https://google.com/',
+          title: "Melinia'24",
+          description: "Cultural Performance"
+        },
+        {
+          image: img10,
+          link: 'https://google.com/',
+          title: "Melinia'24",
+          description: "Faculty at Valediction"
+        },
+        {
+          image: img11,
+          link: 'https://google.com/',
+          title: "Melinia'24",
+          description: "Trophy Unveiling"
+        },
+        {
+          image: img12,
+          link: 'https://google.com/',
+          title: "Melinia'24",
+          description: "The Team Behind"
         },
       ];
 

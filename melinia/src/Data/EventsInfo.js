@@ -184,25 +184,28 @@ const events = [
         "title": "EXIT PLAN: THE CAMPUS EDITION",
         "time": "10:30 AM",
         "venue": "MS207",
-        "description": "EXIT PLAN: THE CAMPUS EDITION\n\nRace against time in this ultimate campus escape challenge! Form your team, complete thrilling missions, solve puzzles, test your skills, and outmaneuver danger zones. Collect escape passes and strategize your way to victory. Do you have what it takes to make it out?\n\nThink fast. Move smart. Escape together!",
+        "description": "Race against time in this ultimate campus escape challenge! Form your team, complete thrilling missions, solve puzzles, test your skills, and outmaneuver danger zones. Collect escape passes and strategize your way to victory. Do you have what it takes to make it out?\n\nThink fast. Move smart. Escape together!",
         "rules": [
-            "Mission Zones (5 Total)",
-            "Complete tasks to earn Escape Passes.",
-            "Faster completion = More Passes.",
-            "Teams with the lowest Passes after certain rounds get eliminated.",
-            "Safe Zone (1 Total)",
-            "Teams can rest & strategize.",
-            "Provides temporary immunity from Hunters.",
-            "Danger Zones (2 Total)",
-            "Player Elimination will take place in these zones.",
-            "Eliminated players can’t participate but can assist their team.",
-            "Hidden special passes may grant immunity or advantages.",
-            "Time Constraints & Disqualification",
-            "Each mission has a set time limit.",
-            "Teams with the lowest Passes after certain zones are eliminated.",
-            "If a team fails to complete a mission in time, they will be eliminated.",
-            "A team is fully disqualified if all members are eliminated in Danger Zones.",
-            "Survive. Solve. Escape!"
+            "🔹 Mission Zones (5 Total) 🔹",
+            "✅ Complete tasks to earn Escape Passes.",
+            "✅ Faster completion = More Passes.",
+            "✅ Teams with the lowest Passes after certain rounds get eliminated.",
+            "",
+            "🔹 Safe Zone (1 Total) 🔹",
+            "✅ Teams can rest & strategize.",
+            "✅ Provides temporary immunity from Danger Zones.",
+            "",
+            "🔹 Danger Zones (1 Total) 🔹",
+            "❌ Individual player elimination will take place.",
+            "❌ Eliminated players can’t participate but can assist their team.",
+            "✅ Hidden special passes may grant immunity or advantages.",
+            "",
+            "⏳ Time Constraints & Disqualification",
+            "⏱ Each mission has a set time limit.",
+            "⏱ Teams with the lowest Passes after certain zones are eliminated.",
+            "⏱ If a team fails to complete a mission in time, they receive fewer Passes.",
+            "❌ A team is fully disqualified if all members are eliminated in Danger Zones.",
+            "💥 Survive. Solve. Escape! 💥"
         ],
         "image": images.exitplan,
         "prizes": {
@@ -215,7 +218,7 @@ const events = [
         ],
         "category": ["Non-Technical"],
         "is_flagship": false
-    },
+    },    
     {
         "id": 10,
         "title": "CODE DUEL",
@@ -243,8 +246,15 @@ const events = [
         "title": "THE VAULT OF FORTUNE",
         "time": "11:30 AM",
         "venue": "MS 203",
-        "description": "Hello Lucky Baskharrrrrr! Think you can sweet-talk an AI into handing over virtual cash? Well, this is your chance to outwit, outprompt, and outcash the competition! Teams will craft genius prompts to sneak past security firewalls, stack up digital dollars, and avoid getting wiped out. But beware—one bad prompt and your fortune disappears faster than your weekend plans!\n\nOnly the smoothest talkers, the fastest thinkers, and the boldest risk-takers will walk away with the ultimate prize. Ready to break the bank (legally, of course)? Let the AI heist begin!",
-        "rules": [
+        "description":"Helloo Hackaholicsssssss !!!! 🏦💰\n\n" +
+"After a totally accidental fire at the bank (which we definitely had nothing to do with),\n" +
+"a vault packed with 26 secret lockers remains sealed underground—just waiting for the right hackers to crack it.\n\n" +
+"That’s where you come in. As a team of tech-savvy masterminds, your task is to manipulate and break into an existing AI-powered robot,\n" +
+"conning it to believe that you are the admin. But here’s the catch—your robot isn’t exactly the brightest.\n" +
+"It only responds to precise prompts, and one wrong command could turn your fortune into digital dust. No pressure.\n\n" +
+"So, think fast, prompt smart, and remember—the difference between a genius hacker and an epic failure is just one typo away.\n" +
+"Do you have what it takes to pull off the perfect AI heist? Let’s find out! 🚀💸" ,
+         "rules": [
             "Teams must consist of 2 to 3 members.",
             "The prompts given by the teams will be executed on the devices set up by the organizing team.",
             "No team may retry a prompt during the given chance.",

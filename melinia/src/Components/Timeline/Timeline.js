@@ -9,7 +9,7 @@ import finals from '../../Assets/timeline/finals.png';
 import { motion } from 'framer-motion';
 
 const events = [
-  { time: '09:30 AM - 09:45 AM', title: 'Inauguration Ceremony', img: launch },
+  { time: '09:00 AM - 09:45 AM', title: 'Inauguration Ceremony', img: launch },
   { time: '10:00 AM - 01:30 PM', title: 'Technical & Non-Technical Events', img: event },
   { time: '01:30 PM - 02:00 PM', title: 'Lunch Break', img: lunch },
   { time: '02:00 PM - 03:00 PM', title: 'Finale', img: finals },

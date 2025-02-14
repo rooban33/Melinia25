@@ -12,6 +12,7 @@ import { Modal, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import mixpanel from "mixpanel-browser";
 import Preloader from "../../Components/Pre";
+import Preloader from "../../Components/Pre";
 export default function Gforms() {
 
   const [show, setShow] = useState(true); // Show modal on render
@@ -70,7 +71,7 @@ export default function Gforms() {
       } catch (error) {
         console.error("Error creating order:", error);
         reject(false);
-      } finally {
+      }finally {
         setLoad(false); // Hide loader
       }
     });
@@ -93,7 +94,6 @@ export default function Gforms() {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
     setLoad(true);
-
     const paymentSuccess = await handleRegisterClick();
 
     if (paymentSuccess) {
@@ -150,7 +150,7 @@ export default function Gforms() {
 
   return (
     <>
-      <Preloader load={load} />
+    <Preloader load={load} />
       <Particle />
       <div className="hero-container6">
         <div className="squid-bg6"></div>
@@ -230,18 +230,18 @@ export default function Gforms() {
 
       </div>
       <Modal show={showPopup} onHide={handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Success!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          Your form has been submitted successfully.
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <Modal.Header closeButton>
+        <Modal.Title>Success!</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+      🎉 Welcome to MELINIA 2K25 🎉
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="primary" onClick={handleClose}>
+          Close
+        </Button>
+      </Modal.Footer>
+    </Modal>
     </>
   );
 }

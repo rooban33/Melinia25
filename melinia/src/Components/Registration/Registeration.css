@@ -1,22 +1,26 @@
+/* Reset default styles */
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main hero container */
 .hero-container6 {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  /* Fill the entire width of the viewport */
-  height: auto;
-  /* Height will adjust based on content */
-  border-radius: 20px;
+  min-height: 100vh;
+  padding: 20px;
   color: white;
   text-align: center;
   position: relative;
   overflow: hidden;
-  padding: 20px;
-  /* Optional padding to prevent content from touching edges */
+  margin-top: 80px;
 }
 
-
-/* Squid Game Style Animated Background */
+/* Background Animation */
 .squid-bg6 {
   position: absolute;
   width: 100%;
@@ -27,362 +31,135 @@
 
 @keyframes eerieGlow {
   from {
-      transform: scale(1);
-      opacity: 0.5;
+    transform: scale(1);
+    opacity: 0.5;
   }
-
   to {
-      transform: scale(1.1);
-      opacity: 0.8;
+    transform: scale(1.1);
+    opacity: 0.8;
   }
 }
 
-/* Hero Card with Marine Blue to Violet Gradient */
+/* Hero Card */
 .hero-card6 {
-  /* background: linear-gradient(135deg, #002762, #310a40); Marine blue to violet */
-  backdrop-filter: blur(15px);
-  padding: 30px 200px;
+  backdrop-filter: blur(20px);
+  padding: 40px;
   border-radius: 20px;
-  /* box-shadow: 0px 15px 40px rgba(255, 0, 0, 0.5); */
-  /* border: 2px solid rgba(78, 8, 8, 0.3); */
-  max-width: 200%;
+  max-width: 90%;
+  width: 800px;
   z-index: 10;
-  box-shadow: 0px 0px 10px #FF1199;
+  box-shadow: 0px 0px 20px rgba(255, 17, 153, 0.7);
+  transition: all 0.3s ease-in-out;
 }
 
-/* Apply the same background as .hero-card to input fields */
-/* Remove background color while keeping blur effect */
-.form-control {
-background: transparent !important;
-/* Remove background color */
-backdrop-filter: blur(10px) !important;
-/* Keep blur effect */
-color: white !important;
-border: 1px solid rgba(255, 255, 255, 0.2) !important;
-border-radius: 10px;
-}
-
-/* Placeholder and label color */
-.form-control::placeholder,
-label {
-color: rgba(255, 255, 255, 0.7) !important;
-}
-
-/* Input focus effect */
-.form-control:focus {
-background: transparent;
-/* Keep it transparent on focus */
-border: 1px solid rgba(255, 255, 255, 0.5);
-box-shadow: 0px 0px 8px rgba(255, 17, 153, 0.5);
-/* Pink glow effect */
-}
-/* Make input labels appear on top */
-/* Style for the title at the top of the card */
+/* Form Title */
 .form-title {
   font-size: 28px;
   font-weight: 700;
   color: white;
   margin-bottom: 30px;
-  /* Adjust the spacing between title and form */
-  text-align: center;
   text-transform: uppercase;
 }
 
-
-/* Make input labels appear on top */
-.input-container {
-  position: relative;
-  margin-bottom: 30px;
-  /* Increased margin to add more gap between inputs */
+/* Form Grid Layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
-.input-label {
-  position: absolute;
-  top: -25px;
-  left: 10px;
+/* Switch to Two-Column Layout on Larger Screens */
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Ensure full-width fields (Dropdowns, Radio Buttons) span across */
+.full-width {
+  grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+  .full-width {
+    grid-column: span 2;
+    align-items: flex-start;
+  }
+}
+
+/* Labels */
+label {
+  display: block;
   font-size: 14px;
   font-weight: 600;
   color: white;
-  padding: 0 5px;
+  margin-bottom: 5px;
+  text-align: left;
 }
 
-.custom-input .form-control {
+/* Form Inputs */
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
-  padding: 10px;
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  transition: border 0.3s ease-in-out;
 }
 
-/* Make the placeholder text visible */
-.custom-input .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-/* Input Focus effect */
-.custom-input .form-control:focus {
+.form-control:focus {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 8px rgba(255, 17, 153, 0.5);
+  box-shadow: 0px 0px 10px rgba(255, 17, 153, 0.7);
+  outline: none;
 }
 
-/* Adjusting spacing between columns */
-@media (min-width: 768px) {
-  .input-container {
-      margin-bottom: 40px;
-      /* Increased gap for larger screens */
-  }
-  .hero-card6{
-    padding: 30px 60px;
-  }
-}
-
-*, *:before, *:after {
-box-sizing: border-box;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-}
-
-/* body {
-background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
-font-size: 12px;
-} */
-
-button, input {
-font-family: 'Audiowide', sans-serif;
-font-weight: 700;
-letter-spacing: 1.4px;
-}
-
-.heading{
-color: white;
-font-size:'1.6rem';
-font-weight: 700;
-font-family: "Audiowide",sans-serif;
-}
-
-.contactbackground {
-margin-top: 80px;
-display: flex;
-min-height: 78.5vh;
-}
-
-.contactcontainer {
-position: relative;
-flex: 0 1 700px;
-margin: auto;
-padding: 10px;
-z-index: 2;
-
-}
-
-.screen {
-position: relative;
-background: #3e3e3e;
-border-radius: 15px;
-}
-
-.screen:after {
-content: '';
-display: block;
-position: absolute;
-top: 0;
-left: 20px;
-right: 20px;
-bottom: 0;
-border-radius: 15px;
-box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-z-index: -1;
-}
-
-.screen-header {
-display: flex;
-align-items: center;
-padding: 10px 20px;
-background: #4d4d4f;
-border-top-left-radius: 15px;
-border-top-right-radius: 15px;
-}
-
-.screen-header-left {
-margin-right: auto;
-}
-
-.screen-header-button {
-display: inline-block;
-width: 8px;
-height: 8px;
-margin-right: 3px;
-border-radius: 8px;
-background: white;
-}
-
-.screen-header-button.close {
-background: #ed1c6f;
-}
-
-.screen-header-button.maximize {
-background: #e8e925;
-}
-
-.screen-header-button.minimize {
-background: #74c54f;
-}
-
-.screen-header-right {
-display: flex;
-}
-
-.screen-header-ellipsis {
-width: 3px;
-height: 3px;
-margin-left: 2px;
-border-radius: 8px;
-background: #999;
-}
-
-.screen-body {
-display: flex;
-}
-
-.screen-body-item {
-flex: 1;
-padding: 50px;
-}
-
-.screen-body-item.left {
-display: flex;
-flex-direction: column;
-}
-
-.app-title {
-display: flex;
-flex-direction: column;
-position: relative;
-color: white;
-font-size: 26px;
-font-family: 'Audiowide',sans-serif;
-}
-
-.app-title:after {
-content: '';
-display: block;
-position: absolute;
-left: 100px;
-bottom: -10px;
-width: 25px;
-height: 4px;
-background: white;
-}
-
-.app-contact {
-margin-top: auto;
-font-size: 8px;
-color: #888;
-}
-
-.app-form-group {
-margin-bottom: 15px;
-}
-
-.app-form-group.message {
-margin-top: 40px;
-}
-
-.app-form-group.buttons {
-margin-bottom: 0;
-text-align: right;
-}
-
-.app-form-control {
-width: 100%;
-padding: 10px 0;
-background: none;
-border: none;
-border-bottom: 1px solid #666;
-color: #ddd;
-font-size: 14px;
-text-transform: uppercase;
-outline: none;
-transition: border-color .2s;
-}
-
-.app-form-control::placeholder {
-color: #666;
-}
-
-.app-form-control:focus {
-border-bottom-color: #ddd;
-}
-
-.app-form-button {
-background: none;
-border: none;
-color: white;
-font-size: 14px;
-cursor: pointer;
-outline: none;
-}
-
-.app-form-button:hover {
-color: blueviolet;
-}
-
-
-/* .dribbble {
-width: 20px;
-height: 20px;
-margin: 0 5px;
-} */
-
-@media screen and (max-width: 520px) {
-.screen-body {
-  flex-direction: column;
-}
-
-.screen-body-item.left {
-  margin-bottom: 30px;
-}
-
-.app-title {
-  flex-direction: row;
-}
-
-.app-title span {
-  margin-right: 12px;
-}
-
-.app-title:after {
-  display: none;
-}
-}
-
-@media screen and (max-width: 600px) {
-.screen-body {
-  padding: 40px;
-}
-
-.screen-body-item {
-  padding: 0;
-}
-}
-
-
-
-
-.form-control::placeholder {
-color: white !important;
-/* Placeholder text color */
-}
-
+/* Ensure Dropdown Options Are Visible */
 .form-control option {
-color: black !important;
-/* Ensures dropdown options are readable */
+  color: black !important;
 }
 
-.bottom{
-margin-bottom: 10px;
+/* Fix Hover Blurring */
+.hero-card6:hover, 
+.form-control:hover, 
+button:hover {
+  filter: none !important;
 }
 
-.blurred-input{
-width: 100%;
+/* Submit Button */
+.MDBBtn {
+  background: linear-gradient(135deg, #ff1199, #6b00b6);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.MDBBtn:hover {
+  background: linear-gradient(135deg, #ff44aa, #8a2be2);
+  box-shadow: 0px 0px 15px rgba(255, 17, 153, 0.7);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 1024px) {
+  .hero-card6 {
+    max-width: 70%;
+    padding: 40px 120px;
+  }
+}
+
+/* Ensure Inputs Don't Blur on Hover */
+input:hover, select:hover {
+  filter: none !important;
+}
+
+/* Placeholder Text */
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }

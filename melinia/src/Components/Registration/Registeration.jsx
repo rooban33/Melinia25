@@ -12,6 +12,7 @@ import { Modal, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import mixpanel from "mixpanel-browser";
 import Preloader from "../../Components/Pre";
+import Preloader from "../../Components/Pre";
 export default function Gforms() {
 
   const [show, setShow] = useState(true); // Show modal on render
@@ -41,7 +42,7 @@ export default function Gforms() {
 
   const handleRegisterClick = () => {
     mixpanel.track("Register button clicked", { page: "home" });
-  
+
     return new Promise(async (resolve, reject) => {
       try {
         const response = await fetch("https://payment-r2hu.onrender.com/create-order", {
@@ -49,9 +50,9 @@ export default function Gforms() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ amount: 250, currency: "INR" }),
         });
-  
+
         const orderData = await response.json();
-  
+
         const options = {
           key: "rzp_live_XFYQBsd1zDxiWw",
           amount: orderData.amount,
@@ -63,7 +64,7 @@ export default function Gforms() {
             resolve(true); // Resolve the promise on successful payment
           },
         };
-  
+
         const razorpay = await loadRazorpay();
         const rzp = new window.Razorpay(options);
         rzp.open();
@@ -75,7 +76,7 @@ export default function Gforms() {
       }
     });
   };
-  
+
 
   const loadRazorpay = () => {
     return new Promise((resolve) => {
@@ -87,14 +88,14 @@ export default function Gforms() {
   };
 
   const handleChange = (e) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
     setLoad(true);
     const paymentSuccess = await handleRegisterClick();
-    
+
     if (paymentSuccess) {
       // Construct form data
       const formDataObj = new FormData();
@@ -109,7 +110,7 @@ export default function Gforms() {
       formDataObj.append("entry.1681341619", formData.yearOfStudy);
       formDataObj.append("entry.701360953", formData.graduatingYear);
       formDataObj.append("entry.1324628010", formData.foodPreference);
-  
+
       try {
         await fetch(
           "https://docs.google.com/forms/d/e/1FAIpQLSf3fGWJ4gXtAfo9aDpuXFPt1kXPoEHf4c_qW0cVuomHDBmLAA/formResponse",
@@ -142,10 +143,10 @@ export default function Gforms() {
       foodPreference: ''
     });
   };
-  
-  
-  
-  
+
+
+
+
 
   return (
     <>
@@ -156,74 +157,74 @@ export default function Gforms() {
         <div className="hero-card6">
           <h2 className="form-title">Register</h2>
           <form className="text-white form-grid" onSubmit={handleSubmit}>
-  <div>
-    <label>Email</label>
-    <MDBInput placeholder='Enter Email' name="email" onChange={handleChange} className="form-control" required />
-  </div>
-  <div>
-    <label>Mobile Number</label>
-    <MDBInput placeholder='Enter Mobile Number' name="mobile" onChange={handleChange} className="form-control" required />
-  </div>
-  <div>
-    <label>First Name</label>
-    <MDBInput placeholder='Enter First Name' name="firstName" onChange={handleChange} className="form-control" required />
-  </div>
-  <div>
-    <label>Last Name</label>
-    <MDBInput placeholder='Enter Last Name' name="lastName" onChange={handleChange} className="form-control" required />
-  </div>
-  
-  <div className="full-width">
-    <label>Gender</label>
-    <div>
-      <MDBRadio name="gender" value="Male" label="Male" onChange={handleChange} inline required />
-      <MDBRadio name="gender" value="Female" label="Female" onChange={handleChange} inline required />
-    </div>
-  </div>
+            <div>
+              <label>Email</label>
+              <MDBInput placeholder='Enter Email' name="email" onChange={handleChange} className="form-control" required />
+            </div>
+            <div>
+              <label>Mobile Number</label>
+              <MDBInput placeholder='Enter Mobile Number' name="mobile" onChange={handleChange} className="form-control" required />
+            </div>
+            <div>
+              <label>First Name</label>
+              <MDBInput placeholder='Enter First Name' name="firstName" onChange={handleChange} className="form-control" required />
+            </div>
+            <div>
+              <label>Last Name</label>
+              <MDBInput placeholder='Enter Last Name' name="lastName" onChange={handleChange} className="form-control" required />
+            </div>
 
-  <div>
-    <label>Institute Name</label>
-    <MDBInput placeholder='Enter Institute Name' name="institute" onChange={handleChange} className="form-control" required />
-  </div>
-  <div>
-    <label>Course</label>
-    <MDBInput placeholder='Enter Course Name' name="course" onChange={handleChange} className="form-control" required />
-  </div>
-  
-  <div>
-    <label>Specialization</label>
-    <MDBInput placeholder='Enter Specialization' name="specialization" onChange={handleChange} className="form-control" required />
-  </div>
-  
-  <div>
-    <label>Year of Study</label>
-    <select name="yearOfStudy" onChange={handleChange} className="form-control" required>
-      <option value="">Select Year</option>
-      <option value="I">I</option>
-      <option value="II">II</option>
-      <option value="III">III</option>
-      <option value="IV">IV</option>
-      <option value="V">V</option>
-    </select>
-  </div>
+            <div className="full-width">
+              <label>Gender</label>
+              <div>
+                <MDBRadio name="gender" value="Male" label="Male" onChange={handleChange} inline required />
+                <MDBRadio name="gender" value="Female" label="Female" onChange={handleChange} inline required />
+              </div>
+            </div>
 
-  <div>
-    <label>Graduating Year</label>
-    <MDBInput placeholder='Enter Year' name="graduatingYear" onChange={handleChange} className="form-control" required />
-  </div>
+            <div>
+              <label>Institute Name</label>
+              <MDBInput placeholder='Enter Institute Name' name="institute" onChange={handleChange} className="form-control" required />
+            </div>
+            <div>
+              <label>Course</label>
+              <MDBInput placeholder='Enter Course Name' name="course" onChange={handleChange} className="form-control" required />
+            </div>
 
-  <div className="full-width">
-    <label>Food Preference</label>
-    <div>
-      <MDBRadio name="foodPreference" value="Veg" label="Veg" onChange={handleChange} inline required />
-      <MDBRadio name="foodPreference" value="Non Veg" label="Non Veg" onChange={handleChange} inline required />
-    </div>
-  </div>
+            <div>
+              <label>Specialization</label>
+              <MDBInput placeholder='Enter Specialization' name="specialization" onChange={handleChange} className="form-control" required />
+            </div>
 
-  <div className="full-width">
-    <MDBBtn type="submit" block>Submit</MDBBtn>
-  </div>
-</form>
+            <div>
+              <label>Year of Study</label>
+              <select name="yearOfStudy" onChange={handleChange} className="form-control" required>
+                <option value="">Select Year</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="IV">IV</option>
+                <option value="V">V</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Graduating Year</label>
+              <MDBInput placeholder='Enter Year' name="graduatingYear" onChange={handleChange} className="form-control" required />
+            </div>
+
+            <div className="full-width">
+              <label>Food Preference</label>
+              <div>
+                <MDBRadio name="foodPreference" value="Veg" label="Veg" onChange={handleChange} inline required />
+                <MDBRadio name="foodPreference" value="Non Veg" label="Non Veg" onChange={handleChange} inline required />
+              </div>
+            </div>
+
+            <div className="full-width">
+              <MDBBtn type="submit" block>Submit</MDBBtn>
+            </div>
+          </form>
 
         </div>
 

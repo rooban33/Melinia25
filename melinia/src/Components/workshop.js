@@ -167,7 +167,7 @@ function Workshop() {
               📍 IT 212, IT 213 | 🗓️ March 7, 2025
             </p>
             <p style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px", ...(ideathonSlots < 10 ? blinkingStyle : {}) }}>
-              Slots Available: 52
+              Slots Available: 23
             </p>
             <button
             style={{

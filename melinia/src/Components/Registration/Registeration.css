@@ -1,0 +1,388 @@
+.hero-container6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* Fill the entire width of the viewport */
+  height: auto;
+  /* Height will adjust based on content */
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  /* Optional padding to prevent content from touching edges */
+}
+
+
+/* Squid Game Style Animated Background */
+.squid-bg6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 0, 0, 0.15), transparent);
+  animation: eerieGlow 3s infinite alternate;
+}
+
+@keyframes eerieGlow {
+  from {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+
+  to {
+      transform: scale(1.1);
+      opacity: 0.8;
+  }
+}
+
+/* Hero Card with Marine Blue to Violet Gradient */
+.hero-card6 {
+  /* background: linear-gradient(135deg, #002762, #310a40); Marine blue to violet */
+  backdrop-filter: blur(15px);
+  padding: 30px 200px;
+  border-radius: 20px;
+  /* box-shadow: 0px 15px 40px rgba(255, 0, 0, 0.5); */
+  /* border: 2px solid rgba(78, 8, 8, 0.3); */
+  max-width: 200%;
+  z-index: 10;
+  box-shadow: 0px 0px 10px #FF1199;
+}
+
+/* Apply the same background as .hero-card to input fields */
+/* Remove background color while keeping blur effect */
+.form-control {
+background: transparent !important;
+/* Remove background color */
+backdrop-filter: blur(10px) !important;
+/* Keep blur effect */
+color: white !important;
+border: 1px solid rgba(255, 255, 255, 0.2) !important;
+border-radius: 10px;
+}
+
+/* Placeholder and label color */
+.form-control::placeholder,
+label {
+color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Input focus effect */
+.form-control:focus {
+background: transparent;
+/* Keep it transparent on focus */
+border: 1px solid rgba(255, 255, 255, 0.5);
+box-shadow: 0px 0px 8px rgba(255, 17, 153, 0.5);
+/* Pink glow effect */
+}
+/* Make input labels appear on top */
+/* Style for the title at the top of the card */
+.form-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+  /* Adjust the spacing between title and form */
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/* Make input labels appear on top */
+.input-container {
+  position: relative;
+  margin-bottom: 30px;
+  /* Increased margin to add more gap between inputs */
+}
+
+.input-label {
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  padding: 0 5px;
+}
+
+.custom-input .form-control {
+  backdrop-filter: blur(10px);
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Make the placeholder text visible */
+.custom-input .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Input Focus effect */
+.custom-input .form-control:focus {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 8px rgba(255, 17, 153, 0.5);
+}
+
+/* Adjusting spacing between columns */
+@media (min-width: 768px) {
+  .input-container {
+      margin-bottom: 40px;
+      /* Increased gap for larger screens */
+  }
+  .hero-card6{
+    padding: 30px 60px;
+  }
+}
+
+*, *:before, *:after {
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+/* body {
+background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+font-size: 12px;
+} */
+
+button, input {
+font-family: 'Audiowide', sans-serif;
+font-weight: 700;
+letter-spacing: 1.4px;
+}
+
+.heading{
+color: white;
+font-size:'1.6rem';
+font-weight: 700;
+font-family: "Audiowide",sans-serif;
+}
+
+.contactbackground {
+margin-top: 80px;
+display: flex;
+min-height: 78.5vh;
+}
+
+.contactcontainer {
+position: relative;
+flex: 0 1 700px;
+margin: auto;
+padding: 10px;
+z-index: 2;
+
+}
+
+.screen {
+position: relative;
+background: #3e3e3e;
+border-radius: 15px;
+}
+
+.screen:after {
+content: '';
+display: block;
+position: absolute;
+top: 0;
+left: 20px;
+right: 20px;
+bottom: 0;
+border-radius: 15px;
+box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+z-index: -1;
+}
+
+.screen-header {
+display: flex;
+align-items: center;
+padding: 10px 20px;
+background: #4d4d4f;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+margin-right: auto;
+}
+
+.screen-header-button {
+display: inline-block;
+width: 8px;
+height: 8px;
+margin-right: 3px;
+border-radius: 8px;
+background: white;
+}
+
+.screen-header-button.close {
+background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+background: #e8e925;
+}
+
+.screen-header-button.minimize {
+background: #74c54f;
+}
+
+.screen-header-right {
+display: flex;
+}
+
+.screen-header-ellipsis {
+width: 3px;
+height: 3px;
+margin-left: 2px;
+border-radius: 8px;
+background: #999;
+}
+
+.screen-body {
+display: flex;
+}
+
+.screen-body-item {
+flex: 1;
+padding: 50px;
+}
+
+.screen-body-item.left {
+display: flex;
+flex-direction: column;
+}
+
+.app-title {
+display: flex;
+flex-direction: column;
+position: relative;
+color: white;
+font-size: 26px;
+font-family: 'Audiowide',sans-serif;
+}
+
+.app-title:after {
+content: '';
+display: block;
+position: absolute;
+left: 100px;
+bottom: -10px;
+width: 25px;
+height: 4px;
+background: white;
+}
+
+.app-contact {
+margin-top: auto;
+font-size: 8px;
+color: #888;
+}
+
+.app-form-group {
+margin-bottom: 15px;
+}
+
+.app-form-group.message {
+margin-top: 40px;
+}
+
+.app-form-group.buttons {
+margin-bottom: 0;
+text-align: right;
+}
+
+.app-form-control {
+width: 100%;
+padding: 10px 0;
+background: none;
+border: none;
+border-bottom: 1px solid #666;
+color: #ddd;
+font-size: 14px;
+text-transform: uppercase;
+outline: none;
+transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+color: #666;
+}
+
+.app-form-control:focus {
+border-bottom-color: #ddd;
+}
+
+.app-form-button {
+background: none;
+border: none;
+color: white;
+font-size: 14px;
+cursor: pointer;
+outline: none;
+}
+
+.app-form-button:hover {
+color: blueviolet;
+}
+
+
+/* .dribbble {
+width: 20px;
+height: 20px;
+margin: 0 5px;
+} */
+
+@media screen and (max-width: 520px) {
+.screen-body {
+  flex-direction: column;
+}
+
+.screen-body-item.left {
+  margin-bottom: 30px;
+}
+
+.app-title {
+  flex-direction: row;
+}
+
+.app-title span {
+  margin-right: 12px;
+}
+
+.app-title:after {
+  display: none;
+}
+}
+
+@media screen and (max-width: 600px) {
+.screen-body {
+  padding: 40px;
+}
+
+.screen-body-item {
+  padding: 0;
+}
+}
+
+
+
+
+.form-control::placeholder {
+color: white !important;
+/* Placeholder text color */
+}
+
+.form-control option {
+color: black !important;
+/* Ensures dropdown options are readable */
+}
+
+.bottom{
+margin-bottom: 10px;
+}
+
+.blurred-input{
+width: 100%;
+}

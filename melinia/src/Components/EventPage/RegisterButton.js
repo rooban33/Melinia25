@@ -1,13 +1,15 @@
 import React from "react";
 import "./RegisterButton.css"; // Ensure the styles are correctly linked
+import { useNavigate } from "react-router-dom";
 
 const RegisterButton = () => {
+    const navigate = useNavigate();
     const handleClick = () => {
         window.location.href = "https://unstop.com/p/melinia-25-a-national-level-symposium-melinia-2k25-coimbatore-institute-of-technology-cit-coimbatore-1389457";
     };
 
     return (
-        <button className="continue-application" onClick={handleClick}>
+        <button className="continue-application" onClick={()=>{navigate("/register")}}>
             <div>
                 <div className="pencil"></div>
                 <div className="folder">

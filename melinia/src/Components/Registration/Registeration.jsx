@@ -72,7 +72,7 @@ export default function Gforms() {
       } catch (error) {
         console.error("Error creating order:", error);
         reject(false);
-      }finally {
+      } finally {
         setLoad(false); // Hide loader
       }
     });
@@ -151,7 +151,7 @@ export default function Gforms() {
 
   return (
     <>
-    <Preloader load={load} />
+      <Preloader load={load} />
       <Particle />
       <div className="hero-container6">
         <div className="squid-bg6"></div>
@@ -231,18 +231,18 @@ export default function Gforms() {
 
       </div>
       <Modal show={showPopup} onHide={handleClose} centered>
-      <Modal.Header closeButton>
-        <Modal.Title>Success!</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-      🎉 Welcome to MELINIA 2K25 🎉
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
-          Close
-        </Button>
-      </Modal.Footer>
-    </Modal>
+        <Modal.Header closeButton>
+          <Modal.Title>Success!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          🎉 Welcome to MELINIA 2K25 🎉
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 }

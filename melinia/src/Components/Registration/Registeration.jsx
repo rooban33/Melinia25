@@ -11,10 +11,11 @@ import { Particle } from '../ParticlesBackground';
 import { Modal, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import mixpanel from "mixpanel-browser";
-
+import Preloader from "../../Components/Pre";
 export default function Gforms() {
 
   const [show, setShow] = useState(true); // Show modal on render
+  const [load, setLoad] = useState(false);
   const navigate = useNavigate();
 
   const handleClose = () => {
@@ -69,6 +70,8 @@ export default function Gforms() {
       } catch (error) {
         console.error("Error creating order:", error);
         reject(false);
+      }finally {
+        setLoad(false); // Hide loader
       }
     });
   };
@@ -89,7 +92,7 @@ export default function Gforms() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
-    
+    setLoad(true);
     const paymentSuccess = await handleRegisterClick();
     
     if (paymentSuccess) {
@@ -146,6 +149,7 @@ export default function Gforms() {
 
   return (
     <>
+    <Preloader load={load} />
       <Particle />
       <div className="hero-container6">
         <div className="squid-bg6"></div>
@@ -229,7 +233,7 @@ export default function Gforms() {
         <Modal.Title>Success!</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        Your form has been submitted successfully.
+      🎉 Welcome to MELINIA 2K25 🎉
       </Modal.Body>
       <Modal.Footer>
         <Button variant="primary" onClick={handleClose}>

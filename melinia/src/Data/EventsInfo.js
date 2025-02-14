@@ -68,7 +68,7 @@ const events = [
     },
     {
         id: 4,
-        title: "RACE 22 CODE",
+        title: "RACE TO CODE",
         time: "10:00 AM",
         venue: "206",
         description: "Brace yourself for an electrifying three-round challenge where only the sharpest minds will prevail! Speed through a thrilling RC car race while tackling brain-teasing technical puzzles. Dominate a rapid-fire MCQ quiz, testing your coding prowess and logical reasoning. Then, face the ultimate test in a high-stakes mystery coding challenge, where an unexpected twist awaits. Think fast, code smart, and rise to victory!",

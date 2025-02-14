@@ -43,10 +43,10 @@ export default function Gforms() {
   
     return new Promise(async (resolve, reject) => {
       try {
-        const response = await fetch("http://localhost:5000/create-order", {
+        const response = await fetch("https://payment-r2hu.onrender.com/create-order", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ amount: 1, currency: "INR" }),
+          body: JSON.stringify({ amount: 250, currency: "INR" }),
         });
   
         const orderData = await response.json();

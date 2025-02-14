@@ -11,10 +11,11 @@ import { Particle } from '../ParticlesBackground';
 import { Modal, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import mixpanel from "mixpanel-browser";
-
+import Preloader from "../../Components/Pre";
 export default function Gforms() {
 
   const [show, setShow] = useState(true); // Show modal on render
+  const [load, setLoad] = useState(false);
   const navigate = useNavigate();
 
   const handleClose = () => {
@@ -40,7 +41,7 @@ export default function Gforms() {
 
   const handleRegisterClick = () => {
     mixpanel.track("Register button clicked", { page: "home" });
-  
+
     return new Promise(async (resolve, reject) => {
       try {
         const response = await fetch("https://payment-r2hu.onrender.com/create-order", {
@@ -48,9 +49,9 @@ export default function Gforms() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ amount: 250, currency: "INR" }),
         });
-  
+
         const orderData = await response.json();
-  
+
         const options = {
           key: "rzp_live_XFYQBsd1zDxiWw",
           amount: orderData.amount,
@@ -62,17 +63,19 @@ export default function Gforms() {
             resolve(true); // Resolve the promise on successful payment
           },
         };
-  
+
         const razorpay = await loadRazorpay();
         const rzp = new window.Razorpay(options);
         rzp.open();
       } catch (error) {
         console.error("Error creating order:", error);
         reject(false);
+      } finally {
+        setLoad(false); // Hide loader
       }
     });
   };
-  
+
 
   const loadRazorpay = () => {
     return new Promise((resolve) => {
@@ -84,14 +87,15 @@ export default function Gforms() {
   };
 
   const handleChange = (e) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
-    
+    setLoad(true);
+
     const paymentSuccess = await handleRegisterClick();
-    
+
     if (paymentSuccess) {
       // Construct form data
       const formDataObj = new FormData();
@@ -106,7 +110,7 @@ export default function Gforms() {
       formDataObj.append("entry.1681341619", formData.yearOfStudy);
       formDataObj.append("entry.701360953", formData.graduatingYear);
       formDataObj.append("entry.1324628010", formData.foodPreference);
-  
+
       try {
         await fetch(
           "https://docs.google.com/forms/d/e/1FAIpQLSf3fGWJ4gXtAfo9aDpuXFPt1kXPoEHf4c_qW0cVuomHDBmLAA/formResponse",
@@ -139,13 +143,14 @@ export default function Gforms() {
       foodPreference: ''
     });
   };
-  
-  
-  
-  
+
+
+
+
 
   return (
     <>
+      <Preloader load={load} />
       <Particle />
       <div className="hero-container6">
         <div className="squid-bg6"></div>
@@ -160,20 +165,20 @@ export default function Gforms() {
             <MDBInput placeholder='Enter First Name' name="firstName" onChange={handleChange} className="mb-3 blurred-input" required />
             <label className='bottom'>Last Name</label>
             <MDBInput placeholder='Enter Last Name' name="lastName" onChange={handleChange} className="mb-3 blurred-input" required />
-            
+
             <div className="mb-3">
-              <label style={{marginRight: "10px"}} >Gender: </label>
+              <label style={{ marginRight: "10px" }} >Gender: </label>
               <MDBRadio name="gender" value="Male" label="Male" onChange={handleChange} inline required />
               <MDBRadio name="gender" value="Female" label="Female" onChange={handleChange} inline required />
             </div>
-            
+
             <label className='bottom'>Institute Name</label>
             <MDBInput placeholder='Enter Institute Name' name="institute" onChange={handleChange} className="mb-3 blurred-input" required />
             <label className='bottom'>Course</label>
             <MDBInput placeholder='Enter Course Name' name="course" onChange={handleChange} className="mb-3 blurred-input" required />
             <label className='bottom'>Specialization</label>
             <MDBInput placeholder='Enter Specialization' name="specialization" onChange={handleChange} className="mb-3 blurred-input" required />
-            
+
             <div className="mb-3">
               <label className='bottom'>Year of Study</label>
               <select placeholder='Enter Year of Study' name="yearOfStudy" onChange={handleChange} className="form-control blurred-input" required>
@@ -188,31 +193,31 @@ export default function Gforms() {
 
             <label className='bottom'>Graduating Year</label>
             <MDBInput placeholder='Enter Year' name="graduatingYear" onChange={handleChange} className="mb-3 blurred-input" required />
-            
+
             <div className="mb-3">
-              <label style={{marginRight: "10px"}}>Food Preference : </label>
+              <label style={{ marginRight: "10px" }}>Food Preference : </label>
               <MDBRadio name="foodPreference" value="Veg" label="Veg" onChange={handleChange} inline required />
               <MDBRadio name="foodPreference" value="Non Veg" label="Non Veg" onChange={handleChange} inline required />
             </div>
-            
+
             <MDBBtn type="submit" block>Submit</MDBBtn>
           </form>
         </div>
 
       </div>
       <Modal show={showPopup} onHide={handleClose} centered>
-      <Modal.Header closeButton>
-        <Modal.Title>Success!</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        Your form has been submitted successfully.
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
-          Close
-        </Button>
-      </Modal.Footer>
-    </Modal>
+        <Modal.Header closeButton>
+          <Modal.Title>Success!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Your form has been submitted successfully.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 }

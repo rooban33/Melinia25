@@ -12,11 +12,11 @@ import { Modal, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import mixpanel from "mixpanel-browser";
 import Preloader from "../../Components/Pre";
-import Preloader from "../../Components/Pre";
 export default function Gforms() {
 
   const [show, setShow] = useState(true); // Show modal on render
   const [load, setLoad] = useState(false);
+  const [id, setId] = useState("");
   const navigate = useNavigate();
 
   const handleClose = () => {
@@ -52,6 +52,7 @@ export default function Gforms() {
         });
 
         const orderData = await response.json();
+        setId(orderData.id);
 
         const options = {
           key: "rzp_live_XFYQBsd1zDxiWw",
@@ -110,7 +111,7 @@ export default function Gforms() {
       formDataObj.append("entry.1681341619", formData.yearOfStudy);
       formDataObj.append("entry.701360953", formData.graduatingYear);
       formDataObj.append("entry.1324628010", formData.foodPreference);
-
+      // formDataObj.append("entry.1221076541", id);
       try {
         await fetch(
           "https://docs.google.com/forms/d/e/1FAIpQLSf3fGWJ4gXtAfo9aDpuXFPt1kXPoEHf4c_qW0cVuomHDBmLAA/formResponse",

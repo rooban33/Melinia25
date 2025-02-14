@@ -151,52 +151,76 @@ export default function Gforms() {
         <div className="squid-bg6"></div>
         <div className="hero-card6">
           <h2 className="form-title">Register</h2>
-          <form className="text-white" onSubmit={handleSubmit}>
-            <label className='bottom'>Email</label>
-            <MDBInput placeholder='Enter Email' name="email" onChange={handleChange} className="mb-3 blurred-input" required />
-            <label className='bottom'>Mobile Number</label>
-            <MDBInput placeholder='Enter Mobile Number' name="mobile" onChange={handleChange} className="mb-3 blurred-input" required />
-            <label className='bottom'>First Name</label>
-            <MDBInput placeholder='Enter First Name' name="firstName" onChange={handleChange} className="mb-3 blurred-input" required />
-            <label className='bottom'>Last Name</label>
-            <MDBInput placeholder='Enter Last Name' name="lastName" onChange={handleChange} className="mb-3 blurred-input" required />
-            
-            <div className="mb-3">
-              <label style={{marginRight: "10px"}} >Gender: </label>
-              <MDBRadio name="gender" value="Male" label="Male" onChange={handleChange} inline required />
-              <MDBRadio name="gender" value="Female" label="Female" onChange={handleChange} inline required />
-            </div>
-            
-            <label className='bottom'>Institute Name</label>
-            <MDBInput placeholder='Enter Institute Name' name="institute" onChange={handleChange} className="mb-3 blurred-input" required />
-            <label className='bottom'>Course</label>
-            <MDBInput placeholder='Enter Course Name' name="course" onChange={handleChange} className="mb-3 blurred-input" required />
-            <label className='bottom'>Specialization</label>
-            <MDBInput placeholder='Enter Specialization' name="specialization" onChange={handleChange} className="mb-3 blurred-input" required />
-            
-            <div className="mb-3">
-              <label className='bottom'>Year of Study</label>
-              <select placeholder='Enter Year of Study' name="yearOfStudy" onChange={handleChange} className="form-control blurred-input" required>
-                <option value="">Select Year</option>
-                <option value="I">I</option>
-                <option value="II">II</option>
-                <option value="III">III</option>
-                <option value="IV">IV</option>
-                <option value="V">V</option>
-              </select>
-            </div>
+          <form className="text-white form-grid" onSubmit={handleSubmit}>
+  <div>
+    <label>Email</label>
+    <MDBInput placeholder='Enter Email' name="email" onChange={handleChange} className="form-control" required />
+  </div>
+  <div>
+    <label>Mobile Number</label>
+    <MDBInput placeholder='Enter Mobile Number' name="mobile" onChange={handleChange} className="form-control" required />
+  </div>
+  <div>
+    <label>First Name</label>
+    <MDBInput placeholder='Enter First Name' name="firstName" onChange={handleChange} className="form-control" required />
+  </div>
+  <div>
+    <label>Last Name</label>
+    <MDBInput placeholder='Enter Last Name' name="lastName" onChange={handleChange} className="form-control" required />
+  </div>
+  
+  <div className="full-width">
+    <label>Gender</label>
+    <div>
+      <MDBRadio name="gender" value="Male" label="Male" onChange={handleChange} inline required />
+      <MDBRadio name="gender" value="Female" label="Female" onChange={handleChange} inline required />
+    </div>
+  </div>
 
-            <label className='bottom'>Graduating Year</label>
-            <MDBInput placeholder='Enter Year' name="graduatingYear" onChange={handleChange} className="mb-3 blurred-input" required />
-            
-            <div className="mb-3">
-              <label style={{marginRight: "10px"}}>Food Preference : </label>
-              <MDBRadio name="foodPreference" value="Veg" label="Veg" onChange={handleChange} inline required />
-              <MDBRadio name="foodPreference" value="Non Veg" label="Non Veg" onChange={handleChange} inline required />
-            </div>
-            
-            <MDBBtn type="submit" block>Submit</MDBBtn>
-          </form>
+  <div>
+    <label>Institute Name</label>
+    <MDBInput placeholder='Enter Institute Name' name="institute" onChange={handleChange} className="form-control" required />
+  </div>
+  <div>
+    <label>Course</label>
+    <MDBInput placeholder='Enter Course Name' name="course" onChange={handleChange} className="form-control" required />
+  </div>
+  
+  <div>
+    <label>Specialization</label>
+    <MDBInput placeholder='Enter Specialization' name="specialization" onChange={handleChange} className="form-control" required />
+  </div>
+  
+  <div>
+    <label>Year of Study</label>
+    <select name="yearOfStudy" onChange={handleChange} className="form-control" required>
+      <option value="">Select Year</option>
+      <option value="I">I</option>
+      <option value="II">II</option>
+      <option value="III">III</option>
+      <option value="IV">IV</option>
+      <option value="V">V</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Graduating Year</label>
+    <MDBInput placeholder='Enter Year' name="graduatingYear" onChange={handleChange} className="form-control" required />
+  </div>
+
+  <div className="full-width">
+    <label>Food Preference</label>
+    <div>
+      <MDBRadio name="foodPreference" value="Veg" label="Veg" onChange={handleChange} inline required />
+      <MDBRadio name="foodPreference" value="Non Veg" label="Non Veg" onChange={handleChange} inline required />
+    </div>
+  </div>
+
+  <div className="full-width">
+    <MDBBtn type="submit" block>Submit</MDBBtn>
+  </div>
+</form>
+
         </div>
 
       </div>

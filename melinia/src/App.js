@@ -1,4 +1,3 @@
-//    import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
 import Preloader from "./Components/Pre";
@@ -43,7 +42,7 @@ function App() {
     <ThemeProvider>
       <Router>
         <Preloader load={load} />
-        <SpeedInsights/>
+        <SpeedInsights />
         <Analytics />
         <div className="App" id={load ? "no-scroll" : "scroll"}>
           <Navbar style={{ display: 'flex', justifyContent: 'end' }} />

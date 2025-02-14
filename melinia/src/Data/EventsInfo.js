@@ -68,7 +68,7 @@ const events = [
     },
     {
         id: 4,
-        title: "RACE TO CODE",
+        title: "RACE to CODE",
         time: "10:00 AM",
         venue: "206",
         description: "Brace yourself for an electrifying three-round challenge where only the sharpest minds will prevail! Speed through a thrilling RC car race while tackling brain-teasing technical puzzles. Dominate a rapid-fire MCQ quiz, testing your coding prowess and logical reasoning. Then, face the ultimate test in a high-stakes mystery coding challenge, where an unexpected twist awaits. Think fast, code smart, and rise to victory!",
@@ -218,7 +218,7 @@ const events = [
         ],
         "category": ["Non-Technical"],
         "is_flagship": false
-    },    
+    },
     {
         "id": 10,
         "title": "CODE DUEL",
@@ -246,15 +246,15 @@ const events = [
         "title": "THE VAULT OF FORTUNE",
         "time": "10:00 AM",
         "venue": "MS 203",
-        "description":"Helloo Hackaholicsssssss !!!! 🏦💰\n\n" +
-"After a totally accidental fire at the bank (which we definitely had nothing to do with),\n" +
-"a vault packed with 26 secret lockers remains sealed underground—just waiting for the right hackers to crack it.\n\n" +
-"That’s where you come in. As a team of tech-savvy masterminds, your task is to manipulate and break into an existing AI-powered robot,\n" +
-"conning it to believe that you are the admin. But here’s the catch—your robot isn’t exactly the brightest.\n" +
-"It only responds to precise prompts, and one wrong command could turn your fortune into digital dust. No pressure.\n\n" +
-"So, think fast, prompt smart, and remember—the difference between a genius hacker and an epic failure is just one typo away.\n" +
-"Do you have what it takes to pull off the perfect AI heist? Let’s find out! 🚀💸" ,
-         "rules": [
+        "description": "Helloo Hackaholicsssssss !!!! 🏦💰\n\n" +
+            "After a totally accidental fire at the bank (which we definitely had nothing to do with),\n" +
+            "a vault packed with 26 secret lockers remains sealed underground—just waiting for the right hackers to crack it.\n\n" +
+            "That’s where you come in. As a team of tech-savvy masterminds, your task is to manipulate and break into an existing AI-powered robot,\n" +
+            "conning it to believe that you are the admin. But here’s the catch—your robot isn’t exactly the brightest.\n" +
+            "It only responds to precise prompts, and one wrong command could turn your fortune into digital dust. No pressure.\n\n" +
+            "So, think fast, prompt smart, and remember—the difference between a genius hacker and an epic failure is just one typo away.\n" +
+            "Do you have what it takes to pull off the perfect AI heist? Let’s find out! 🚀💸",
+        "rules": [
             "Teams must consist of 2 to 3 members.",
             "The prompts given by the teams will be executed on the devices set up by the organizing team.",
             "No team may retry a prompt during the given chance.",

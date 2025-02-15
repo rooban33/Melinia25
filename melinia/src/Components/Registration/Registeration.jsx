@@ -41,6 +41,18 @@ export default function Gforms() {
   const [stateSearch, setStateSearch] = useState("");
   const [districtSearch, setDistrictSearch] = useState("");
   const [collegeSearch, setCollegeSearch] = useState("");
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsCollegeOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
 
 
   // Handle state selection change
@@ -351,7 +363,7 @@ export default function Gforms() {
         style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
       />
       {Object.entries(states)
-        .filter(([code, name]) => name.toLowerCase().includes(stateSearch.toLowerCase()))
+        .filter(([code, name]) => name?.toLowerCase().includes(stateSearch?.toLowerCase()))
         .map(([code, name]) => (
           <a
             key={code}
@@ -398,7 +410,7 @@ export default function Gforms() {
         style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
       />
       {districts
-        .filter((district) => district.toLowerCase().includes(districtSearch.toLowerCase()))
+        .filter((district) => district?.toLowerCase().includes(districtSearch?.toLowerCase()))
         .map((district, index) => (
           <a
             key={index}
@@ -420,49 +432,59 @@ export default function Gforms() {
 
 
 {/* College Dropdown with Search */}
-<div className="dropdown mt-3">
-  <label>College</label>
-  <button
-    className="btn dropdown-toggle w-100 text-left form-control"
-    type="button"
-    onClick={() => setIsCollegeOpen(!isCollegeOpen)}
-  >
-    {selectedCollege || "Select a college"}
-  </button>
+<div className="dropdown mt-3" ref={dropdownRef}>
+      <label>College</label>
+      <button
+        className="btn dropdown-toggle w-100 text-left form-control"
+        type="button"
+        onClick={() => setIsCollegeOpen(!isCollegeOpen)}
+      >
+        {selectedCollege || "Select a college"}
+      </button>
 
-  {isCollegeOpen && (
-    <div
-      className="dropdown-menu w-100 show"
-      style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
-    >
-      <input
-        type="text"
-        className="form-control mb-2"
-        placeholder="Search college..."
-        value={collegeSearch}
-        onChange={(e) => setCollegeSearch(e.target.value)}
-        style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
-      />
-      {colleges
-        .filter((college) => college.toLowerCase().includes(collegeSearch.toLowerCase()))
-        .map((college, index) => (
-          <a
-            key={index}
-            className="dropdown-item"
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setSelectedCollege(college);
-              setIsCollegeOpen(false);
-            }}
-            style={{ color: "white", backgroundColor: "black" }}
-          >
-            {college}
-          </a>
-        ))}
+      {isCollegeOpen && (
+        <div
+          className="dropdown-menu w-100 show"
+          style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
+        >
+          {/* Search Box */}
+          <input
+            type="text"
+            className="form-control mb-2"
+            placeholder="Search college..."
+            value={collegeSearch}
+            onChange={(e) => setCollegeSearch(e.target.value)}
+            style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
+          />
+
+          {/* Filtered College List */}
+          {(colleges || [])
+            .filter((college) => typeof college === "string" && college.toLowerCase().includes(collegeSearch.toLowerCase()))
+            .map((college, index) => (
+              <a
+                key={index}
+                className="dropdown-item"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setSelectedCollege(college);
+                  setIsCollegeOpen(false);
+                  setCollegeSearch(""); // Clear search after selection
+                }}
+                style={{ color: "white", backgroundColor: "black" }}
+              >
+                {college}
+              </a>
+            ))}
+
+          {/* Handle no matching results */}
+          {(colleges || []).filter((college) => typeof college === "string" && college.toLowerCase().includes(collegeSearch.toLowerCase()))
+            .length === 0 && (
+            <p className="text-center text-white">No colleges found</p>
+          )}
+        </div>
+      )}
     </div>
-  )}
-</div>
 
               {/* )} */}
             <div>

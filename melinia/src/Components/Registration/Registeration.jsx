@@ -38,6 +38,11 @@ export default function Gforms() {
   const [isCollegeOpen, setIsCollegeOpen] = useState(false);
   const [isStateOpen,setIsStateOpen] = useState(false);
 
+  const [stateSearch, setStateSearch] = useState("");
+  const [districtSearch, setDistrictSearch] = useState("");
+  const [collegeSearch, setCollegeSearch] = useState("");
+
+
   // Handle state selection change
   const handleStateChange = (event) => {
     const selectedStateName = event.target.value;
@@ -321,190 +326,143 @@ export default function Gforms() {
                 <MDBRadio name="gender" value="Female" label="Female" onChange={handleChange} inline required />
               </div>
             </div>
-      {/* State Dropdown (Regular Select) */}
-      <div className="dropdown mt-3">
+{/* State Dropdown with Search */}
+<div className="dropdown mt-3">
   <label>State</label>
   <button
     className="btn dropdown-toggle w-100 text-left form-control"
     type="button"
     onClick={() => setIsStateOpen(!isStateOpen)}
-    style={{
-      background: "rgba(255, 255, 255, 0.1)",
-      backdropFilter: "blur(10px)",
-      color: "white",
-      border: "1px solid rgba(255, 255, 255, 0.3)",
-      borderRadius: "10px",
-      transition: "border 0.3s ease-in-out",
-    }}
   >
     {selectedState || "Select a state"}
   </button>
 
-  {/* Dropdown menu with scrolling and styling */}
-  <div
-    className={`dropdown-menu w-100 ${isStateOpen ? "show" : ""}`}
-    style={{
-      maxHeight: "200px",
-      overflowY: "auto",
-      backgroundColor: "black",
-      border: "1px solid rgba(255, 255, 255, 0.3)",
-      scrollbarColor: "pink black",// Scrollbar for Firefox
-    }}
-  >
-    {/* Custom Scrollbar Styling */}
-    <style>
-      {`
-        .dropdown-menu::-webkit-scrollbar {
-          width: 8px;
-        }
-        .dropdown-menu::-webkit-scrollbar-thumb {
-          background-color: white;
-          border-radius: 4px;
-        }
-        .dropdown-menu::-webkit-scrollbar-track {
-          background: rgba(255, 255, 255, 0.2);
-        }
-      `}
-    </style>
-
-    {Object.entries(states).length > 0 ? (
-      Object.entries(states).map(([code, name]) => (
-        <a
-          key={code}
-          className="dropdown-item"
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            handleStateChange({ target: { value: name } });
-            setIsStateOpen(false); // Close dropdown after selection
-          }}
-          style={{
-            whiteSpace: "normal",
-            wordWrap: "break-word",
-            textOverflow: "ellipsis",
-            color: "white",
-            backgroundColor: "black",
-            padding: "10px",
-            borderBottom: "1px solid white",
-          }}
-        >
-          {name}
-        </a>
-      ))
-    ) : (
-      <span className="dropdown-item text-muted" style={{ color: "white", backgroundColor: "black" }}>
-        No states found
-      </span>
-    )}
-  </div>
+  {isStateOpen && (
+    <div
+      className="dropdown-menu w-100 show"
+      style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
+    >
+      <input
+        type="text"
+        className="form-control mb-2"
+        placeholder="Search state..."
+        value={stateSearch}
+        onChange={(e) => setStateSearch(e.target.value)}
+        style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
+      />
+      {Object.entries(states)
+        .filter(([code, name]) => name.toLowerCase().includes(stateSearch.toLowerCase()))
+        .map(([code, name]) => (
+          <a
+            key={code}
+            className="dropdown-item"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              handleStateChange({ target: { value: name } });
+              setIsStateOpen(false);
+            }}
+            style={{ color: "white", backgroundColor: "black" }}
+          >
+            {name}
+          </a>
+        ))}
+    </div>
+  )}
 </div>
 
 
-      {/* District Dropdown */}
-      <div className="dropdown mt-3">
-        <label>District</label>
-        <button
-          className="btn dropdown-toggle w-100 text-left form-control"
-          type="button"
-          onClick={() => setIsDistrictOpen(!isDistrictOpen)}
-        >
-          {selectedDistrict || "Select a district"}
-        </button>
 
-        <div
-          className={`dropdown-menu w-100 ${isDistrictOpen ? "show" : ""}`}
-          style={{
-            maxHeight: "200px",
-            overflowY: "auto",
-            backgroundColor: "black",
-            border: "1px solid rgba(255, 255, 255, 0.3)",
-            scrollbarColor: "pink black",
-          }}
-        >
-          {selectedState && districts.length > 0 ? (
-            districts.map((district, index) => (
-              <a
-                key={index}
-                className="dropdown-item"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleDistrictChange({ target: { value: district } });
-                  setIsDistrictOpen(false);
-                }}
-                style={{
-                  whiteSpace: "normal",
-                  wordWrap: "break-word",
-                  textOverflow: "ellipsis",
-                  color: "white",
-                  backgroundColor: "black",
-                  padding: "10px",
-                  borderBottom: "1px solid white",
-                }}
-              >
-                {district}
-              </a>
-            ))
-          ) : (
-            <span className="dropdown-item text-muted" style={{ color: "white", backgroundColor: "black" }}>
-              No districts found
-            </span>
-          )}
-        </div>
-      </div>
+{/* District Dropdown with Search */}
+<div className="dropdown mt-3">
+  <label>District</label>
+  <button
+    className="btn dropdown-toggle w-100 text-left form-control"
+    type="button"
+    onClick={() => setIsDistrictOpen(!isDistrictOpen)}
+  >
+    {selectedDistrict || "Select a district"}
+  </button>
 
-      {/* College Dropdown */}
-      <div className="dropdown mt-3">
-        <label>College</label>
-        <button
-          className="btn dropdown-toggle w-100 text-left form-control"
-          type="button"
-          onClick={() => setIsCollegeOpen(!isCollegeOpen)}
-        >
-          {selectedCollege || "Select a college"}
-        </button>
+  {isDistrictOpen && (
+    <div
+      className="dropdown-menu w-100 show"
+      style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
+    >
+      <input
+        type="text"
+        className="form-control mb-2"
+        placeholder="Search district..."
+        value={districtSearch}
+        onChange={(e) => setDistrictSearch(e.target.value)}
+        style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
+      />
+      {districts
+        .filter((district) => district.toLowerCase().includes(districtSearch.toLowerCase()))
+        .map((district, index) => (
+          <a
+            key={index}
+            className="dropdown-item"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              handleDistrictChange({ target: { value: district } });
+              setIsDistrictOpen(false);
+            }}
+            style={{ color: "white", backgroundColor: "black" }}
+          >
+            {district}
+          </a>
+        ))}
+    </div>
+  )}
+</div>
 
-        <div
-          className={`dropdown-menu w-100 ${isCollegeOpen ? "show" : ""}`}
-          style={{
-            maxHeight: "200px",
-            overflowY: "auto",
-            backgroundColor: "black",
-            border: "1px solid rgba(255, 255, 255, 0.3)",
-            scrollbarColor: "pink black",
-          }}
-        >
-          {selectedDistrict && colleges.length > 0 ? (
-            colleges.map((college, index) => (
-              <a
-                key={index}
-                className="dropdown-item"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setSelectedCollege(college);
-                  setIsCollegeOpen(false);
-                }}
-                style={{
-                  whiteSpace: "normal",
-                  wordWrap: "break-word",
-                  textOverflow: "ellipsis",
-                  color: "white",
-                  backgroundColor: "black",
-                  padding: "10px",
-                  borderBottom: "1px solid white",
-                }}
-              >
-                {college}
-              </a>
-            ))
-          ) : (
-            <span className="dropdown-item text-muted" style={{ color: "white", backgroundColor: "black" }}>
-              No colleges found
-            </span>
-          )}
-        </div>
-      </div>
+
+{/* College Dropdown with Search */}
+<div className="dropdown mt-3">
+  <label>College</label>
+  <button
+    className="btn dropdown-toggle w-100 text-left form-control"
+    type="button"
+    onClick={() => setIsCollegeOpen(!isCollegeOpen)}
+  >
+    {selectedCollege || "Select a college"}
+  </button>
+
+  {isCollegeOpen && (
+    <div
+      className="dropdown-menu w-100 show"
+      style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
+    >
+      <input
+        type="text"
+        className="form-control mb-2"
+        placeholder="Search college..."
+        value={collegeSearch}
+        onChange={(e) => setCollegeSearch(e.target.value)}
+        style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
+      />
+      {colleges
+        .filter((college) => college.toLowerCase().includes(collegeSearch.toLowerCase()))
+        .map((college, index) => (
+          <a
+            key={index}
+            className="dropdown-item"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setSelectedCollege(college);
+              setIsCollegeOpen(false);
+            }}
+            style={{ color: "white", backgroundColor: "black" }}
+          >
+            {college}
+          </a>
+        ))}
+    </div>
+  )}
+</div>
 
               {/* )} */}
             <div>

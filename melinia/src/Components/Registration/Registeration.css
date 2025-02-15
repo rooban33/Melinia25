@@ -1,5 +1,7 @@
 /* Reset default styles */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,6 +36,7 @@
     transform: scale(1);
     opacity: 0.5;
   }
+
   to {
     transform: scale(1.1);
     opacity: 0.8;
@@ -99,9 +102,9 @@ label {
 
 /* Form Inputs */
 .form-control {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  color: white;
+  background: rgba(255, 255, 255, 0.1)!important;
+  backdrop-filter: blur(10px) !important;
+  color: white !important;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   padding: 12px;
@@ -116,14 +119,9 @@ label {
   outline: none;
 }
 
-/* Ensure Dropdown Options Are Visible */
-.form-control option {
-  color: black !important;
-}
-
 /* Fix Hover Blurring */
-.hero-card6:hover, 
-.form-control:hover, 
+.hero-card6:hover,
+.form-control:hover,
 button:hover {
   filter: none !important;
 }
@@ -155,11 +153,55 @@ button:hover {
 }
 
 /* Ensure Inputs Don't Blur on Hover */
-input:hover, select:hover {
+input:hover,
+select:hover {
   filter: none !important;
 }
 
 /* Placeholder Text */
 .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgb(255, 253, 253) !important;
+}
+
+
+.bottom {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: white !important;
+}
+
+.blurred-input {
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  
+}
+
+select.form-control option {
+  background-color: black !important;
+}
+
+.custom-submit-button {
+  border-radius: 20px;
+  background: linear-gradient(90deg, #FF1199, #d72054);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.custom-submit-button:hover {
+  opacity: 0.9;
 }

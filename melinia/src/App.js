@@ -24,10 +24,14 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 import Gallery from './Components/Gallery/Gallery';
 import Gforms from './Components/Registration/Registeration';
+import ReactGA from "react-ga4";
 
 mixpanel.init("80b2a21992bf5ce950bb5dbd06b144a7", {
   debug: true
 })
+
+ReactGA.initialize("G-24DYX82CNK"); // Replace with your Measurement ID
+ReactGA.send("pageview"); // Track page views
 
 function App() {
   const [load, upadateLoad] = useState(true);

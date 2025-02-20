@@ -76,8 +76,26 @@
   .form-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .form-control {
+    width:15rem !important;
+  }
 }
 
+@media (min-width: 320px) {
+  .form-control {
+    width:12rem !important;
+  }
+}
+@media (min-width: 375px) {
+  .form-control {
+    width:15rem !important;
+  }
+}
+@media (min-width: 425px) {
+  .form-control {
+    width:15rem !important;
+  }
+}
 /* Ensure full-width fields (Dropdowns, Radio Buttons) span across */
 .full-width {
   grid-column: span 1;
@@ -109,10 +127,10 @@ label {
   border-radius: 10px;
   padding: 12px;
   font-size: 16px;
-  width:20rem !important;
+  width:20rem ;
   transition: border 0.3s ease-in-out;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 .form-control:focus {
@@ -150,7 +168,16 @@ button:hover {
 @media (min-width: 1024px) {
   .hero-card6 {
     max-width: 70%;
-    padding: 40px 120px;
+    padding: 40px 71px;
+  }
+  .form-control {
+    width: 18rem !important;
+}
+}
+
+@media (min-width: 1440px) {
+  .form-control {
+      width: 20rem !important;
   }
 }
 

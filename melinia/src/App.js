@@ -30,7 +30,10 @@ mixpanel.init("80b2a21992bf5ce950bb5dbd06b144a7", {
   debug: true
 })
 
-ReactGA.initialize("G-24DYX82CNK"); // Replace with your Measurement ID
+ReactGA.initialize([
+  { trackingId: "G-24DYX82CNK" },  // First GA4 ID
+  { trackingId: "G-6JNR0LNQNR" }   // Second GA4 ID (Replace with your second ID)
+]);
 ReactGA.send("pageview"); // Track page views
 
 function App() {

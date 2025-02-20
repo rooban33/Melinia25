@@ -109,8 +109,10 @@ label {
   border-radius: 10px;
   padding: 12px;
   font-size: 16px;
-  width: 100%;
+  width:20rem !important;
   transition: border 0.3s ease-in-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .form-control:focus {
@@ -205,3 +207,20 @@ select.form-control option {
 .custom-submit-button:hover {
   opacity: 0.9;
 }
+
+select {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  appearance: none;
+  padding-right: 30px; /* Adjust to fit dropdown arrow */
+}
+
+.form-check-input:checked {
+  background-color: #d72054 !important;
+  border-color: #f063b3 !important;
+}
+
+

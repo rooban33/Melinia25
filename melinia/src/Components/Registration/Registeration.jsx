@@ -43,6 +43,12 @@ export default function Gforms() {
   const [collegeSearch, setCollegeSearch] = useState("");
   const dropdownRef = useRef(null);
 
+  // Query form state
+  const [queryMessage, setQueryMessage] = useState("");
+  const [queryEmail, setQueryEmail] = useState("");
+  const [queryName, setQueryName] = useState("");
+  const [querySuccess, setQuerySuccess] = useState(false);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -93,6 +99,10 @@ export default function Gforms() {
   const handleClose = () => {
     setShow(false);
     navigate("/"); // Redirect to home
+  };
+
+  const handleQueryClose = () => {
+    setQuerySuccess(false);
   };
 
   const [formData, setFormData] = useState({
@@ -226,6 +236,30 @@ export default function Gforms() {
       
   };
   
+  // Handle query form submission
+  const handleQuerySubmit = (e) => {
+    e.preventDefault();
+    
+    // Validate query form
+    if (!queryName || !queryEmail || !queryMessage) {
+      alert("Please fill all fields in the query form");
+      return;
+    }
+    
+    // Format the message
+    const messageText = `Name: ${queryName}%0AEmail: ${queryEmail}%0AMessage: ${queryMessage}`;
+    
+    // Send message via WhatsApp (open in new tab)
+    window.open(`https://wa.me/919489425649?text=${messageText}`, '_blank');
+    
+    // Show success message
+    setQuerySuccess(true);
+    
+    // Reset form
+    setQueryName("");
+    setQueryEmail("");
+    setQueryMessage("");
+  };
 
   const resetForm = () => {
     setFormData({
@@ -546,22 +580,47 @@ export default function Gforms() {
             </div>
           </form>
 
+          {/* Query Section */}
+          <div className="query-section mt-5 pt-4 border-top border-light">
+            <h3 className="form-title">For Queries</h3>
+            <div className="contact-info mb-4">
+              <p className="mb-2"><strong>Contact Us:</strong></p>
+              <p className="mb-2">Shajithrooban - <a href="tel:+919489425649" className="text-white">+91 9489425649</a></p>
+              <p>Mughilan - <a href="tel:+917397169278" className="text-white">+91 7397169278</a></p>
+            </div>
+          </div>
         </div>
-
       </div>
+      
+      {/* Registration Success Modal */}
       <Modal show={showPopup} onHide={handleClose} centered>
-      <Modal.Header closeButton>
-        <Modal.Title>Success!</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-      🎉 Welcome to MELINIA 2K25 🎉
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
-          Close
-        </Button>
-      </Modal.Footer>
-    </Modal>
+        <Modal.Header closeButton>
+          <Modal.Title>Success!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          🎉 Welcome to MELINIA 2K25 🎉
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      
+      {/* Query Success Modal */}
+      {/* <Modal show={querySuccess} onHide={handleQueryClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Message Sent!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Your message has been sent successfully. We'll get back to you soon!
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleQueryClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal> */}
     </>
   );
 }

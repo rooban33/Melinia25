@@ -135,7 +135,7 @@ export default function Gforms() {
             resolve(true); // Resolve the promise on successful payment
           },
         };
-        idRef.current = orderData.id;
+        idRef.current = options.order_id;
         console.log("Shajith",orderData.id);
 
         const razorpay = await loadRazorpay();
@@ -181,6 +181,7 @@ export default function Gforms() {
       {
         
           // Construct form data
+          console.log("Shajith",idRef.current,formData.institute);
           const formDataObj = new FormData();
           formDataObj.append("entry.1191433481", formData.email);
           formDataObj.append("entry.1314378005", formData.mobile);
@@ -470,6 +471,7 @@ export default function Gforms() {
                   setSelectedCollege(college);
                   setIsCollegeOpen(false);
                   setCollegeSearch(""); // Clear search after selection
+                  setFormData((prevData) => ({ ...prevData, institute: college })); // Update formData
                 }}
                 style={{ color: "white", backgroundColor: "black" }}
               >

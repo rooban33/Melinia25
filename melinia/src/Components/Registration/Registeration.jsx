@@ -346,7 +346,17 @@ export default function Gforms() {
         <div className="squid-bg6"></div>
         <div className="hero-card6">
           <h2 className="form-title">Registeration</h2>
-          <form className="text-white form-grid" onSubmit={handleSubmit}>
+          {/* Info Section */}
+          <div className="query-section mt-5 pt-4 border-top border-light">
+            {/* <h3 className="form-title">Registration Details</h3> */}
+            <div className="contact-info mb-4">
+              <p className="mb-2">✅ Fee: ₹250 (Includes access to all tech and non-tech events+ lunch which excludes Flagship events)</p>
+              <p className="mb-2">✅ Arrival Time: All participants must report by 8:10 AM at the college.</p>
+              <p className="mb-2">✅ Requirements: Bring your laptop for participation.</p>
+              <p className="mb-2">✅ Registration Kit: All participants will receive a registration kit upon arrival.</p>
+            </div>
+          </div>
+          <form className="text-white form-grid mt-5 pt-4 border-top border-light" onSubmit={handleSubmit}>
             <div>
               <label className='bottom'>Email</label>
               <MDBInput placeholder='Enter Email' name="email" onChange={handleChange} className="mb-3 blurred-input" required />
@@ -579,6 +589,7 @@ export default function Gforms() {
               <button type="submit" className='custom-submit-button' block>Submit</button>
             </div>
           </form>
+
 
           {/* Query Section */}
           <div className="query-section mt-5 pt-4 border-top border-light">

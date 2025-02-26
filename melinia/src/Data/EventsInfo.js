@@ -19,7 +19,7 @@ const events = [
             first: "₹6,500",
             second: "₹4,000"
         },
-        contact: ["Sai Nikhil S - 9080861273"],
+        contact: [{ name: "Sai Nikhil S", phone: "9080861273" }],
         category: ["Flagship"],
         is_flagship: true
     },
@@ -41,7 +41,10 @@ const events = [
             first: "₹6500",
             second: "₹4000"
         },
-        contact: ["Karthik Krishna - +91 9092723034", "Shanmugapriyaa D - +91 8248594018"],
+        contact: [
+                { name: "Karthik Krishna", phone: "9092723034" },
+                { name: "Shanmugapriyaa D", phone: "8248594018" }
+                ],
         category: ["Flagship"],
         is_flagship: true
     },
@@ -62,7 +65,7 @@ const events = [
             first: "₹3500",
             second: "₹2000"
         },
-        contact: ["S. Suhaina - 9790941992"],
+        contact: [{ name: "S. Suhaina", phone: "9790941992" }],
         category: ["Technical"],
         is_flagship: false
     },
@@ -84,7 +87,7 @@ const events = [
             first: "₹3,500",
             second: "₹2,000"
         },
-        contact: ["Tarun S R - 8870881201"],
+        contact: [{ name: "Tarun S R", phone: "8870881201" }],
         category: ["Technical"],
         is_flagship: false
     },
@@ -103,7 +106,7 @@ const events = [
             "first": "₹2500",
             "second": "₹1500"
         },
-        "contact": ["Sashwathan S - 7904733589"],
+        "contact": [{ name: "Sashwathan S", phone: "7904733589" }],
         "category": ["Non-Technical"],
         "is_flagship": false
     },
@@ -124,9 +127,9 @@ const events = [
             second: "₹1500"
         },
         contact: [
-            "Yashvitha - 9894060392",
-            "Riza - 9894074180"
-        ],
+  { name: "Yashvitha", phone: "9894060392" },
+  { name: "Riza", phone: "9894074180" }
+],
         category: ["Non-Technical"],
         is_flagship: false
     },
@@ -150,10 +153,11 @@ const events = [
             first: "₹3500",
             second: "₹2000"
         },
-        contact: [
-            "Priyadarshini - 9500862244",
-            "Sri Bhavan - 9944206566"
-        ],
+        "contact": [
+  { name: "Priyadarshini", phone: "9500862244" },
+  { name: "Sri Bhavan", phone: "9944206566" }
+]
+,
         category: ["Technical"],
         is_flagship: false
     },
@@ -174,7 +178,7 @@ const events = [
             "first": "₹2500",
             "second": "₹1500"
         },
-        "contact": ["Sudeep K - 7598323217"],
+        "contact": [{ name: "Sudeep K", phone: "7598323217" }],
         "category": ["Non-Technical"],
         "is_flagship": false
     }
@@ -213,9 +217,9 @@ const events = [
             "second": "₹1,500"
         },
         "contact": [
-            "Venkateshwaran S V - 6382129482",
-            "Aishvarya S - 9488915001"
-        ],
+                    { name: "Venkateshwaran S V", phone: "6382129482" },
+                    { name: "Aishvarya S", phone: "9488915001" }
+                ],
         "category": ["Non-Technical"],
         "is_flagship": false
     },
@@ -237,7 +241,7 @@ const events = [
             "first": "₹3500",
             "second": "₹2000"
         },
-        "contact": ["Logesh - 8248211569"],
+        "contact": [{ name: "Logesh", phone: "8248211569" }],
         "category": ["Technical"],
         "is_flagship": false
     },
@@ -268,12 +272,13 @@ const events = [
             "first": "₹3500",
             "second": "₹2000"
         },
-        "contact": [
-            "Surya - 9344817790",
-            "Priyadarshini - +91 63824 51789"
-        ],
         "category": ["Technical"],
-        "is_flagship": false
+        "is_flagship": false,
+        "contact": [
+                    { name: "Surya", phone: "9344817790" },
+                    { name: "Priyadarshini", phone: "63824 51789" }
+                    ]
+
     },
 
 
@@ -297,11 +302,9 @@ const events = [
             "first": "₹3,500",
             "second": "₹2,000"
         },
-        "contact": [
-            "Sudeep - 7598323217"
-        ],
         "category": ["Technical"],
-        "is_flagship": false
+        "is_flagship": false,
+        "contact": [{ name: "Sudeep", phone: "7598323217" }]
     }
 
 

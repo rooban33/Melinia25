@@ -94,13 +94,17 @@ const EventDetails = () => {
                     {/* Contact Info */}
                     <h3 className="mt-6 text-lg font-semibold" style={{color:"cornsilk"}}>Contact Info:</h3>
                     <div className="!text-white ml-4">
-                        {event.contact.map((person, index) => (
-                            <div key={index} className="flex items-center mt-2">
-                                <CallIcon className="text-[#F33A6A] mr-2" />
-                                <span>{person}</span>
-                            </div>
-                        ))}
-                    </div>
+  {event.contact.map((person, index) => (
+    <div key={index} className="flex items-center mt-2">
+      <CallIcon className="text-[#F33A6A] mr-2" />
+      <a href={`tel:${person.phone}`} className="text-white text-decoration-none">
+        {person.name} - {person.phone}
+      </a>
+    </div>
+  ))}
+</div>
+
+
                     {/* Registration Button */}
 
                 </div>

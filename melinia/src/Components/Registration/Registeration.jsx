@@ -555,7 +555,7 @@ export default function Gforms() {
             </div>
 
             <div>
-              <label>Specialization</label>
+              <label>Department</label>
               <MDBInput placeholder='Enter Specialization' name="specialization" onChange={handleChange} className="form-control" required />
             </div>
 

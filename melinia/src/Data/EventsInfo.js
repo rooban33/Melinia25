@@ -42,9 +42,9 @@ const events = [
             second: "₹4000"
         },
         contact: [
-                { name: "Karthik Krishna", phone: "9092723034" },
-                { name: "Shanmugapriyaa D", phone: "8248594018" }
-                ],
+            { name: "Karthik Krishna", phone: "9092723034" },
+            { name: "Shanmugapriyaa D", phone: "8248594018" }
+        ],
         category: ["Flagship"],
         is_flagship: true
     },
@@ -52,7 +52,7 @@ const events = [
         id: 3,
         title: "RED LIGHT GREEN CODE",
         time: "10:00 AM",
-        venue: "CM 202",
+        venue: "MS-202",
         description: "Red Light Green Code - Stop. Think. Code. Navigate through mind-bending flowchart challenges, ThinkWizard to unlock questions, crack puzzles to unlock test cases, and track down elusive bugs. Each level is packed with thrilling twists that test your logic,speed and teamwork. With excitement at every turn, only the sharpest minds will reach the finish line. Are you ready to code your way to victory?",
         rules: [
             "2 or 4 per team - choose your team wisely",
@@ -73,7 +73,7 @@ const events = [
         id: 4,
         title: "RACE to CODE",
         time: "10:00 AM",
-        venue: "206",
+        venue: "MS-206",
         description: "Brace yourself for an electrifying three-round challenge where only the sharpest minds will prevail! Speed through a thrilling RC car race while tackling brain-teasing technical puzzles. Dominate a rapid-fire MCQ quiz, testing your coding prowess and logical reasoning. Then, face the ultimate test in a high-stakes mystery coding challenge, where an unexpected twist awaits. Think fast, code smart, and rise to victory!",
         rules: [
             "Bring your own laptop - essential for the later rounds.",
@@ -95,7 +95,7 @@ const events = [
         "id": 5,
         "title": "PLAYER 456's REVENGE",
         "time": "10:00 AM",
-        "venue": "MS103",
+        "venue": "MS-103",
         "description": "In this event, teams are thrust into a series of high-stakes challenges where precision, teamwork, and creativity are their only weapons for survival. Participants must work together to complete tasks such as complete tasks with their legs tied, cracking cryptic codes, playing Reverse Pictionary, and balancing a platform with cups. Every mistake could result in elimination, with the pressure mounting like a game of life or death. Success in each round brings teams closer to the ultimate prize, but only those who can balance speed, strategy, and flawless execution will make it to the end.",
         "rules": [
             "Team size: 2",
@@ -114,7 +114,7 @@ const events = [
         id: 6,
         title: "THE PROFESSOR'S LAST LECTURE",
         time: "10:00 AM",
-        venue: "MS 106",
+        venue: "MS-106",
         description: "A brilliant and controversial professor is found dead just before revealing groundbreaking research. Was it a rival, a student, or something more sinister? Join this high-stakes mystery challenge, where teams investigate crime scenes, decode secret messages, and uncover hidden motives. Each round brings new twists—only the sharpest minds will solve the case. Dare to dive into darkness? Unleash your inner sleuth and crack the case—before the killer strikes again!",
         rules: [
             "Team Size - 3 or 4",
@@ -127,9 +127,9 @@ const events = [
             second: "₹1500"
         },
         contact: [
-  { name: "Yashvitha", phone: "9894060392" },
-  { name: "Riza", phone: "9894074180" }
-],
+            { name: "Yashvitha", phone: "9894060392" },
+            { name: "Riza", phone: "9894074180" }
+        ],
         category: ["Non-Technical"],
         is_flagship: false
     },
@@ -137,7 +137,7 @@ const events = [
         id: 7,
         title: "CIPHER QUEST: THE DATA MYSTERY",
         time: "10:00 AM",
-        venue: "104",
+        venue: "MS-104",
         description: "This event is a competitive machine learning challenge designed to test teams' problem-solving, analytical, and model-building skills under unique constraints. Round 1: Participants receive only 50% of the dataset, while the remaining 50% is locked. The feature names are hidden behind riddles, and teams must solve them to unlock the rest of the data. Failure to identify a minimum number of features within the given time will result in elimination. Round 2: Qualified teams will proceed to build machine learning models while facing surprise challenges that impact coding time, testing their adaptability and efficiency. The winning team will be judged based on: 1. Model accuracy 2. Justification of choices 3. Bonus points for well-presented visualizations.",
         rules: [
             "Bring Laptop",
@@ -154,10 +154,10 @@ const events = [
             second: "₹2000"
         },
         "contact": [
-  { name: "Priyadarshini", phone: "9500862244" },
-  { name: "Sri Bhavan", phone: "9944206566" }
-]
-,
+            { name: "Priyadarshini", phone: "9500862244" },
+            { name: "Sri Bhavan", phone: "9944206566" }
+        ]
+        ,
         category: ["Technical"],
         is_flagship: false
     },
@@ -165,7 +165,7 @@ const events = [
         "id": 8,
         "title": "SURVIVE THE SWAP",
         "time": "10:00 AM",
-        "venue": "MS 107",
+        "venue": "MS-107",
         "description": "\"Survive the Swap\" is a high-stakes 1v1 strategy game that challenges players' intuition, deception, and decision-making skills. Players must carefully place their cards, analyse their opponent’s tactics, and make the right swaps to ensure their survival. With every round, the intensity rises, making it a thrilling knockout-style event where only the most strategic player advances to ultimate victory.",
         "rules": [
             "The game is played in a 1v1 format throughout all rounds.",
@@ -187,7 +187,7 @@ const events = [
         "id": 9,
         "title": "EXIT PLAN: THE CAMPUS EDITION",
         "time": "10:00 AM",
-        "venue": "MS207",
+        "venue": "MS-207",
         "description": "Race against time in this ultimate campus escape challenge! Form your team, complete thrilling missions, solve puzzles, test your skills, and outmaneuver danger zones. Collect escape passes and strategize your way to victory. Do you have what it takes to make it out?\n\nThink fast. Move smart. Escape together!",
         "rules": [
             "🔹 Mission Zones (5 Total) 🔹",
@@ -217,9 +217,9 @@ const events = [
             "second": "₹1,500"
         },
         "contact": [
-                    { name: "Venkateshwaran S V", phone: "6382129482" },
-                    { name: "Aishvarya S", phone: "9488915001" }
-                ],
+            { name: "Venkateshwaran S V", phone: "6382129482" },
+            { name: "Aishvarya S", phone: "9488915001" }
+        ],
         "category": ["Non-Technical"],
         "is_flagship": false
     },
@@ -227,7 +227,7 @@ const events = [
         "id": 10,
         "title": "CODE DUEL",
         "time": "10:00 AM",
-        "venue": "MS208",
+        "venue": "MS-208",
         "description": "\"CODE DUEL\" is a thrilling 1 vs. 1 coding showdown that pits programmers against each other in a series of fast-paced, knockout-style battles. Designed to challenge participants' coding expertise, logical thinking, and adaptability, this competition delivers an electrifying experience for coders. Only the sharpest minds and fastest fingers will survive each round to claim ultimate glory. Each round introduces a mystery puzzle—the first team to solve it will receive unique perks that can either benefit themselves or put their opponent at a disadvantage in the head-to-head battle.",
         "rules": [
             "Teams must have 2-4 members (minimum one for coding challenge and one for puzzle challenge).",
@@ -249,7 +249,7 @@ const events = [
         "id": 11,
         "title": "THE VAULT OF FORTUNE",
         "time": "10:00 AM",
-        "venue": "MS 203",
+        "venue": "MS-203",
         "description": "Helloo Hackaholicsssssss !!!! 🏦💰\n\n" +
             "After a totally accidental fire at the bank (which we definitely had nothing to do with),\n" +
             "a vault packed with 26 secret lockers remains sealed underground—just waiting for the right hackers to crack it.\n\n" +
@@ -275,9 +275,9 @@ const events = [
         "category": ["Technical"],
         "is_flagship": false,
         "contact": [
-                    { name: "Surya", phone: "9344817790" },
-                    { name: "Priyadarshini", phone: "63824 51789" }
-                    ]
+            { name: "Surya", phone: "9344817790" },
+            { name: "Priyadarshini", phone: "63824 51789" }
+        ]
 
     },
 
@@ -286,7 +286,7 @@ const events = [
         "id": 12,
         "title": "KILL CODE: DEBUG TO SURVIVE",
         "time": "10:00 AM",
-        "venue": "MS 108",
+        "venue": "MS-108",
         "description": "In \"Kill Code: Debug to Survive,\" you are an elite investigator employed by the Front Man to solve a chilling murder mystery in the Squid Games HQ. As you navigate through layers of deceit and technical puzzles, only your sharpest instincts and logic will keep you alive. The game will test your analytical, problem-solving and programming skills like never before. Fail to uncover the truth, and the Front Man’s wrath will be your demise. Can you decode the mystery and survive, or will you become another victim of the deadly game?",
         "rules": [
             "Participants can use any programming language for coding challenges.",

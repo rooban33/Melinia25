@@ -8,6 +8,7 @@ import MainDescription from './Components/Events/MainDescription';
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact/Contact"
 import EventsPage from "./Components/EventPage/Events";
+import LeaderBoard from './Components/LeaderBoard';
 import { ThemeProvider } from "@material-tailwind/react";
 import EventDetails from './Components/EventPage/Event';
 import {
@@ -63,6 +64,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/developers" element={<Developers />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/leaderboard" element={<LeaderBoard />} />
             <Route path="/event/:id" element={<EventDetails />} />
           </Routes>
           <Footer />

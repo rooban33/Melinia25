@@ -112,9 +112,7 @@ function Workshop() {
             <p style={{ fontSize: "12px", fontWeight: "500", opacity: "0.8", marginBottom: "10px" }}>
               📍 MBCH | 🗓️ March 5-7, 2025
             </p>
-            <p style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px", ...(hackathonSlots < 10 ? blinkingStyle : {}) }}>
-              Slots Available: 12
-            </p>
+
             <button
               style={{
                 background: "#00a6fb",
@@ -165,9 +163,6 @@ function Workshop() {
             The Pitch Pit is an exciting opportunity to present your ideas, receive expert guidance, and gain the support needed to turn your vision into reality. More than just an ideathon, this platform encourages innovation across both technical and non-technical fields. Participants are challenged to develop creative solutions to real-world problems.</p>
             <p style={{ fontSize: "12px", fontWeight: "500", opacity: "0.8", marginBottom: "10px" }}>
               📍 IT 212, IT 213 | 🗓️ March 7, 2025
-            </p>
-            <p style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px", ...(ideathonSlots < 10 ? blinkingStyle : {}) }}>
-              Slots Available: 23
             </p>
             <button
             style={{

@@ -1,4 +1,4 @@
-import React, { useState, useEffect , useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   MDBRow,
   MDBCol,
@@ -36,7 +36,7 @@ export default function Gforms() {
   const [selectedCollege, setSelectedCollege] = useState("");
   const [isDistrictOpen, setIsDistrictOpen] = useState(false);
   const [isCollegeOpen, setIsCollegeOpen] = useState(false);
-  const [isStateOpen,setIsStateOpen] = useState(false);
+  const [isStateOpen, setIsStateOpen] = useState(false);
 
   const [stateSearch, setStateSearch] = useState("");
   const [districtSearch, setDistrictSearch] = useState("");
@@ -146,7 +146,7 @@ export default function Gforms() {
           },
         };
         idRef.current = options.order_id;
-        console.log("Shajith",orderData.id);
+        console.log("Shajith", orderData.id);
 
         const razorpay = await loadRazorpay();
         const rzp = new window.Razorpay(options);
@@ -154,7 +154,7 @@ export default function Gforms() {
       } catch (error) {
         console.error("Error creating order:", error);
         reject(false);
-      }finally {
+      } finally {
         setLoad(false); // Hide loader
       }
     });
@@ -172,89 +172,88 @@ export default function Gforms() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
-    if(validate())
+    if (validate())
       setLoad(true);
-    else{
-          let errorMessages = Object.entries(errors)
-            .filter(([key, value]) => value) // Keep only non-empty errors
-            .map(([key, value]) => `${key}: ${value}`) // Format them properly
-            .join("\n"); // Join into a single string
+    else {
+      let errorMessages = Object.entries(errors)
+        .filter(([key, value]) => value) // Keep only non-empty errors
+        .map(([key, value]) => `${key}: ${value}`) // Format them properly
+        .join("\n"); // Join into a single string
 
-          if (errorMessages) {
-            alert("Invalid Inputs:\n" + errorMessages);
-          }
-          return;
-        }
+      if (errorMessages) {
+        alert("Invalid Inputs:\n" + errorMessages);
+      }
+      return;
+    }
     const paymentSuccess = await handleRegisterClick();
     if (paymentSuccess) {
-      if(validate())
-      {
-        
-          // Construct form data
-          console.log("Shajith",idRef.current,formData.institute);
-          const formDataObj = new FormData();
-          formDataObj.append("entry.1191433481", formData.email);
-          formDataObj.append("entry.1314378005", formData.mobile);
-          formDataObj.append("entry.1493743491", formData.firstName);
-          formDataObj.append("entry.830723680", formData.lastName);
-          formDataObj.append("entry.534467670", formData.gender);
-          formDataObj.append("entry.44250385", formData.institute);
-          formDataObj.append("entry.1322569869", formData.course);
-          formDataObj.append("entry.1415842802", formData.specialization);
-          formDataObj.append("entry.1681341619", formData.yearOfStudy);
-          formDataObj.append("entry.701360953", formData.graduatingYear);
-          formDataObj.append("entry.1324628010", formData.foodPreference);
-          formDataObj.append("entry.1221076541", idRef.current);
+      if (validate()) {
 
-          try {
-            await fetch(
-              "https://docs.google.com/forms/d/e/1FAIpQLSf3fGWJ4gXtAfo9aDpuXFPt1kXPoEHf4c_qW0cVuomHDBmLAA/formResponse",
-              {
-                method: "POST",
-                body: formDataObj,
-                mode: "no-cors", // Required for Google Forms
-              }
-            );
-            setShowPopup(true);
-            resetForm();
-          } catch (error) {
-            console.error("Error submitting Google Form:", error);
-          }
-        }
-        else{
-          let errorMessages = Object.entries(errors)
-            .filter(([key, value]) => value) // Keep only non-empty errors
-            .map(([key, value]) => `${key}: ${value}`) // Format them properly
-            .join("\n"); // Join into a single string
+        // Construct form data
+        console.log("Shajith", idRef.current, formData.institute);
+        const formDataObj = new FormData();
+        formDataObj.append("entry.1191433481", formData.email);
+        formDataObj.append("entry.1314378005", formData.mobile);
+        formDataObj.append("entry.1493743491", formData.firstName);
+        formDataObj.append("entry.830723680", formData.lastName);
+        formDataObj.append("entry.534467670", formData.gender);
+        formDataObj.append("entry.44250385", formData.institute);
+        formDataObj.append("entry.1322569869", formData.course);
+        formDataObj.append("entry.1415842802", formData.specialization);
+        formDataObj.append("entry.1681341619", formData.yearOfStudy);
+        formDataObj.append("entry.701360953", formData.graduatingYear);
+        formDataObj.append("entry.1324628010", formData.foodPreference);
+        formDataObj.append("entry.1221076541", idRef.current);
 
-          if (errorMessages) {
-            alert("Invalid Inputs:\n" + errorMessages);
-          }
+        try {
+          await fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSf3fGWJ4gXtAfo9aDpuXFPt1kXPoEHf4c_qW0cVuomHDBmLAA/formResponse",
+            {
+              method: "POST",
+              body: formDataObj,
+              mode: "no-cors", // Required for Google Forms
+            }
+          );
+          setShowPopup(true);
+          resetForm();
+        } catch (error) {
+          console.error("Error submitting Google Form:", error);
         }
       }
-      
-      
+      else {
+        let errorMessages = Object.entries(errors)
+          .filter(([key, value]) => value) // Keep only non-empty errors
+          .map(([key, value]) => `${key}: ${value}`) // Format them properly
+          .join("\n"); // Join into a single string
+
+        if (errorMessages) {
+          alert("Invalid Inputs:\n" + errorMessages);
+        }
+      }
+    }
+
+
   };
-  
+
   // Handle query form submission
   const handleQuerySubmit = (e) => {
     e.preventDefault();
-    
+
     // Validate query form
     if (!queryName || !queryEmail || !queryMessage) {
       alert("Please fill all fields in the query form");
       return;
     }
-    
+
     // Format the message
     const messageText = `Name: ${queryName}%0AEmail: ${queryEmail}%0AMessage: ${queryMessage}`;
-    
+
     // Send message via WhatsApp (open in new tab)
     window.open(`https://wa.me/919489425649?text=${messageText}`, '_blank');
-    
+
     // Show success message
     setQuerySuccess(true);
-    
+
     // Reset form
     setQueryName("");
     setQueryEmail("");
@@ -284,63 +283,63 @@ export default function Gforms() {
 
   const validate = () => {
     let tempErrors = { email: '', mobile: '', graduatingYear: '' };
-    
+
     // Email validation
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       tempErrors.email = "Invalid email format";
     }
-    
+
     // Mobile number validation (10 digits)
     if (!/^\d{10}$/.test(formData.mobile)) {
       tempErrors.mobile = "Mobile number must be 10 digits";
     }
-    
+
     // Graduating year validation (1900 - 2030)
     const gradYear = parseInt(formData.graduatingYear);
     if (isNaN(gradYear) || gradYear < 1900 || gradYear > 2030) {
       tempErrors.graduatingYear = "Year must be between 1900 and 2030";
     }
-    
+
     setErrors(tempErrors);
     return Object.values(tempErrors).every(error => error === '');
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-  let tempErrors = { ...errors };
+    let tempErrors = { ...errors };
 
-  // Live validation for each field
-  switch (name) {
-    case "email":
-      tempErrors.email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
-        ? ""
-        : "Invalid email format";
-      break;
-
-    case "mobile":
-      tempErrors.mobile = /^\d{10}$/.test(value)
-        ? ""
-        : "Mobile number must be 10 digits";
-      break;
-
-    case "graduatingYear":
-      const gradYear = parseInt(value, 10);
-      tempErrors.graduatingYear =
-        !isNaN(gradYear) && gradYear >= 1900 && gradYear <= 2030
+    // Live validation for each field
+    switch (name) {
+      case "email":
+        tempErrors.email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
           ? ""
-          : "Year must be between 1900 and 2030";
-      break;
+          : "Invalid email format";
+        break;
 
-    default:
-      break;
-  }
+      case "mobile":
+        tempErrors.mobile = /^\d{10}$/.test(value)
+          ? ""
+          : "Mobile number must be 10 digits";
+        break;
+
+      case "graduatingYear":
+        const gradYear = parseInt(value, 10);
+        tempErrors.graduatingYear =
+          !isNaN(gradYear) && gradYear >= 1900 && gradYear <= 2030
+            ? ""
+            : "Year must be between 1900 and 2030";
+        break;
+
+      default:
+        break;
+    }
     setFormData({ ...formData, [name]: value });
-  setErrors(tempErrors);
+    setErrors(tempErrors);
   };
   return (
-    
+
     <>
-    <Preloader load={load} />
+      <Preloader load={load} />
       <Particle />
       <div className="hero-container6">
         <div className="squid-bg6"></div>
@@ -350,7 +349,8 @@ export default function Gforms() {
           <div className="query-section mt-5 pt-4 border-top border-light">
             {/* <h3 className="form-title">Registration Details</h3> */}
             <div className="contact-info mb-4">
-              <p className="mb-2">✅ Fee: ₹250 (Includes access to all tech and non-tech events+ lunch which excludes Flagship events)</p>
+              <p className="mb-2">✅ Fee: ₹250 (Includes access to all tech and non-tech events + lunch )</p>
+              <p className="mb-2">✅ Flagship Events: Requires additional fee excluding the overall registration fee </p>
               <p className="mb-2">✅ Arrival Time: All participants must report by 8:10 AM at the college.</p>
               <p className="mb-2">✅ Requirements: Bring your laptop for participation.</p>
               <p className="mb-2">✅ Registration Kit: All participants will receive a registration kit upon arrival.</p>
@@ -383,156 +383,156 @@ export default function Gforms() {
                 <MDBRadio name="gender" value="Female" label="Female" onChange={handleChange} inline required />
               </div>
             </div>
-{/* State Dropdown with Search */}
-<div className="dropdown mt-3">
-  <label>State</label>
-  <button
-    className="btn dropdown-toggle w-100 text-left form-control"
-    type="button"
-    onClick={() => setIsStateOpen(!isStateOpen)}
-  >
-    {selectedState || "Select a state"}
-  </button>
-
-  {isStateOpen && (
-    <div
-      className="dropdown-menu w-100 show"
-      style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
-    >
-      <input
-        type="text"
-        className="form-control mb-2"
-        placeholder="Search state..."
-        value={stateSearch}
-        onChange={(e) => setStateSearch(e.target.value)}
-        style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
-      />
-      {Object.entries(states)
-        .filter(([code, name]) => name?.toLowerCase().includes(stateSearch?.toLowerCase()))
-        .map(([code, name]) => (
-          <a
-            key={code}
-            className="dropdown-item"
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              handleStateChange({ target: { value: name } });
-              setIsStateOpen(false);
-            }}
-            style={{ color: "white", backgroundColor: "black" }}
-          >
-            {name}
-          </a>
-        ))}
-    </div>
-  )}
-</div>
-
-
-
-{/* District Dropdown with Search */}
-<div className="dropdown mt-3">
-  <label>District</label>
-  <button
-    className="btn dropdown-toggle w-100 text-left form-control"
-    type="button"
-    onClick={() => setIsDistrictOpen(!isDistrictOpen)}
-  >
-    {selectedDistrict || "Select a district"}
-  </button>
-
-  {isDistrictOpen && (
-    <div
-      className="dropdown-menu w-100 show"
-      style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
-    >
-      <input
-        type="text"
-        className="form-control mb-2"
-        placeholder="Search district..."
-        value={districtSearch}
-        onChange={(e) => setDistrictSearch(e.target.value)}
-        style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
-      />
-      {districts
-        .filter((district) => district?.toLowerCase().includes(districtSearch?.toLowerCase()))
-        .map((district, index) => (
-          <a
-            key={index}
-            className="dropdown-item"
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              handleDistrictChange({ target: { value: district } });
-              setIsDistrictOpen(false);
-            }}
-            style={{ color: "white", backgroundColor: "black" }}
-          >
-            {district}
-          </a>
-        ))}
-    </div>
-  )}
-</div>
-
-
-{/* College Dropdown with Search */}
-<div className="dropdown mt-3" ref={dropdownRef}>
-      <label>College</label>
-      <button
-        className="btn dropdown-toggle w-100 text-left form-control"
-        type="button"
-        onClick={() => setIsCollegeOpen(!isCollegeOpen)}
-      >
-        {selectedCollege || "Select a college"}
-      </button>
-
-      {isCollegeOpen && (
-        <div
-          className="dropdown-menu w-100 show"
-          style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
-        >
-          {/* Search Box */}
-          <input
-            type="text"
-            className="form-control mb-2"
-            placeholder="Search college..."
-            value={collegeSearch}
-            onChange={(e) => setCollegeSearch(e.target.value)}
-            style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
-          />
-
-          {/* Filtered College List */}
-          {(colleges || [])
-            .filter((college) => typeof college === "string" && college.toLowerCase().includes(collegeSearch.toLowerCase()))
-            .map((college, index) => (
-              <a
-                key={index}
-                className="dropdown-item"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setSelectedCollege(college);
-                  setIsCollegeOpen(false);
-                  setCollegeSearch(""); // Clear search after selection
-                  setFormData((prevData) => ({ ...prevData, institute: college })); // Update formData
-                }}
-                style={{ color: "white", backgroundColor: "black" }}
+            {/* State Dropdown with Search */}
+            <div className="dropdown mt-3">
+              <label>State</label>
+              <button
+                className="btn dropdown-toggle w-100 text-left form-control"
+                type="button"
+                onClick={() => setIsStateOpen(!isStateOpen)}
               >
-                {college}
-              </a>
-            ))}
+                {selectedState || "Select a state"}
+              </button>
 
-          {/* Handle no matching results */}
-          {(colleges || []).filter((college) => typeof college === "string" && college.toLowerCase().includes(collegeSearch.toLowerCase()))
-            .length === 0 && (
-            <p className="text-center text-white">No colleges found</p>
-          )}
-        </div>
-      )}
-    </div>
+              {isStateOpen && (
+                <div
+                  className="dropdown-menu w-100 show"
+                  style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
+                >
+                  <input
+                    type="text"
+                    className="form-control mb-2"
+                    placeholder="Search state..."
+                    value={stateSearch}
+                    onChange={(e) => setStateSearch(e.target.value)}
+                    style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
+                  />
+                  {Object.entries(states)
+                    .filter(([code, name]) => name?.toLowerCase().includes(stateSearch?.toLowerCase()))
+                    .map(([code, name]) => (
+                      <a
+                        key={code}
+                        className="dropdown-item"
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleStateChange({ target: { value: name } });
+                          setIsStateOpen(false);
+                        }}
+                        style={{ color: "white", backgroundColor: "black" }}
+                      >
+                        {name}
+                      </a>
+                    ))}
+                </div>
+              )}
+            </div>
 
-              {/* )} */}
+
+
+            {/* District Dropdown with Search */}
+            <div className="dropdown mt-3">
+              <label>District</label>
+              <button
+                className="btn dropdown-toggle w-100 text-left form-control"
+                type="button"
+                onClick={() => setIsDistrictOpen(!isDistrictOpen)}
+              >
+                {selectedDistrict || "Select a district"}
+              </button>
+
+              {isDistrictOpen && (
+                <div
+                  className="dropdown-menu w-100 show"
+                  style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
+                >
+                  <input
+                    type="text"
+                    className="form-control mb-2"
+                    placeholder="Search district..."
+                    value={districtSearch}
+                    onChange={(e) => setDistrictSearch(e.target.value)}
+                    style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
+                  />
+                  {districts
+                    .filter((district) => district?.toLowerCase().includes(districtSearch?.toLowerCase()))
+                    .map((district, index) => (
+                      <a
+                        key={index}
+                        className="dropdown-item"
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleDistrictChange({ target: { value: district } });
+                          setIsDistrictOpen(false);
+                        }}
+                        style={{ color: "white", backgroundColor: "black" }}
+                      >
+                        {district}
+                      </a>
+                    ))}
+                </div>
+              )}
+            </div>
+
+
+            {/* College Dropdown with Search */}
+            <div className="dropdown mt-3" ref={dropdownRef}>
+              <label>College</label>
+              <button
+                className="btn dropdown-toggle w-100 text-left form-control"
+                type="button"
+                onClick={() => setIsCollegeOpen(!isCollegeOpen)}
+              >
+                {selectedCollege || "Select a college"}
+              </button>
+
+              {isCollegeOpen && (
+                <div
+                  className="dropdown-menu w-100 show"
+                  style={{ maxHeight: "200px", overflowY: "auto", backgroundColor: "black" }}
+                >
+                  {/* Search Box */}
+                  <input
+                    type="text"
+                    className="form-control mb-2"
+                    placeholder="Search college..."
+                    value={collegeSearch}
+                    onChange={(e) => setCollegeSearch(e.target.value)}
+                    style={{ backgroundColor: "black", color: "white", border: "1px solid white" }}
+                  />
+
+                  {/* Filtered College List */}
+                  {(colleges || [])
+                    .filter((college) => typeof college === "string" && college.toLowerCase().includes(collegeSearch.toLowerCase()))
+                    .map((college, index) => (
+                      <a
+                        key={index}
+                        className="dropdown-item"
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setSelectedCollege(college);
+                          setIsCollegeOpen(false);
+                          setCollegeSearch(""); // Clear search after selection
+                          setFormData((prevData) => ({ ...prevData, institute: college })); // Update formData
+                        }}
+                        style={{ color: "white", backgroundColor: "black" }}
+                      >
+                        {college}
+                      </a>
+                    ))}
+
+                  {/* Handle no matching results */}
+                  {(colleges || []).filter((college) => typeof college === "string" && college.toLowerCase().includes(collegeSearch.toLowerCase()))
+                    .length === 0 && (
+                      <p className="text-center text-white">No colleges found</p>
+                    )}
+                </div>
+              )}
+            </div>
+
+            {/* )} */}
             <div>
               <label>Course</label>
               {/*<MDBInput placeholder='Enter Course Name' name="course" onChange={handleChange} className="form-control" required />*/}
@@ -572,9 +572,9 @@ export default function Gforms() {
             </div>
 
             <div>
-            <label className='bottom'>Graduating Year</label>
-            <MDBInput placeholder='Enter Year' name="graduatingYear" onChange={handleChange} className="mb-3 blurred-input" required />
-             {errors.graduatingYear && <span className="error-text">{errors.graduatingYear}</span>}
+              <label className='bottom'>Graduating Year</label>
+              <MDBInput placeholder='Enter Year' name="graduatingYear" onChange={handleChange} className="mb-3 blurred-input" required />
+              {errors.graduatingYear && <span className="error-text">{errors.graduatingYear}</span>}
             </div>
 
             <div className="full-width">
@@ -602,7 +602,7 @@ export default function Gforms() {
           </div>
         </div>
       </div>
-      
+
       {/* Registration Success Modal */}
       <Modal show={showPopup} onHide={handleClose} centered>
         <Modal.Header closeButton>
@@ -617,7 +617,7 @@ export default function Gforms() {
           </Button>
         </Modal.Footer>
       </Modal>
-      
+
       {/* Query Success Modal */}
       {/* <Modal show={querySuccess} onHide={handleQueryClose} centered>
         <Modal.Header closeButton>

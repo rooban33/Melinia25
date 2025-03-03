@@ -344,7 +344,7 @@ export default function Gforms() {
       <div className="hero-container6">
         <div className="squid-bg6"></div>
         <div className="hero-card6">
-          <h2 className="form-title">Registeration</h2>
+          <h2 className="form-title">Registration</h2>
           {/* Info Section */}
           <div className="query-section mt-5 pt-4 border-top border-light">
             {/* <h3 className="form-title">Registration Details</h3> */}

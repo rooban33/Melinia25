@@ -101,6 +101,10 @@ export default function Gforms() {
     navigate("/"); // Redirect to home
   };
 
+  const handleCloseUndefined = () => {
+    setShowUndefined(false);
+  };
+
   const handleQueryClose = () => {
     setQuerySuccess(false);
   };
@@ -120,6 +124,7 @@ export default function Gforms() {
   });
 
   const [showPopup, setShowPopup] = useState(false);
+  const [showUndefined, setShowUndefined] = useState(false);
 
   const handleRegisterClick = () => {
     mixpanel.track("Register button clicked", { page: "home" });
@@ -187,7 +192,11 @@ export default function Gforms() {
     }
     const paymentSuccess = await handleRegisterClick();
     if (paymentSuccess) {
-      if (validate()) {
+      if(idRef.current=='undefined')
+      {
+        setShowUndefined(true);
+      }
+      else if (validate()) {
 
         // Construct form data
         console.log("Shajith", idRef.current, formData.institute);
@@ -617,6 +626,21 @@ export default function Gforms() {
           </Button>
         </Modal.Footer>
       </Modal>
+
+      <Modal show={showUndefined} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>⚠️ Oops! Something went wrong!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        Sorry for the inconvenience. Please register again. If any amount was debited, it will be refunded on the same day. ✅💰
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleCloseUndefined}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
 
       {/* Query Success Modal */}
       {/* <Modal show={querySuccess} onHide={handleQueryClose} centered>

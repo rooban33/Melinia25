@@ -196,7 +196,6 @@ export default function Gforms() {
       {
         setShowUndefined(true);
       }
-      else if (validate()) {
 
         // Construct form data
         console.log("Shajith", idRef.current, formData.institute);
@@ -228,17 +227,7 @@ export default function Gforms() {
         } catch (error) {
           console.error("Error submitting Google Form:", error);
         }
-      }
-      else {
-        let errorMessages = Object.entries(errors)
-          .filter(([key, value]) => value) // Keep only non-empty errors
-          .map(([key, value]) => `${key}: ${value}`) // Format them properly
-          .join("\n"); // Join into a single string
-
-        if (errorMessages) {
-          alert("Invalid Inputs:\n" + errorMessages);
-        }
-      }
+     
     }
 
 

@@ -222,7 +222,7 @@ select.form-control option {
 
 .custom-submit-button {
   border-radius: 20px;
-  background: linear-gradient(90deg, #FF1199, #d72054);
+  background: gray;
   color: white;
   border: none;
   padding: 10px 20px;

@@ -124,7 +124,8 @@ export default function Gforms() {
   });
 
   const [showPopup, setShowPopup] = useState(false);
-  const [showUndefined, setShowUndefined] = useState(false);
+  const [showUndefined, setShowUndefined] = useState(true);
+  const [showClose, setShowClose] = useState(false);
 
   const handleRegisterClick = () => {
     mixpanel.track("Register button clicked", { page: "home" });
@@ -584,7 +585,7 @@ export default function Gforms() {
             </div>
 
             <div className="full-width">
-              <button type="submit" className='custom-submit-button' block>Submit</button>
+              <button type="submit" className='custom-submit-button' disabled='true' block>Submit</button>
             </div>
           </form>
 
@@ -617,6 +618,20 @@ export default function Gforms() {
       </Modal>
 
       <Modal show={showUndefined} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>📢 Online Registration Closed! 🚫</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        Online registration is now closed, but don't worry! You can still register on-spot at the venue. ✅🎟️
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={showClose} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>⚠️ Oops! Something went wrong!</Modal.Title>
         </Modal.Header>

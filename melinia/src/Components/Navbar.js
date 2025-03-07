@@ -124,6 +124,17 @@ const NavBar = () => {
             </Nav.Item>
 
             <Nav.Item>
+              <Nav.Link
+                className="scroll-link"
+                as={Link}
+                to="/leaderboard"
+                onClick={() => updateExpanded(false)}
+              >
+                LeaderBoard
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
               <Nav.Link className="scroll-link" as={Link} to="/contact" onClick={() => updateExpanded(false)}>
                 Contact
               </Nav.Link>

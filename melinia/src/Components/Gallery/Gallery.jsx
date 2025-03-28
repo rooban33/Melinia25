@@ -8,9 +8,9 @@ import img6 from '../../Assets/gallery/chief.JPG';
 import img7 from '../../Assets/gallery/mr.JPG';
 import img8 from '../../Assets/gallery/tech.jpeg';
 import img9 from '../../Assets/gallery/music.JPG';
-import img10 from '../../Assets/gallery/audiance.JPG';
-import img11 from '../../Assets/gallery/reveal.JPG';
-import img12 from '../../Assets/gallery/team.JPG';
+import img10 from '../../Assets/gallery/audiance.JPG?cachebust=1';
+import img11 from '../../Assets/gallery/reveal.JPG?cachebust=1';
+import img12 from '../../Assets/gallery/team.JPG?cachebust=1';
 import img13 from '../../Assets/gallery/sports.jpeg';
 
 

@@ -31,9 +31,9 @@ const HeroSection = () => {
         <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.9 }} className="hero-date">
           7th March
         </motion.p>
-        <motion.button initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 1 }} className="squid-button" onClick={()=>{navigate("/register")}}>
+        {/* <motion.button initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 1 }} className="squid-button" onClick={()=>{navigate("/register")}}>
         Register Now
-      </motion.button>
+      </motion.button> */}
 
       </div>
     </div>

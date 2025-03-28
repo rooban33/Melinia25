@@ -95,11 +95,11 @@ const NavBar = () => {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
+            {/* <Nav.Item>
               <Nav.Link className="scroll-link" as={Link} to="/events" onClick={() => updateExpanded(false)}>
                 Events
               </Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
 
             <Nav.Item>
               <Nav.Link

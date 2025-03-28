@@ -2,7 +2,7 @@ import InfiniteMenu from './InfiniteMenu';
 import img1 from '../../Assets/gallery/start.png';
 import img2 from '../../Assets/gallery/stco.JPG';
 import img3 from '../../Assets/gallery/win.JPG';
-import img4 from '../../Assets/gallery/flashmob.JPG';
+import img4 from '../../Assets/gallery/preparty.JPG';
 import img5 from '../../Assets/gallery/inaguration.JPG';
 import img6 from '../../Assets/gallery/chief.JPG';
 import img7 from '../../Assets/gallery/mr.JPG';
